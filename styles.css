@@ -51,12 +51,11 @@ body {
 .brand-logo {
   width: 92px;
   height: 92px;
-  border-radius: 16px;
   object-fit: contain;
-  background: #fff;
-  border: 1px solid #bfd0ea;
-  padding: 8px;
-  box-shadow: 0 10px 22px rgba(31, 70, 130, 0.12);
+  background: transparent;
+  border: 0;
+  padding: 0;
+  box-shadow: none;
   flex-shrink: 0;
 }
 .brand-text { display: flex; flex-direction: column; min-width: 0; }
@@ -395,3 +394,6 @@ input, select, textarea {
   .brand-name { font-size: 1.28rem; }
   .brand-sub { font-size: 0.72rem; }
 }
+
+
+section[id] { scroll-margin-top: 95px; }
