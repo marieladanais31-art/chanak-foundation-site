@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-label="Chanak logo">
+  <rect width="320" height="320" rx="36" fill="#ffffff"/>
+  <rect x="16" y="16" width="288" height="288" rx="28" fill="#f2f6fc" stroke="#cddcf1" stroke-width="6"/>
+  <g fill="none" stroke="#1e437f" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M72 196c18-46 48-70 88-70s70 24 88 70"/>
+    <path d="M109 208h102"/>
+    <path d="M160 82v90"/>
+    <path d="M121 118l39-36 39 36"/>
+  </g>
+  <text x="160" y="260" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" fill="#1e437f" font-weight="700">CHANAK</text>
+</svg>
