@@ -183,6 +183,7 @@ body {
   background: linear-gradient(145deg, #f4f8fd 0%, #e6eef9 100%);
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
 .visual-panel::after {
   content: attr(data-label);
@@ -203,7 +204,9 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
+  transform: scale(1.01);
 }
 
 .hero-image {
@@ -213,7 +216,16 @@ body {
 .image-frame {
   margin: 0;
   min-height: 260px;
+  aspect-ratio: 4 / 3;
 }
+
+.hero-media .hero-image {
+  aspect-ratio: 4 / 5;
+}
+
+.focal-center { object-position: center center; }
+.focal-center-top { object-position: center 28%; }
+.focal-center-right { object-position: 62% center; }
 
 .image-frame figcaption {
   position: absolute;
@@ -230,6 +242,21 @@ body {
 
 .image-frame::after {
   display: none;
+}
+
+.image-frame::before,
+.hero-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(12, 28, 56, 0) 55%, rgba(12, 28, 56, 0.35) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.image-frame figcaption,
+.media-caption {
+  z-index: 2;
 }
 
 .trust-bar {
