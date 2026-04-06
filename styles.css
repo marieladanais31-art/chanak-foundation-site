@@ -297,6 +297,7 @@ body {
 .focal-center { object-position: center center; }
 .focal-center-top { object-position: center 28%; }
 .focal-center-right { object-position: 62% center; }
+.focal-center-left { object-position: 36% center; }
 
 .image-frame figcaption {
   position: absolute;
@@ -643,6 +644,11 @@ section[id] { scroll-margin-top: 95px; }
 
 .contact-image-band {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contact-image-band.contact-image-band-single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 720px;
 }
 
 @media (max-width: 1150px) {
