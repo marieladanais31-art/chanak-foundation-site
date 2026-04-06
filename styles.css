@@ -91,6 +91,21 @@ body {
 }
 .nav-links a:hover { color: var(--primary); }
 
+.nav-links a.is-active {
+  color: var(--primary);
+  position: relative;
+}
+
+.nav-links a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.4rem;
+  height: 2px;
+  background: var(--primary);
+}
+
 .section { padding: 4.7rem 0; }
 .alt { background: var(--bg); }
 .soft { background: var(--surface-alt); }
@@ -400,6 +415,27 @@ body {
   padding: 1.2rem;
 }
 
+.initiative-card p:last-child {
+  margin-bottom: 0;
+}
+
+.family-support-layout {
+  align-items: stretch;
+}
+
+.value-grid {
+  margin-top: 1rem;
+}
+
+.value-grid .card {
+  height: 100%;
+}
+
+.partnership-card {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
 .btn {
   display: inline-block;
   padding: 0.66rem 1.05rem;
@@ -421,6 +457,30 @@ body {
 }
 .page-title { margin: 0 0 0.3rem; font-size: clamp(1.7rem, 3.6vw, 2.4rem); }
 .intro { color: var(--ink-soft); max-width: 72ch; font-size: 1.03rem; }
+
+.programs-hero {
+  padding: 3rem 0;
+}
+
+.programs-hero .hero-grid {
+  align-items: center;
+}
+
+.quick-links {
+  margin-top: 1.4rem;
+}
+
+.quick-links .item {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 700;
+  display: block;
+}
+
+.quick-links .item:hover {
+  color: var(--primary-dark);
+  border-color: #b8ccec;
+}
 .checklist { margin: 0.75rem 0 0; padding-left: 1.1rem; }
 .checklist li { margin-bottom: 0.45rem; }
 
@@ -473,6 +533,14 @@ input, select, textarea {
 }
 
 @media (max-width: 900px) {
+
+  .programs-hero {
+    padding-top: 2.2rem;
+  }
+
+  .nav-links a.is-active::after {
+    bottom: -0.2rem;
+  }
   .cards, .cards-two, .cards-three, .grid-three, .footer-grid, .image-band, .phase-list { grid-template-columns: 1fr; }
   .site-header { position: static; }
   .brand-logo { width: 72px; height: 72px; }
