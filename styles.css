@@ -667,3 +667,51 @@ section[id] { scroll-margin-top: 95px; }
     padding-top: 3.4rem;
   }
 }
+
+/* About page enhancements */
+.about-hero {
+  padding-bottom: 3.6rem;
+}
+
+.about-hero-grid {
+  align-items: center;
+}
+
+.about-approach-layout {
+  align-items: stretch;
+  gap: 1.6rem;
+}
+
+.about-approach-cards {
+  margin-top: 1.1rem;
+}
+
+.stewardship-block {
+  border: 1px solid #c7d7ef;
+  box-shadow: 0 10px 26px rgba(24, 56, 104, 0.08);
+}
+
+.stewardship-grid {
+  margin-top: 1rem;
+}
+
+.stewardship-grid ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+/* Contact page refinements */
+.partnership-support-layout {
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+.support-copy-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.support-copy-card p:last-child {
+  margin-bottom: 0;
+}
