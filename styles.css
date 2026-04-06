@@ -49,13 +49,14 @@ body {
   min-width: 0;
 }
 .brand-logo {
-  width: 92px;
-  height: 92px;
+  width: 86px;
+  height: 86px;
   object-fit: contain;
   background: transparent;
   border: 0;
   padding: 0;
-  box-shadow: none;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(24, 54, 99, 0.12);
   flex-shrink: 0;
 }
 .brand-text { display: flex; flex-direction: column; min-width: 0; }
@@ -66,7 +67,7 @@ body {
   letter-spacing: 0.01em;
 }
 .brand-sub {
-  font-size: 0.79rem;
+  font-size: 0.76rem;
   color: var(--ink-soft);
   text-wrap: balance;
   max-width: 42ch;
@@ -103,7 +104,7 @@ body {
 }
 .hero {
   background:
-    linear-gradient(180deg, #f6f8fc 0%, #ffffff 100%);
+    linear-gradient(180deg, #f2f6fd 0%, #ffffff 100%);
   padding-top: 5.5rem;
 }
 .hero-grid {
@@ -123,6 +124,14 @@ body {
   font-size: 1.08rem;
   max-width: 60ch;
 }
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.55rem, 2.8vw, 2.2rem);
+  line-height: 1.25;
+}
+
 .hero-highlight {
   display: grid;
   gap: 0.85rem;
@@ -169,6 +178,10 @@ body {
   padding: 1.2rem;
 }
 .card h3, .card h2 { margin-top: 0.2rem; }
+.card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.18s ease;
+}
 .feature-card {
   border: 1px solid #c8d7ef;
   box-shadow: 0 10px 25px rgba(31, 63, 122, 0.08);
@@ -259,6 +272,7 @@ body {
   margin: 0;
   min-height: 260px;
   aspect-ratio: 4 / 3;
+  position: relative;
 }
 
 .hero-media .hero-image {
@@ -319,7 +333,7 @@ body {
 }
 
 .trust-line {
-  margin-top: 0.95rem;
+  margin-top: 1rem;
   color: #204777;
   font-weight: 700;
   font-size: 0.9rem;
