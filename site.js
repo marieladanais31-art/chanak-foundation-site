@@ -1,11 +1,12 @@
 (function () {
   const STORAGE_KEY = 'siteLocale';
   const SUPPORTED = ['en', 'es', 'fr', 'pt'];
+  const MOBILE_BREAKPOINT = 900;
   const labels = {
-    en: { about: 'About', mission: 'Mission', programs: 'Programs', impact: 'Impact', contact: 'Contact', donate: 'Donate', language: 'Language' },
-    es: { about: 'Nosotros', mission: 'Misión', programs: 'Programas', impact: 'Impacto', contact: 'Contacto', donate: 'Donar', language: 'Idioma' },
-    fr: { about: 'À propos', mission: 'Mission', programs: 'Programmes', impact: 'Impact', contact: 'Contact', donate: 'Faire un don', language: 'Langue' },
-    pt: { about: 'Sobre', mission: 'Missão', programs: 'Programas', impact: 'Impacto', contact: 'Contato', donate: 'Doar', language: 'Idioma' }
+    en: { about: 'About', mission: 'Mission', programs: 'Programs', impact: 'Impact', contact: 'Contact', donate: 'Donate', language: 'Language', menu: 'Menu', closeMenu: 'Close menu' },
+    es: { about: 'Nosotros', mission: 'Misión', programs: 'Programas', impact: 'Impacto', contact: 'Contacto', donate: 'Donar', language: 'Idioma', menu: 'Menú', closeMenu: 'Cerrar menú' },
+    fr: { about: 'À propos', mission: 'Mission', programs: 'Programmes', impact: 'Impact', contact: 'Contact', donate: 'Faire un don', language: 'Langue', menu: 'Menu', closeMenu: 'Fermer le menu' },
+    pt: { about: 'Sobre', mission: 'Missão', programs: 'Programas', impact: 'Impacto', contact: 'Contato', donate: 'Doar', language: 'Idioma', menu: 'Menu', closeMenu: 'Fechar menu' }
   };
 
   function getLocale() {
@@ -47,6 +48,77 @@
     if (labelNode) {
       labelNode.textContent = pack.language;
     }
+
+    const toggle = document.querySelector('.nav-toggle');
+    if (toggle) {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-label', expanded ? pack.closeMenu : pack.menu);
+    }
+  }
+
+  function closeMobileNav() {
+    const navWrap = document.querySelector('.nav-wrap');
+    const toggle = navWrap ? navWrap.querySelector('.nav-toggle') : null;
+    if (!navWrap || !toggle) return;
+    navWrap.classList.remove('nav-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function ensureMobileMenu() {
+    const navWrap = document.querySelector('.nav-wrap');
+    const nav = document.querySelector('.site-header nav');
+    if (!navWrap || !nav) return;
+
+    nav.classList.add('site-nav');
+    if (!nav.id) {
+      nav.id = 'site-navigation';
+    }
+
+    let toggle = navWrap.querySelector('.nav-toggle');
+    if (!toggle) {
+      toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'nav-toggle';
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-controls', nav.id);
+      toggle.setAttribute('aria-label', 'Menu');
+      toggle.innerHTML = '<span class="nav-toggle-icon" aria-hidden="true"></span>';
+      navWrap.insertBefore(toggle, nav);
+
+      toggle.addEventListener('click', function () {
+        const isOpen = navWrap.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        const locale = getLocale();
+        const pack = labels[locale] || labels.en;
+        toggle.setAttribute('aria-label', isOpen ? pack.closeMenu : pack.menu);
+      });
+
+      nav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', function () {
+          if (window.innerWidth <= MOBILE_BREAKPOINT) {
+            closeMobileNav();
+          }
+        });
+      });
+
+      nav.querySelectorAll('select').forEach((select) => {
+        select.addEventListener('change', function () {
+          if (window.innerWidth <= MOBILE_BREAKPOINT) {
+            closeMobileNav();
+          }
+        });
+      });
+    }
+
+    if (window.innerWidth > MOBILE_BREAKPOINT) {
+      closeMobileNav();
+    }
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > MOBILE_BREAKPOINT) {
+        closeMobileNav();
+      }
+    });
   }
 
   function ensureLanguageSwitcher(locale) {
@@ -82,6 +154,7 @@
   }
 
   const initialLocale = getLocale();
+  ensureMobileMenu();
   ensureLanguageSwitcher(initialLocale);
   applyGlobalLocale(initialLocale);
   window.dispatchEvent(new CustomEvent('site:localechange', { detail: { locale: initialLocale } }));
