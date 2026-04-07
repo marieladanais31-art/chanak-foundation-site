@@ -6,6 +6,7 @@
   <title>Contact Chanak Foundation | Partnerships, Giving, and Volunteer Inquiries</title>
   <meta name="description" content="Connect with Chanak Foundation for church collaboration, donor and sponsorship conversations, volunteer opportunities, and nonprofit partnership inquiries." />
   <link rel="stylesheet" href="styles.css" />
+  <script src="site.js" defer></script>
 </head>
 <body>
 <header class="site-header">
@@ -37,15 +38,6 @@
         <p class="eyebrow">We'd Be Honored to Connect</p>
         <h1 data-i18n="contactHeroHeading">Contact Chanak Foundation</h1>
         <p class="hero-lead" data-i18n="contactHeroIntro">Whether you represent a church, donor community, ministry network, school, or institutional organization, our team welcomes a thoughtful conversation about how we can serve together.</p>
-        <div class="language-switcher" aria-label="Language selector">
-          <label for="language-select" class="language-label" data-i18n="languageLabel">Language</label>
-          <select id="language-select" class="language-select">
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="fr">Français</option>
-            <option value="pt">Português</option>
-          </select>
-        </div>
         <div class="trust-bar" aria-label="Primary contact audiences">
           <span>Churches &amp; Ministries</span>
           <span>Institutional Partners</span>
@@ -170,7 +162,7 @@
         <h2 data-i18n="partnerHeading">Working with Local Partners</h2>
         <p data-i18n="partnerDescription">Chanak Foundation works alongside local partners such as EducaFe to support values-based educational initiatives, family strengthening, and community-rooted care for children and youth.</p>
         <div class="partner-logo-row">
-          <img src="assets/Logo%20EducaFe%20Sin%20Fondo%20(1).png" alt="EducaFe partner logo" loading="lazy" decoding="async" />
+          <img src="assets/Logo EducaFe.png" alt="EducaFe partner logo" loading="lazy" decoding="async" />
         </div>
       </article>
     </div>
@@ -345,7 +337,6 @@
   };
 
   const i18nNodes = document.querySelectorAll('[data-i18n]');
-  const languageSelect = document.getElementById('language-select');
   const metaDescription = document.querySelector('meta[name="description"]');
 
   function applyTranslations(locale) {
@@ -362,14 +353,16 @@
     });
     document.title = pack.pageTitle;
     metaDescription.setAttribute('content', pack.metaDescription);
-    document.documentElement.lang = locale;
   }
 
-  languageSelect.addEventListener('change', (event) => {
-    applyTranslations(event.target.value);
+  window.applyContactLocale = applyTranslations;
+
+  window.addEventListener('site:localechange', (event) => {
+    applyTranslations(event.detail.locale);
   });
 
-  applyTranslations('en');
+  const initialLocale = (window.chanakSiteLocale && window.chanakSiteLocale.getLocale()) || 'en';
+  applyTranslations(initialLocale);
 
   document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
