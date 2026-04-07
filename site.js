@@ -9,6 +9,37 @@
     pt: { about: 'Sobre', mission: 'Missão', programs: 'Programas', impact: 'Impacto', contact: 'Contato', donate: 'Doar', language: 'Idioma', menu: 'Menu', closeMenu: 'Fechar menu', privacy: 'Política de privacidade', terms: 'Termos de uso' }
   };
 
+  const footerLabels = {
+    en: {
+      orgTitle: 'Chanak Foundation',
+      nonprofit: 'CHANAK TRAINUP EDUCATION, INC. is a nonprofit organization exempt from federal income tax under Section 501(c)(3) of the Internal Revenue Code.',
+      missionInitiative: 'Chanak Foundation operates as an educational initiative of CHANAK TRAINUP EDUCATION, INC.',
+      quickLinks: 'Quick Links',
+      adminContact: 'Administrative Contact'
+    },
+    es: {
+      orgTitle: 'Chanak Foundation',
+      nonprofit: 'CHANAK TRAINUP EDUCATION, INC. es una organización sin fines de lucro exenta del impuesto federal sobre la renta bajo la Sección 501(c)(3) del Código de Rentas Internas.',
+      missionInitiative: 'Chanak Foundation opera como una iniciativa educativa de CHANAK TRAINUP EDUCATION, INC.',
+      quickLinks: 'Enlaces rápidos',
+      adminContact: 'Contacto administrativo'
+    },
+    fr: {
+      orgTitle: 'Chanak Foundation',
+      nonprofit: 'CHANAK TRAINUP EDUCATION, INC. est une organisation à but non lucratif exonérée de l’impôt fédéral sur le revenu au titre de la section 501(c)(3) de l’Internal Revenue Code.',
+      missionInitiative: 'Chanak Foundation fonctionne comme une initiative éducative de CHANAK TRAINUP EDUCATION, INC.',
+      quickLinks: 'Liens rapides',
+      adminContact: 'Contact administratif'
+    },
+    pt: {
+      orgTitle: 'Chanak Foundation',
+      nonprofit: 'CHANAK TRAINUP EDUCATION, INC. é uma organização sem fins lucrativos isenta de imposto de renda federal de acordo com a Seção 501(c)(3) do Internal Revenue Code.',
+      missionInitiative: 'A Chanak Foundation opera como uma iniciativa educacional da CHANAK TRAINUP EDUCATION, INC.',
+      quickLinks: 'Links rápidos',
+      adminContact: 'Contato administrativo'
+    }
+  };
+
   function getLocale() {
     const params = new URLSearchParams(window.location.search);
     const fromQuery = params.get('lang');
@@ -60,6 +91,29 @@
     if (toggle) {
       const expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-label', expanded ? pack.closeMenu : pack.menu);
+    }
+  }
+
+
+  function updateFooter(locale) {
+    const pack = footerLabels[locale] || footerLabels.en;
+    const footer = document.querySelector('.site-footer');
+    if (!footer) return;
+    const cols = footer.querySelectorAll('.footer-grid > div');
+    if (cols[0]) {
+      const heading = cols[0].querySelector('h3');
+      if (heading) heading.textContent = pack.orgTitle;
+      const paragraphs = cols[0].querySelectorAll('p');
+      if (paragraphs[0]) paragraphs[0].textContent = pack.nonprofit;
+      if (paragraphs[2]) paragraphs[2].textContent = pack.missionInitiative;
+    }
+    if (cols[1]) {
+      const heading = cols[1].querySelector('h3');
+      if (heading) heading.textContent = pack.quickLinks;
+    }
+    if (cols[2]) {
+      const heading = cols[2].querySelector('h3');
+      if (heading) heading.textContent = pack.adminContact;
     }
   }
 
@@ -154,6 +208,7 @@
   function applyGlobalLocale(locale) {
     document.documentElement.lang = locale;
     updateNav(locale);
+    updateFooter(locale);
     const select = document.getElementById('global-language-select');
     if (select && select.value !== locale) {
       select.value = locale;
