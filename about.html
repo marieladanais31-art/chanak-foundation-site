@@ -311,5 +311,31 @@
       </div>
     </div>
   </footer>
+<script>
+(function () {
+  const translations = {
+    en: { title: 'About Chanak Foundation | Faith-Informed Educational Impact', desc: "Discover Chanak Foundation's mission, approach, and community partnerships supporting families, youth, churches, and local institutions through educational impact.", heroEyebrow: 'About Chanak Foundation', heroHeading: 'A Mission-Driven Foundation for Faith-Compatible Educational Impact', heroLead: 'Chanak Foundation exists to serve children, youth, and families through practical educational support, mentorship, and community partnership. As an initiative of CHANAK TRAINUP EDUCATION, INC., we work with churches, educators, and local organizations to strengthen long-term opportunity in the communities we serve.', partnerTitle: 'Partner Spotlight: EducaFe', partnerCta: 'Explore Our Collaborative Approach' },
+    es: { title: 'Nosotros | Chanak Foundation', desc: 'Conozca la misión, el enfoque y las alianzas comunitarias de Chanak Foundation.', heroEyebrow: 'Sobre Chanak Foundation', heroHeading: 'Una fundación con misión para un impacto educativo basado en valores', heroLead: 'Chanak Foundation existe para servir a niños, jóvenes y familias mediante apoyo educativo práctico, mentoría y colaboración comunitaria.', partnerTitle: 'Aliado destacado: EducaFe', partnerCta: 'Explorar nuestro enfoque colaborativo' },
+    fr: { title: 'À propos | Chanak Foundation', desc: 'Découvrez la mission, l’approche et les partenariats communautaires de Chanak Foundation.', heroEyebrow: 'À propos de Chanak Foundation', heroHeading: 'Une fondation guidée par sa mission pour un impact éducatif fondé sur les valeurs', heroLead: 'Chanak Foundation sert les enfants, les jeunes et les familles grâce à un soutien éducatif concret, au mentorat et à la collaboration communautaire.', partnerTitle: 'Partenaire mis en avant : EducaFe', partnerCta: 'Découvrir notre approche collaborative' },
+    pt: { title: 'Sobre | Chanak Foundation', desc: 'Conheça a missão, a abordagem e as parcerias comunitárias da Chanak Foundation.', heroEyebrow: 'Sobre a Chanak Foundation', heroHeading: 'Uma fundação orientada por missão para impacto educacional baseado em valores', heroLead: 'A Chanak Foundation existe para servir crianças, jovens e famílias com apoio educacional prático, mentoria e colaboração comunitária.', partnerTitle: 'Parceiro em destaque: EducaFe', partnerCta: 'Conheça nossa abordagem colaborativa' }
+  };
+  const $ = (s) => document.querySelector(s);
+  function apply(locale) {
+    const pack = translations[locale] || translations.en;
+    document.title = pack.title;
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute('content', pack.desc);
+    $('.about-hero .eyebrow').textContent = pack.heroEyebrow;
+    $('.about-hero h1').textContent = pack.heroHeading;
+    $('.about-hero .hero-lead').textContent = pack.heroLead;
+    const pTitle = document.querySelector('.partner-spotlight h3');
+    if (pTitle) pTitle.textContent = pack.partnerTitle;
+    const pCta = document.querySelector('.partner-spotlight .btn');
+    if (pCta) pCta.textContent = pack.partnerCta;
+  }
+  window.addEventListener('site:localechange', (event) => apply((event.detail && event.detail.locale) || 'en'));
+  apply((window.chanakSiteLocale && window.chanakSiteLocale.getLocale()) || 'en');
+})();
+</script>
 </body>
 </html>

@@ -99,7 +99,7 @@
         <p>This initiative helps connect home and school expectations, encourages healthy routines, and reinforces consistent student follow-through through family-informed support.</p>
       </article>
       <figure class="visual-panel image-frame">
-        <img class="content-image focal-center-right" src="assets/QffGq.jpg" alt="Community and family support activity connected to student development" />
+        <img class="content-image focal-center-right" src="assets/Practical Support for Families.jpg" alt="Community and family support activity connected to student development" />
         <figcaption>Family and community-centered support pathways</figcaption>
       </figure>
     </div>
@@ -157,5 +157,31 @@
 </main>
 
 <footer class="site-footer"><div class="container footer-grid"><div><h3>Chanak Foundation</h3><p>CHANAK TRAINUP EDUCATION, INC. is a nonprofit organization exempt from federal income tax under Section 501(c)(3) of the Internal Revenue Code.</p><p><strong>EIN:</strong> 36-5154011</p><p>Chanak Foundation operates as an educational initiative of CHANAK TRAINUP EDUCATION, INC.</p><p class="small">Chanak International Academy is a project of CHANAK TRAINUP EDUCATION, INC.</p></div><div><h3>Quick Links</h3><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="mission.html">Mission</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact</a></li><li><a href="donate.html">Donate</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li></ul></div><div><h3>Administrative Contact</h3><p><a href="mailto:administration@chanakacademy.org">administration@chanakacademy.org</a></p><p><a href="tel:+17866199807">+1 786 619 9807</a></p><address>7901 4th St N, Ste 300<br>St. Petersburg, FL 33702</address></div></div></footer>
+<script>
+(function () {
+  const translations = {
+    en: { title: 'Programs | Chanak Foundation', desc: 'Explore Chanak Foundation programs supporting leadership development, scholarships, educational materials, and family support through nonprofit community partnership.', eyebrow: 'Programs', heading: 'Empowering Students and Families Through Purpose-Driven Educational Support', intro: 'Chanak Foundation develops practical, values-informed programs that support students in school and strengthen family participation in learning. As a nonprofit educational initiative, we focus on continuity, character, and community collaboration that can serve students over the long term.', q1: 'Leadership & Life Skills', q2: 'Scholarships', q3: 'Educational Materials', q4: 'Family Support', familyCaption: 'Family and community-centered support pathways' },
+    es: { title: 'Programas | Chanak Foundation', desc: 'Explore los programas de Chanak Foundation para liderazgo, becas, materiales educativos y apoyo familiar.', eyebrow: 'Programas', heading: 'Impulsando a estudiantes y familias con apoyo educativo con propósito', intro: 'Chanak Foundation desarrolla programas prácticos y basados en valores que apoyan a los estudiantes y fortalecen la participación familiar en el aprendizaje.', q1: 'Liderazgo y habilidades para la vida', q2: 'Becas', q3: 'Materiales educativos', q4: 'Apoyo familiar', familyCaption: 'Rutas de apoyo centradas en la familia y la comunidad' },
+    fr: { title: 'Programmes | Chanak Foundation', desc: 'Découvrez les programmes de Chanak Foundation pour le leadership, les bourses, les ressources éducatives et le soutien familial.', eyebrow: 'Programmes', heading: 'Accompagner les élèves et les familles par un soutien éducatif orienté vers le sens', intro: 'Chanak Foundation développe des programmes concrets et fondés sur des valeurs pour soutenir les élèves et renforcer l’engagement des familles.', q1: 'Leadership et compétences de vie', q2: 'Bourses', q3: 'Ressources éducatives', q4: 'Soutien familial', familyCaption: 'Parcours de soutien centrés sur la famille et la communauté' },
+    pt: { title: 'Programas | Chanak Foundation', desc: 'Conheça os programas da Chanak Foundation para liderança, bolsas, materiais educacionais e apoio familiar.', eyebrow: 'Programas', heading: 'Fortalecendo estudantes e famílias com apoio educacional orientado por propósito', intro: 'A Chanak Foundation desenvolve programas práticos e orientados por valores para apoiar estudantes e fortalecer a participação familiar na aprendizagem.', q1: 'Liderança e habilidades para a vida', q2: 'Bolsas', q3: 'Materiais educacionais', q4: 'Apoio familiar', familyCaption: 'Caminhos de apoio centrados na família e na comunidade' }
+  };
+  const $ = (s) => document.querySelector(s);
+  function apply(locale) {
+    const pack = translations[locale] || translations.en;
+    document.title = pack.title;
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute('content', pack.desc);
+    $('.programs-hero .eyebrow').textContent = pack.eyebrow;
+    $('.programs-hero .page-title').textContent = pack.heading;
+    $('.programs-hero .intro').textContent = pack.intro;
+    const links = document.querySelectorAll('.quick-links .item');
+    [pack.q1, pack.q2, pack.q3, pack.q4].forEach((text, i) => links[i] && (links[i].textContent = text));
+    const fig = document.querySelector('#family-support figcaption');
+    if (fig) fig.textContent = pack.familyCaption;
+  }
+  window.addEventListener('site:localechange', (event) => apply((event.detail && event.detail.locale) || 'en'));
+  apply((window.chanakSiteLocale && window.chanakSiteLocale.getLocale()) || 'en');
+})();
+</script>
 </body>
 </html>
