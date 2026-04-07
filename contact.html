@@ -35,8 +35,17 @@
     <div class="container hero-grid contact-hero-grid">
       <div>
         <p class="eyebrow">We'd Be Honored to Connect</p>
-        <h1>Contact Chanak Foundation</h1>
-        <p class="hero-lead">Whether you represent a church, donor community, ministry network, school, or institutional organization, our team welcomes a thoughtful conversation about how we can serve together.</p>
+        <h1 data-i18n="contactHeroHeading">Contact Chanak Foundation</h1>
+        <p class="hero-lead" data-i18n="contactHeroIntro">Whether you represent a church, donor community, ministry network, school, or institutional organization, our team welcomes a thoughtful conversation about how we can serve together.</p>
+        <div class="language-switcher" aria-label="Language selector">
+          <label for="language-select" class="language-label" data-i18n="languageLabel">Language</label>
+          <select id="language-select" class="language-select">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="pt">Português</option>
+          </select>
+        </div>
         <div class="trust-bar" aria-label="Primary contact audiences">
           <span>Churches &amp; Ministries</span>
           <span>Institutional Partners</span>
@@ -89,32 +98,34 @@
     <div class="container grid-two contact-form-layout">
       <div>
         <p class="eyebrow">Send a Message</p>
-        <h2>Tell Us About Your Interest</h2>
+        <h2 data-i18n="formSectionHeading">Tell Us About Your Interest</h2>
+        <p class="form-hook" data-i18n="formHook">Join our mission to empower students and strengthen families. Whether you represent a church, a school, an organization, or a family, we would love to hear from you.</p>
+        <p class="trust-line" data-i18n="partnershipLine">Interested in partnering with us? Alongside local partners such as EducaFe, we are helping develop initiatives that support families, strengthen communities, and expand meaningful educational opportunities.</p>
         <form class="contact-form card" id="contactForm" aria-describedby="form-helper form-note">
-          <label for="name">Full Name</label>
+          <label for="name" data-i18n="labelName">Full Name</label>
           <input id="name" name="name" autocomplete="name" required>
 
-          <label for="email">Email Address</label>
+          <label for="email" data-i18n="labelEmail">Email Address</label>
           <input id="email" type="email" name="email" autocomplete="email" required>
 
-          <label for="organization">Church / Organization (Optional)</label>
+          <label for="organization" data-i18n="labelOrganization">Church / Organization (Optional)</label>
           <input id="organization" name="organization" autocomplete="organization">
 
-          <label for="category">I am reaching out about</label>
+          <label for="category" data-i18n="labelCategory">I am reaching out about</label>
           <select id="category" name="category" required>
-            <option value="Partnership Opportunities">Partnership Opportunities</option>
-            <option value="Church and Ministry Collaboration">Church and Ministry Collaboration</option>
-            <option value="Donations and Sponsorship">Donations and Sponsorship</option>
-            <option value="Volunteer Interest">Volunteer Interest</option>
-            <option value="General Inquiries">General Inquiries</option>
+            <option value="Partnership Opportunities" data-i18n="categoryPartnership">Partnership Opportunities</option>
+            <option value="Church and Ministry Collaboration" data-i18n="categoryChurch">Church and Ministry Collaboration</option>
+            <option value="Donations and Sponsorship" data-i18n="categoryDonations">Donations and Sponsorship</option>
+            <option value="Volunteer Interest" data-i18n="categoryVolunteer">Volunteer Interest</option>
+            <option value="General Inquiries" data-i18n="categoryGeneral">General Inquiries</option>
           </select>
 
-          <label for="message">Message</label>
+          <label for="message" data-i18n="labelMessage">Message</label>
           <textarea id="message" name="message" rows="6" required></textarea>
 
-          <p id="form-helper" class="form-helper">This form opens your default email app with a pre-filled message addressed to Chanak Foundation administration.</p>
-          <div class="cta-row"><button class="btn btn-primary" type="submit">Prepare Email Message</button></div>
-          <p id="form-note" class="form-note">If an email app does not open, please send your message directly to <a href="mailto:administration@chanakacademy.org">administration@chanakacademy.org</a>.</p>
+          <p id="form-helper" class="form-helper" data-i18n="formHelper">This form opens your default email app with a pre-filled message addressed to Chanak Foundation administration.</p>
+          <div class="cta-row"><button class="btn btn-primary" type="submit" data-i18n="formButton">Prepare Email Message</button></div>
+          <p id="form-note" class="form-note" data-i18n="formNote">If an email app does not open, please send your message directly to <a href="mailto:administration@chanakacademy.org">administration@chanakacademy.org</a>.</p>
         </form>
       </div>
       <aside class="contact-info-stack">
@@ -152,14 +163,27 @@
     </div>
   </section>
 
+  <section class="section alt" id="local-partners">
+    <div class="container">
+      <article class="card local-partner-card">
+        <p class="eyebrow" data-i18n="partnerEyebrow">Local Collaboration</p>
+        <h2 data-i18n="partnerHeading">Working with Local Partners</h2>
+        <p data-i18n="partnerDescription">Chanak Foundation works alongside local partners such as EducaFe to support values-based educational initiatives, family strengthening, and community-rooted care for children and youth.</p>
+        <div class="partner-logo-row">
+          <img src="assets/Logo%20EducaFe%20Sin%20Fondo%20(1).png" alt="EducaFe partner logo" loading="lazy" decoding="async" />
+        </div>
+      </article>
+    </div>
+  </section>
+
   <section class="section soft final-cta" id="partnership-cta">
     <div class="container center-copy">
       <p class="eyebrow">Partnership Invitation</p>
-      <h2>Ready to Start a Partnership or Giving Conversation?</h2>
-      <p>If your church, institution, donor network, or ministry team is seeking a trusted educational impact partner, we would be grateful to connect.</p>
+      <h2 data-i18n="ctaHeading">Ready to Start a Partnership or Giving Conversation?</h2>
+      <p data-i18n="ctaIntro">If your church, institution, donor network, or ministry team is seeking a trusted educational impact partner, we would be grateful to connect.</p>
       <div class="cta-row center-cta">
-        <a class="btn btn-primary" href="#project-brief">Start the Conversation</a>
-        <a class="btn btn-secondary" href="donate.html">Visit Giving Page</a>
+        <a class="btn btn-primary" href="#project-brief" data-i18n="ctaPrimary">Start the Conversation</a>
+        <a class="btn btn-secondary" href="donate.html" data-i18n="ctaSecondary">Visit Giving Page</a>
       </div>
     </div>
   </section>
@@ -197,6 +221,156 @@
 </footer>
 
 <script>
+  const translations = {
+    en: {
+      pageTitle: 'Contact Chanak Foundation | Partnerships, Giving, and Volunteer Inquiries',
+      metaDescription: 'Connect with Chanak Foundation for church collaboration, donor and sponsorship conversations, volunteer opportunities, and nonprofit partnership inquiries.',
+      contactHeroHeading: 'Contact Chanak Foundation',
+      contactHeroIntro: 'Whether you represent a church, donor community, ministry network, school, or institutional organization, our team welcomes a thoughtful conversation about how we can serve together.',
+      languageLabel: 'Language',
+      formSectionHeading: 'Tell Us About Your Interest',
+      formHook: 'Join our mission to empower students and strengthen families. Whether you represent a church, a school, an organization, or a family, we would love to hear from you.',
+      partnershipLine: 'Interested in partnering with us? Alongside local partners such as EducaFe, we are helping develop initiatives that support families, strengthen communities, and expand meaningful educational opportunities.',
+      labelName: 'Full Name',
+      labelEmail: 'Email Address',
+      labelOrganization: 'Church / Organization (Optional)',
+      labelCategory: 'I am reaching out about',
+      categoryPartnership: 'Partnership Opportunities',
+      categoryChurch: 'Church and Ministry Collaboration',
+      categoryDonations: 'Donations and Sponsorship',
+      categoryVolunteer: 'Volunteer Interest',
+      categoryGeneral: 'General Inquiries',
+      labelMessage: 'Message',
+      formHelper: 'This form opens your default email app with a pre-filled message addressed to Chanak Foundation administration.',
+      formButton: 'Prepare Email Message',
+      formNote: 'If an email app does not open, please send your message directly to <a href="mailto:administration@chanakacademy.org">administration@chanakacademy.org</a>.',
+      partnerEyebrow: 'Local Collaboration',
+      partnerHeading: 'Working with Local Partners',
+      partnerDescription: 'Chanak Foundation works alongside local partners such as EducaFe to support values-based educational initiatives, family strengthening, and community-rooted care for children and youth.',
+      ctaHeading: 'Ready to Start a Partnership or Giving Conversation?',
+      ctaIntro: 'If your church, institution, donor network, or ministry team is seeking a trusted educational impact partner, we would be grateful to connect.',
+      ctaPrimary: 'Start the Conversation',
+      ctaSecondary: 'Visit Giving Page'
+    },
+    es: {
+      pageTitle: 'Contacto Chanak Foundation | Alianzas, donaciones y voluntariado',
+      metaDescription: 'Conéctese con Chanak Foundation para colaborar con iglesias, conversar sobre donaciones y patrocinios, oportunidades de voluntariado y alianzas sin fines de lucro.',
+      contactHeroHeading: 'Contacte a Chanak Foundation',
+      contactHeroIntro: 'Ya sea que represente a una iglesia, una comunidad de donantes, una red ministerial, una escuela o una organización institucional, nuestro equipo le dará la bienvenida para conversar sobre cómo podemos servir juntos.',
+      languageLabel: 'Idioma',
+      formSectionHeading: 'Cuéntenos sobre su interés',
+      formHook: 'Únase a nuestra misión de empoderar a los estudiantes y fortalecer a las familias. Ya sea que represente a una iglesia, una escuela, una organización o una familia, nos encantará escucharle.',
+      partnershipLine: '¿Le interesa colaborar con nosotros? Junto con aliados locales como EducaFe, estamos desarrollando iniciativas que apoyan a las familias, fortalecen comunidades y amplían oportunidades educativas significativas.',
+      labelName: 'Nombre completo',
+      labelEmail: 'Correo electrónico',
+      labelOrganization: 'Iglesia / Organización (Opcional)',
+      labelCategory: 'Me comunico por',
+      categoryPartnership: 'Oportunidades de alianza',
+      categoryChurch: 'Colaboración con iglesias y ministerios',
+      categoryDonations: 'Donaciones y patrocinios',
+      categoryVolunteer: 'Interés en voluntariado',
+      categoryGeneral: 'Consultas generales',
+      labelMessage: 'Mensaje',
+      formHelper: 'Este formulario abre su aplicación de correo predeterminada con un mensaje prellenado para la administración de Chanak Foundation.',
+      formButton: 'Preparar mensaje de correo',
+      formNote: 'Si no se abre una aplicación de correo, envíe su mensaje directamente a <a href="mailto:administration@chanakacademy.org">administration@chanakacademy.org</a>.',
+      partnerEyebrow: 'Colaboración local',
+      partnerHeading: 'Trabajando con aliados locales',
+      partnerDescription: 'Chanak Foundation trabaja junto a aliados locales como EducaFe para apoyar iniciativas educativas basadas en valores, el fortalecimiento familiar y el cuidado comunitario para niños y jóvenes.',
+      ctaHeading: '¿Listo para iniciar una conversación de alianza o de donación?',
+      ctaIntro: 'Si su iglesia, institución, red de donantes o equipo ministerial busca un aliado confiable para el impacto educativo, será un honor conectar con usted.',
+      ctaPrimary: 'Iniciar la conversación',
+      ctaSecondary: 'Visitar página de donaciones'
+    },
+    fr: {
+      pageTitle: 'Contact Chanak Foundation | Partenariats, dons et bénévolat',
+      metaDescription: 'Contactez Chanak Foundation pour des collaborations avec des églises, des échanges avec des donateurs et commanditaires, des opportunités de bénévolat et des partenariats associatifs.',
+      contactHeroHeading: 'Contacter Chanak Foundation',
+      contactHeroIntro: 'Que vous représentiez une église, une communauté de donateurs, un réseau ministériel, une école ou une organisation institutionnelle, notre équipe vous accueille pour échanger sur la manière de servir ensemble.',
+      languageLabel: 'Langue',
+      formSectionHeading: 'Parlez-nous de votre projet',
+      formHook: 'Rejoignez notre mission pour autonomiser les élèves et renforcer les familles. Que vous représentiez une église, une école, une organisation ou une famille, nous serions heureux d’échanger avec vous.',
+      partnershipLine: 'Vous souhaitez devenir partenaire? Aux côtés d’acteurs locaux tels qu’EducaFe, nous développons des initiatives qui soutiennent les familles, renforcent les communautés et élargissent des opportunités éducatives porteuses de sens.',
+      labelName: 'Nom complet',
+      labelEmail: 'Adresse e-mail',
+      labelOrganization: 'Église / Organisation (Optionnel)',
+      labelCategory: 'Je vous contacte au sujet de',
+      categoryPartnership: 'Opportunités de partenariat',
+      categoryChurch: 'Collaboration avec églises et ministères',
+      categoryDonations: 'Dons et commandites',
+      categoryVolunteer: 'Intérêt pour le bénévolat',
+      categoryGeneral: 'Demandes générales',
+      labelMessage: 'Message',
+      formHelper: 'Ce formulaire ouvre votre application e-mail par défaut avec un message prérempli adressé à l’administration de Chanak Foundation.',
+      formButton: 'Préparer le message e-mail',
+      formNote: 'Si aucune application e-mail ne s’ouvre, veuillez envoyer votre message directement à <a href="mailto:administration@chanakacademy.org">administration@chanakacademy.org</a>.',
+      partnerEyebrow: 'Collaboration locale',
+      partnerHeading: 'En collaboration avec des partenaires locaux',
+      partnerDescription: 'Chanak Foundation travaille aux côtés de partenaires locaux tels qu’EducaFe pour soutenir des initiatives éducatives fondées sur des valeurs, le renforcement des familles et un accompagnement communautaire des enfants et des jeunes.',
+      ctaHeading: 'Prêt à lancer une conversation de partenariat ou de don?',
+      ctaIntro: 'Si votre église, institution, réseau de donateurs ou équipe ministérielle recherche un partenaire fiable pour l’impact éducatif, nous serions ravis d’échanger avec vous.',
+      ctaPrimary: 'Commencer la conversation',
+      ctaSecondary: 'Voir la page des dons'
+    },
+    pt: {
+      pageTitle: 'Contato Chanak Foundation | Parcerias, doações e voluntariado',
+      metaDescription: 'Conecte-se com a Chanak Foundation para colaboração com igrejas, conversas com doadores e patrocinadores, oportunidades de voluntariado e parcerias sem fins lucrativos.',
+      contactHeroHeading: 'Entre em contato com a Chanak Foundation',
+      contactHeroIntro: 'Se você representa uma igreja, uma comunidade de doadores, uma rede ministerial, uma escola ou uma organização institucional, nossa equipe terá prazer em conversar sobre como servir em conjunto.',
+      languageLabel: 'Idioma',
+      formSectionHeading: 'Conte-nos sobre seu interesse',
+      formHook: 'Junte-se à nossa missão de fortalecer estudantes e famílias. Se você representa uma igreja, uma escola, uma organização ou uma família, teremos alegria em ouvir você.',
+      partnershipLine: 'Tem interesse em fazer parceria conosco? Ao lado de parceiros locais como a EducaFe, estamos desenvolvendo iniciativas que apoiam famílias, fortalecem comunidades e ampliam oportunidades educacionais relevantes.',
+      labelName: 'Nome completo',
+      labelEmail: 'E-mail',
+      labelOrganization: 'Igreja / Organização (Opcional)',
+      labelCategory: 'Estou entrando em contato sobre',
+      categoryPartnership: 'Oportunidades de parceria',
+      categoryChurch: 'Colaboração com igrejas e ministérios',
+      categoryDonations: 'Doações e patrocínios',
+      categoryVolunteer: 'Interesse em voluntariado',
+      categoryGeneral: 'Solicitações gerais',
+      labelMessage: 'Mensagem',
+      formHelper: 'Este formulário abre seu aplicativo de e-mail padrão com uma mensagem pré-preenchida para a administração da Chanak Foundation.',
+      formButton: 'Preparar mensagem de e-mail',
+      formNote: 'Se nenhum aplicativo de e-mail abrir, envie sua mensagem diretamente para <a href="mailto:administration@chanakacademy.org">administration@chanakacademy.org</a>.',
+      partnerEyebrow: 'Colaboração local',
+      partnerHeading: 'Trabalhando com parceiros locais',
+      partnerDescription: 'A Chanak Foundation atua ao lado de parceiros locais como a EducaFe para apoiar iniciativas educacionais baseadas em valores, fortalecimento familiar e cuidado comunitário voltado a crianças e jovens.',
+      ctaHeading: 'Pronto para iniciar uma conversa sobre parceria ou doação?',
+      ctaIntro: 'Se sua igreja, instituição, rede de doadores ou equipe ministerial procura um parceiro confiável para impacto educacional, teremos satisfação em conversar.',
+      ctaPrimary: 'Iniciar conversa',
+      ctaSecondary: 'Visitar página de doação'
+    }
+  };
+
+  const i18nNodes = document.querySelectorAll('[data-i18n]');
+  const languageSelect = document.getElementById('language-select');
+  const metaDescription = document.querySelector('meta[name="description"]');
+
+  function applyTranslations(locale) {
+    const pack = translations[locale] || translations.en;
+    i18nNodes.forEach((node) => {
+      const key = node.getAttribute('data-i18n');
+      if (pack[key]) {
+        if (key === 'formNote') {
+          node.innerHTML = pack[key];
+        } else {
+          node.textContent = pack[key];
+        }
+      }
+    });
+    document.title = pack.pageTitle;
+    metaDescription.setAttribute('content', pack.metaDescription);
+    document.documentElement.lang = locale;
+  }
+
+  languageSelect.addEventListener('change', (event) => {
+    applyTranslations(event.target.value);
+  });
+
+  applyTranslations('en');
+
   document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
     const name = document.getElementById('name').value.trim();
