@@ -3,10 +3,10 @@
   const SUPPORTED = ['en', 'es', 'fr', 'pt'];
   const MOBILE_BREAKPOINT = 900;
   const labels = {
-    en: { about: 'About', mission: 'Mission', programs: 'Programs', impact: 'Impact', contact: 'Contact', donate: 'Donate', language: 'Language', menu: 'Menu', closeMenu: 'Close menu' },
-    es: { about: 'Nosotros', mission: 'Misión', programs: 'Programas', impact: 'Impacto', contact: 'Contacto', donate: 'Donar', language: 'Idioma', menu: 'Menú', closeMenu: 'Cerrar menú' },
-    fr: { about: 'À propos', mission: 'Mission', programs: 'Programmes', impact: 'Impact', contact: 'Contact', donate: 'Faire un don', language: 'Langue', menu: 'Menu', closeMenu: 'Fermer le menu' },
-    pt: { about: 'Sobre', mission: 'Missão', programs: 'Programas', impact: 'Impacto', contact: 'Contato', donate: 'Doar', language: 'Idioma', menu: 'Menu', closeMenu: 'Fechar menu' }
+    en: { about: 'About', mission: 'Mission', programs: 'Programs', impact: 'Impact', contact: 'Contact', donate: 'Donate', language: 'Language', menu: 'Menu', closeMenu: 'Close menu', privacy: 'Privacy Policy', terms: 'Terms of Use' },
+    es: { about: 'Nosotros', mission: 'Misión', programs: 'Programas', impact: 'Impacto', contact: 'Contacto', donate: 'Donar', language: 'Idioma', menu: 'Menú', closeMenu: 'Cerrar menú', privacy: 'Política de privacidad', terms: 'Términos de uso' },
+    fr: { about: 'À propos', mission: 'Mission', programs: 'Programmes', impact: 'Impact', contact: 'Contact', donate: 'Faire un don', language: 'Langue', menu: 'Menu', closeMenu: 'Fermer le menu', privacy: 'Politique de confidentialité', terms: 'Conditions d\'utilisation' },
+    pt: { about: 'Sobre', mission: 'Missão', programs: 'Programas', impact: 'Impacto', contact: 'Contato', donate: 'Doar', language: 'Idioma', menu: 'Menu', closeMenu: 'Fechar menu', privacy: 'Política de privacidade', terms: 'Termos de uso' }
   };
 
   function getLocale() {
@@ -42,6 +42,13 @@
       document.querySelectorAll('a[href="' + href + '"]').forEach((link) => {
         link.textContent = pack[key];
       });
+    });
+
+    document.querySelectorAll('a[href="privacy.html"]').forEach((link) => {
+      link.textContent = pack.privacy;
+    });
+    document.querySelectorAll('a[href="terms.html"]').forEach((link) => {
+      link.textContent = pack.terms;
     });
 
     const labelNode = document.querySelector('[data-i18n-global="languageLabel"]');

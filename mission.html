@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mission | Chanak Foundation</title>
-  <meta name="description" content="Explore Chanak Foundation's mission, vision, values, and local partnership work that supports families, youth formation, and community-rooted educational initiatives." />
+  <meta name="description" content="Explore Chanak Foundation\'s mission, vision, values, and local partnership work that supports families, youth formation, and community-rooted educational initiatives." />
   <link rel="stylesheet" href="styles.css" />
   <script src="site.js" defer></script>
 </head>
@@ -92,7 +92,7 @@
         <div class="card" style="margin-top:1rem;">
           <p class="eyebrow" style="margin-bottom:0.3rem;">Local Collaboration Partner</p>
           <img src="assets/Logo EducaFe.png" alt="EducaFe logo as a local collaboration partner" style="max-width:140px;height:auto;display:block;" loading="lazy" decoding="async" />
-          <p class="small" style="margin:0.6rem 0 0;">EducaFe is presented as a local implementation partner within Chanak Foundation's broader mission-led framework.</p>
+          <p class="small" style="margin:0.6rem 0 0;">EducaFe is presented as a local implementation partner within Chanak Foundation\'s broader mission-led framework.</p>
         </div>
       </div>
       <figure class="visual-panel image-frame">
@@ -143,7 +143,7 @@
   <section class="section final-cta">
     <div class="container center-copy">
       <p class="eyebrow">Partner With Us</p>
-      <h2>Let's Build Stronger Support Pathways Together</h2>
+      <h2>Let\'s Build Stronger Support Pathways Together</h2>
       <p>Chanak Foundation invites churches, donors, and aligned organizations to collaborate in building practical, values-based support for families and youth.</p>
       <div class="cta-row center-cta">
         <a class="btn btn-primary" href="contact.html">Start a Partnership Conversation</a>
@@ -154,5 +154,16 @@
 </main>
 
 <footer class="site-footer"><div class="container footer-grid"><div><img class="footer-logo" src="assets/chanak_logo_embedded.svg" alt="Chanak Foundation logo" loading="lazy" decoding="async" /><h3>Chanak Foundation</h3><p>CHANAK TRAINUP EDUCATION, INC. is a nonprofit organization exempt from federal income tax under Section 501(c)(3) of the Internal Revenue Code.</p><p><strong>EIN:</strong> 36-5154011</p><p>Chanak Foundation operates as an educational initiative of CHANAK TRAINUP EDUCATION, INC.</p><p class="small">Chanak International Academy is a project of CHANAK TRAINUP EDUCATION, INC.</p></div><div><h3>Quick Links</h3><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="mission.html">Mission</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact</a></li><li><a href="donate.html">Donate</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li></ul></div><div><h3>Administrative Contact</h3><p><a href="mailto:administration@chanakacademy.org">administration@chanakacademy.org</a></p><p><a href="tel:+17866199807">+1 786 619 9807</a></p><address>7901 4th St N, Ste 300<br>St. Petersburg, FL 33702</address></div></div></footer>
+
+<script>
+(function(){
+ const t={en:{title:'Mission | Chanak Foundation',desc:'Explore Chanak Foundation\'s mission, vision, values, and local partnership work that supports families, youth formation, and community-rooted educational initiatives.',heroEyebrow:'Mission',heroHeading:'Building Values-Centered Support for Families, Youth, and Communities',heroLead:'Chanak Foundation exists to strengthen families and guide youth through practical, community-rooted educational support. We serve with accountability, collaboration, and long-term commitment so churches, caregivers, and local partners can respond to real needs with trust and consistency.',localHeading:'Working in Collaboration with Local Partners',ctaEyebrow:'Partner With Us',ctaHeading:'Let\'s Build Stronger Support Pathways Together',ctaLead:'Chanak Foundation invites churches, donors, and aligned organizations to collaborate in building practical, values-based support for families and youth.',cta1:'Start a Partnership Conversation',cta2:'Support the Mission'},es:{title:'Misión | Chanak Foundation',desc:'Conozca la misión, visión y valores de Chanak Foundation y su trabajo colaborativo local.',heroEyebrow:'Misión',heroHeading:'Construyendo apoyo centrado en valores para familias, jóvenes y comunidades',heroLead:'Chanak Foundation existe para fortalecer a las familias y orientar a los jóvenes mediante apoyo educativo práctico y arraigado en la comunidad.',localHeading:'Trabajando en colaboración con aliados locales',ctaEyebrow:'Asóciate con nosotros',ctaHeading:'Construyamos juntos rutas de apoyo más sólidas',ctaLead:'Chanak Foundation invita a iglesias, donantes y organizaciones afines a colaborar en apoyo práctico y basado en valores.',cta1:'Iniciar conversación de alianza',cta2:'Apoyar la misión'},fr:{title:'Mission | Chanak Foundation',desc:'Découvrez la mission, la vision et les valeurs de Chanak Foundation.',heroEyebrow:'Mission',heroHeading:'Construire un soutien centré sur les valeurs pour les familles et les jeunes',heroLead:'Chanak Foundation renforce les familles et accompagne les jeunes grâce à un soutien éducatif concret ancré dans la communauté.',localHeading:'Travailler en collaboration avec des partenaires locaux',ctaEyebrow:'Devenir partenaire',ctaHeading:'Construisons ensemble des parcours de soutien plus solides',ctaLead:'Chanak Foundation invite les églises, les donateurs et les organisations partenaires à collaborer.',cta1:'Lancer une conversation de partenariat',cta2:'Soutenir la mission'},pt:{title:'Missão | Chanak Foundation',desc:'Conheça a missão, visão e valores da Chanak Foundation.',heroEyebrow:'Missão',heroHeading:'Construindo apoio centrado em valores para famílias, jovens e comunidades',heroLead:'A Chanak Foundation fortalece famílias e orienta jovens por meio de apoio educacional prático e enraizado na comunidade.',localHeading:'Trabalhando em colaboração com parceiros locais',ctaEyebrow:'Seja parceiro',ctaHeading:'Vamos construir juntos caminhos de apoio mais fortes',ctaLead:'A Chanak Foundation convida igrejas, doadores e organizações alinhadas a colaborar.',cta1:'Iniciar conversa de parceria',cta2:'Apoiar a missão'}};
+ const $=(s)=>document.querySelector(s);
+ function apply(locale){const p=t[locale]||t.en;document.title=p.title;const m=document.querySelector('meta[name="description"]');if(m)m.setAttribute('content',p.desc);$('.programs-hero .eyebrow').textContent=p.heroEyebrow;$('.programs-hero h1').textContent=p.heroHeading;$('.programs-hero .hero-lead').textContent=p.heroLead;$('#local-partnerships-in-action h2').textContent=p.localHeading;const c=$('.final-cta .container');if(c){c.querySelector('.eyebrow').textContent=p.ctaEyebrow;c.querySelector('h2').textContent=p.ctaHeading;c.querySelector('p:not(.eyebrow)').textContent=p.ctaLead;const b=c.querySelectorAll('.cta-row a');if(b[0])b[0].textContent=p.cta1;if(b[1])b[1].textContent=p.cta2;}}
+ window.addEventListener('site:localechange',(e)=>apply((e.detail&&e.detail.locale)||'en'));
+ apply((window.chanakSiteLocale&&window.chanakSiteLocale.getLocale())||'en');
+})();
+</script>
+
 </body>
 </html>
