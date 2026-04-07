@@ -42,5 +42,35 @@
 </main>
 
 <footer class="site-footer"><div class="container footer-grid"><div><h3>Chanak Foundation</h3><p>CHANAK TRAINUP EDUCATION, INC. is a nonprofit organization exempt from federal income tax under Section 501(c)(3) of the Internal Revenue Code.</p><p><strong>EIN:</strong> 36-5154011</p><p>Chanak Foundation operates as an educational initiative of CHANAK TRAINUP EDUCATION, INC.</p><p class="small">Chanak International Academy is a project of CHANAK TRAINUP EDUCATION, INC.</p></div><div><h3>Quick Links</h3><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="mission.html">Mission</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact</a></li><li><a href="donate.html">Donate</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li></ul></div><div><h3>Administrative Contact</h3><p><a href="mailto:administration@chanakacademy.org">administration@chanakacademy.org</a></p><p><a href="tel:+17866199807">+1 786 619 9807</a></p><address>7901 4th St N, Ste 300<br>St. Petersburg, FL 33702</address></div></div></footer>
+<script>
+(function () {
+  const translations = {
+    en: { title: 'Donate | Chanak Foundation', desc: "Support Chanak Foundation's nonprofit mission with a tax-deductible contribution to educational opportunity and family-centered student support.", eyebrow: 'Donate', heading: 'Your Support Helps Expand Educational Opportunity', intro: 'Tax-deductible contributions help sustain mission-aligned efforts such as leadership development, educational materials, family-centered support, and school collaboration initiatives. Every donation helps strengthen practical pathways for student growth, resilience, and long-term educational continuity.', why: 'Why Your Contribution Matters', li1: 'Supports nonprofit educational programming for students and families', li2: 'Strengthens mission-aligned leadership and life-skills development', li3: 'Helps sustain educational materials and continuity-focused support efforts', li4: 'Advances family engagement and school collaboration initiatives', strip: 'Chanak Foundation operates as an educational initiative of CHANAK TRAINUP EDUCATION, INC., and contributions are directed toward nonprofit educational impact.', cta: 'Contribute Securely', transparency: 'Nonprofit Transparency' },
+    es: { title: 'Donar | Chanak Foundation', desc: 'Apoye la misión sin fines de lucro de Chanak Foundation con una contribución deducible de impuestos para ampliar la oportunidad educativa y el apoyo familiar.', eyebrow: 'Donar', heading: 'Tu apoyo ayuda a ampliar las oportunidades educativas', intro: 'Las contribuciones deducibles de impuestos sostienen esfuerzos alineados con la misión, como desarrollo de liderazgo, materiales educativos, apoyo familiar y colaboración escolar.', why: 'Por qué importa tu contribución', li1: 'Apoya programas educativos sin fines de lucro para estudiantes y familias', li2: 'Fortalece el liderazgo y las habilidades para la vida alineadas con la misión', li3: 'Ayuda a sostener materiales educativos y apoyos de continuidad', li4: 'Impulsa la participación familiar y la colaboración escolar', strip: 'Chanak Foundation opera como iniciativa educativa de CHANAK TRAINUP EDUCATION, INC., y las contribuciones se destinan a impacto educativo sin fines de lucro.', cta: 'Contribuir de forma segura', transparency: 'Transparencia sin fines de lucro' },
+    fr: { title: 'Faire un don | Chanak Foundation', desc: "Soutenez la mission à but non lucratif de Chanak Foundation avec un don déductible des impôts.", eyebrow: 'Faire un don', heading: 'Votre soutien élargit les opportunités éducatives', intro: 'Les dons déductibles des impôts soutiennent des actions alignées sur la mission, notamment le leadership, les ressources éducatives et le soutien aux familles.', why: 'Pourquoi votre contribution est importante', li1: 'Soutient des programmes éducatifs pour les élèves et les familles', li2: 'Renforce le leadership et les compétences de vie', li3: 'Aide à maintenir les ressources éducatives', li4: 'Favorise l’engagement des familles et la collaboration scolaire', strip: 'Chanak Foundation fonctionne comme initiative éducative de CHANAK TRAINUP EDUCATION, INC., et les dons soutiennent un impact éducatif d’intérêt public.', cta: 'Contribuer en sécurité', transparency: 'Transparence de l’organisation' },
+    pt: { title: 'Doar | Chanak Foundation', desc: 'Apoie a missão sem fins lucrativos da Chanak Foundation com uma contribuição dedutível de impostos.', eyebrow: 'Doar', heading: 'Seu apoio ajuda a ampliar oportunidades educacionais', intro: 'Contribuições dedutíveis de impostos sustentam iniciativas alinhadas à missão, como liderança, materiais educacionais e apoio às famílias.', why: 'Por que sua contribuição importa', li1: 'Apoia programas educacionais para estudantes e famílias', li2: 'Fortalece liderança e habilidades para a vida', li3: 'Ajuda a manter materiais educacionais e continuidade', li4: 'Amplia o engajamento familiar e a colaboração escolar', strip: 'A Chanak Foundation opera como iniciativa educacional da CHANAK TRAINUP EDUCATION, INC., e as contribuições são direcionadas ao impacto educacional.', cta: 'Contribuir com segurança', transparency: 'Transparência institucional' }
+  };
+
+  const $ = (s) => document.querySelector(s);
+  function apply(locale) {
+    const pack = translations[locale] || translations.en;
+    document.title = pack.title;
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute('content', pack.desc);
+    $('.page-hero .eyebrow').textContent = pack.eyebrow;
+    $('.page-hero .page-title').textContent = pack.heading;
+    $('.page-hero .intro').textContent = pack.intro;
+    $('main .section h2').textContent = pack.why;
+    const items = document.querySelectorAll('main .checklist li');
+    [pack.li1, pack.li2, pack.li3, pack.li4].forEach((text, i) => items[i] && (items[i].textContent = text));
+    $('main .impact-strip').textContent = pack.strip;
+    $('main .cta-row .btn-primary').textContent = pack.cta;
+    $('main aside h2').textContent = pack.transparency;
+  }
+
+  window.addEventListener('site:localechange', (event) => apply((event.detail && event.detail.locale) || 'en'));
+  apply((window.chanakSiteLocale && window.chanakSiteLocale.getLocale()) || 'en');
+})();
+</script>
 </body>
 </html>
