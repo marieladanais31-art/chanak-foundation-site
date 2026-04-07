@@ -96,6 +96,31 @@ body {
   position: relative;
 }
 
+
+.nav-language-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.28rem 0.45rem;
+  border: 1px solid #c8d8f2;
+  border-radius: 999px;
+  background: #f2f6fd;
+}
+
+.nav-language-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #204777;
+}
+
+.nav-language-select {
+  font-size: 0.82rem;
+  border: 1px solid #b8cae7;
+  border-radius: 999px;
+  padding: 0.2rem 0.5rem;
+  background: #fff;
+  color: var(--ink);
+}
 .nav-links a.is-active::after {
   content: "";
   position: absolute;
@@ -632,30 +657,6 @@ section[id] { scroll-margin-top: 95px; }
 
 .contact-hero-media {
   min-height: 440px;
-}
-
-.language-switcher {
-  margin-top: 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  background: #f2f6fd;
-  border: 1px solid #c8d8f2;
-  border-radius: 10px;
-  padding: 0.4rem 0.55rem;
-}
-
-.language-label {
-  margin: 0;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #204777;
-}
-
-.language-select {
-  min-width: 140px;
-  font-size: 0.9rem;
-  padding: 0.35rem 0.45rem;
 }
 
 .contact-pathways {
