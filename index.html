@@ -1,45 +1,40 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CHANAK Foundation | CHANAK TRAINUP EDUCATION INC (501c3)</title>
-  <meta name="description" content="Iniciativa educativa sin fines de lucro de CHANAK TRAINUP EDUCATION INC. Programas de becas de bachillerato dual, acompañamiento a la educación en el hogar y evaluaciones pedagógicas de acceso abierto.">
-  <link rel="canonical" href="https://foundation.chanakacademy.org/">
-  
-  <!-- Typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="/assets/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chanak Foundation | Church-Centered Community Impact &amp; Educational Mission</title>
+  <meta name="description" content="Chanak Foundation equips churches and mission partners to launch community learning hubs, youth life skills, adult education, dual diploma scholarships, and family support initiatives." />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18109980849"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18109980849');
+    gtag('config', 'GT-NSSXS5N6');
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="site.js" defer></script>
 </head>
 <body>
-
-  <!-- Top Legal Notice Bar -->
-  <aside class="tax-notice-bar" aria-label="Estatus Legal de la Organización">
-    CHANAK TRAINUP EDUCATION INC | Organización 501(c)(3) sin fines de lucro exenta de impuestos | EIN: <strong>36-5154011</strong> | St. Petersburg, FL
-  </aside>
-
-  <!-- Navigation Header -->
-  <header class="header">
-    <div class="nav-container">
-      <a href="/" class="logo-group">
-        <img src="/assets/logo-chanak.png" alt="CHANAK Logo" class="logo-img" onerror="this.style.display='none'">
-        <div class="logo-text">
-          <span class="logo-title">CHANAK FOUNDATION</span>
-          <span class="logo-sub">501(c)(3) Tax-Exempt Non-Profit</span>
-        </div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/chanak_logo_embedded.svg" alt="Chanak Foundation embedded logo" />
+        <span class="brand-text">
+          <span class="brand-name">Chanak Foundation</span>
+          <span class="brand-sub">An educational initiative of CHANAK TRAINUP EDUCATION, INC.</span>
+        </span>
       </a>
-      
-      <nav aria-label="Navegación Principal">
-        <ul class="nav-menu">
-          <li><a href="/#mision" class="nav-link">Nuestra Misión</a></li>
-          <li><a href="/programas/dual-diploma/" class="nav-link">Beca Dual Diploma</a></li>
-          <li><a href="/programas/homeschool-support/" class="nav-link">Apoyo Homeschool</a></li>
-          <li><a href="/evaluacion-diagnostica/" class="nav-link">Diagnóstico Gratuito</a></li>
-          <li><a href="/transparencia/" class="nav-link">Transparencia</a></li>
-          <li><a href="/contacto/" class="btn-cta">Solicitar Admisión / Beca</a></li>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="mission.html">Mission</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="donate.html" style="background-color: #C9A84C; color: #fff; padding: 8px 16px; border-radius: 4px; font-weight: bold;">Donate</a></li>
         </ul>
       </nav>
     </div>
@@ -47,218 +42,597 @@
 
   <main>
     <!-- Hero Section -->
-    <section class="hero" id="mision">
-      <div class="hero-content">
-        <div class="badge-mission">
-          <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-          Iniciativa Educativa de Impacto Comunitario y Equidad
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow" data-i18n-home="heroEyebrow">Church-Centered Community Impact</p>
+          <h1 data-i18n-home="heroHeading">Transforming Churches into Centers of Educational and Community Impact</h1>
+          <p class="hero-lead" data-i18n-home="heroLead">Chanak Foundation helps churches and mission-aligned partners activate practical local initiatives for children, youth, and families—through structured life skills, adult education, scholarship programs, and donor-funded community hubs.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="donate.html" data-i18n-home="cta1">Donate Now</a>
+            <a class="btn btn-secondary" href="contact.html" data-i18n-home="cta2">Partner With Us</a>
+            <a class="btn btn-secondary" href="programs.html" data-i18n-home="cta3">Explore Programs</a>
+          </div>
+          <p class="trust-line" data-i18n-home="trustLine">Faith-driven | Community-based | Education-centered | Scalable impact</p>
         </div>
-        <h1>Ampliando el Acceso a la Educación Global y Oportunidades Académicas</h1>
-        <p>En <strong>CHANAK TRAINUP EDUCATION INC</strong> trabajamos para derribar las barreras geográficas y económicas mediante programas de becas para el Bachillerato Dual Americano, asesoría pedagógica familiar y herramientas de diagnóstico formativo de acceso abierto.</p>
-        <div class="hero-actions">
-          <a href="/#programas" class="btn-cta">Explorar Programas Misionales</a>
-          <a href="/evaluacion-diagnostica/" class="btn-secondary-white">Realizar Evaluación Gratuita</a>
+        <aside class="hero-media">
+          <img class="content-image hero-image focal-center-top" src="assets/panama-graduation.jpg" alt="Philadelphia International School graduation in Panama" fetchpriority="high" decoding="async" />
+          <div class="media-caption" data-i18n-home="heroCaption">A local church can become a trusted place for learning support, mentoring, family guidance, and neighborhood outreach.</div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Proof of Concept Section -->
+    <section style="background:#f8f9fa; padding:60px 20px;">
+      <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+        <div>
+          <p style="color:#C9A84C; font-weight:700; letter-spacing:2px; font-size:0.85rem;" data-i18n-home="pocEyebrow">PROOF OF CONCEPT</p>
+          <h2 style="font-size:2rem; color:#1a2744; margin:12px 0;" data-i18n-home="pocHeading">We Did It in Panama.<br>Now We're Doing It in Spain.</h2>
+          <p style="color:#555; line-height:1.7; margin-bottom:20px;" data-i18n-home="pocText">
+            In 2020, Chanak's founding team helped launch the Philadelphia International School inside a local church in Panama City. In four years, it grew from 5 to 165 students — a nationally recognized model of faith-integrated education and family empowerment. Now we're applying that same proven model to Spain's Costa Blanca and broader communities.
+          </p>
+          <div style="display:flex; gap:32px; margin-bottom:28px;">
+            <div style="text-align:center;">
+              <div style="font-size:2.5rem; font-weight:800; color:#1a2744;">165</div>
+              <div style="font-size:0.8rem; color:#777;" data-i18n-home="pocStat1">students in 4 years</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:2.5rem; font-weight:800; color:#1a2744;">4</div>
+              <div style="font-size:0.8rem; color:#777;" data-i18n-home="pocStat2">communities in Spain</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:2.5rem; font-weight:800; color:#1a2744;">501c3</div>
+              <div style="font-size:0.8rem; color:#777;" data-i18n-home="pocStat3">IRS recognized</div>
+            </div>
+          </div>
+          <a href="donate.html" style="background:#C9A84C; color:#fff; padding:14px 28px; border-radius:6px; font-weight:700; text-decoration:none; display:inline-block;" data-i18n-home="pocBtn">
+            Support the Spain Expansion
+          </a>
+        </div>
+        <img src="assets/panama-graduation.jpg" alt="Philadelphia International School Graduation" style="width:100%; border-radius:12px; box-shadow:0 8px 32px rgba(0,0,0,0.12);">
+      </div>
+    </section>
+
+    <!-- The Need in Spain / Crisis Section -->
+    <section class="section" id="crisis-solving">
+      <div class="container">
+        <p class="eyebrow" data-i18n-home="crisisEyebrow">The Need in Spain</p>
+        <h2 data-i18n-home="crisisHeading">The Challenges We're Addressing</h2>
+        <div class="cards cards-three crisis-cards">
+          <article class="card stat-card">
+            <h3 data-i18n-home="crisisCard1Title">Youth Mental Health</h3>
+            <p data-i18n-home="crisisCard1Desc">#1 cause of non-natural death among Spanish youth 15–29 is suicide. Purpose and belonging are urgently needed.</p>
+            <p class="source">INE 2023</p>
+          </article>
+          <article class="card stat-card">
+            <h3 data-i18n-home="crisisCard2Title">School Bullying &amp; Isolation</h3>
+            <p data-i18n-home="crisisCard2Desc">1 in 4 students affected by school harassment, requiring safe, supportive learning environments.</p>
+            <p class="source">Defensor del Pueblo</p>
+          </article>
+          <article class="card stat-card">
+            <h3 data-i18n-home="crisisCard3Title">Economic Accessibility</h3>
+            <p data-i18n-home="crisisCard3Desc">Private values-based education often costs €600–1,200/month. We deliver accessible church hubs for €200–280.</p>
+          </article>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#hubs" data-i18n-home="crisisCta">See How We Help</a>
         </div>
       </div>
     </section>
 
-    <!-- Main Programs Section -->
-    <section class="section" id="programas">
-      <div class="section-header">
-        <span class="section-tag">Nuestros Programas</span>
-        <h2>Iniciativas de Impacto Comunitario y Becas de Apoyo Familiar</h2>
-        <p>Proyectos formativos financiados a través de fondos filantrópicos y alianzas benéficas para promover el desarrollo integral de niños y jóvenes.</p>
-      </div>
-
-      <div class="grid-3">
-        <!-- Card 1: Dual Diploma Scholarship -->
-        <article class="card">
-          <div>
-            <span class="card-badge">Fondo de Becas</span>
-            <h3>Beca de Acceso al Bachillerato Dual Internacional</h3>
-            <p>Programa de inclusión que otorga becas de estudio para que estudiantes de comunidades hispanas cursen el High School Diploma estadounidense en paralelo a sus estudios locales.</p>
-            <ul class="feature-list">
-              <li>
-                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <span>Asignación de fondos por mérito y necesidad familiar</span>
-              </li>
-              <li>
-                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <span>Acompañamiento docente y tutorías sincrónicas</span>
-              </li>
-              <li>
-                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <span>Certificación oficial internacional subsidiada</span>
-              </li>
-            </ul>
-          </div>
-          <div style="display: flex; gap: 10px; flex-direction: column;">
-            <a href="/programas/dual-diploma/" class="btn-secondary" style="justify-content: center;">Ver Detalles del Programa</a>
-            <a href="/contacto/?programa=dual-diploma" class="btn-cta" style="justify-content: center;">Solicitar Beca / Admisión</a>
-          </div>
-        </article>
-
-        <!-- Card 2: Homeschool Support -->
-        <article class="card">
-          <div>
-            <span class="card-badge">Orientación Pedagógica</span>
-            <h3>Programa Comunitario de Apoyo a la Educación en el Hogar</h3>
-            <p>Acompañamiento psicopedagógico y dotación de recursos curriculares abiertos para familias que optan por la educación flexible y personalizada en el hogar.</p>
-            <ul class="feature-list">
-              <li>
-                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <span>Consultoría pedagógica gratuita con especialistas</span>
-              </li>
-              <li>
-                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <span>Guías curriculares y estándares de aprendizaje abiertos</span>
-              </li>
-              <li>
-                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <span>Talleres de capacitación para padres educadores</span>
-              </li>
-            </ul>
-          </div>
-          <div style="display: flex; gap: 10px; flex-direction: column;">
-            <a href="/programas/homeschool-support/" class="btn-secondary" style="justify-content: center;">Ver Plan Comunitario</a>
-            <a href="/contacto/?programa=homeschool" class="btn-cta" style="justify-content: center;">Agendar Orientación Gratuita</a>
-          </div>
-        </article>
-
-        <!-- Card 3: Free Diagnostic -->
-        <article class="card">
-          <div>
-            <span class="card-badge">Evaluación Abierta</span>
-            <h3>Evaluación Diagnóstica y Orientación Académica Gratuita</h3>
-            <p>Herramienta formativa comunitaria para identificar fortalezas cognitivas, nivel de competencia en inglés y áreas de mejora en estudiantes de 6 a 18 años.</p>
-            <ul class="feature-list">
-              <li>
-                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <span>Prueba adaptativa 100% gratuita y sin compromiso</span>
-              </li>
-              <li>
-                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <span>Informe pedagógico individualizado para la familia</span>
-              </li>
-              <li>
-                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                <span>Recomendaciones formativas y vocacionales</span>
-              </li>
-            </ul>
-          </div>
-          <div style="display: flex; gap: 10px; flex-direction: column;">
-            <a href="/evaluacion-diagnostica/" class="btn-secondary" style="justify-content: center;">Conocer la Evaluación</a>
-            <a href="/evaluacion-diagnostica/#iniciar" class="btn-cta" style="justify-content: center;">Iniciar Evaluación Gratuita</a>
-          </div>
-        </article>
-      </div>
-
-      <!-- Institutional Transparency Callout -->
-      <div class="transparency-callout">
-        <div class="transparency-callout-icon">
-          <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+    <!-- Community Hubs Section -->
+    <section class="section alt" id="hubs">
+      <div class="container">
+        <p class="eyebrow" data-i18n-home="hubsEyebrow">Community Hubs</p>
+        <h2 data-i18n-home="hubsHeading">Community Learning Hubs — Spain's Costa Blanca</h2>
+        <p class="intro" data-i18n-home="hubsIntro">Inside local churches. Academically rigorous. Financially accessible.</p>
+        <div class="cards cards-two hub-cards">
+          <article class="card feature-card">
+            <h3 data-i18n-home="hubJaveaTitle">Hub Jávea</h3>
+            <p><strong data-i18n-home="hubOpenEnroll">Founding Families Open Enrollment</strong></p>
+            <p data-i18n-home="hubJaveaFam">Visionary Family: Medalith &amp; Juan Carlos</p>
+          </article>
+          <article class="card feature-card">
+            <h3 data-i18n-home="hubTorreviejaTitle">Hub Torrevieja</h3>
+            <p><strong data-i18n-home="hubOpenEnroll">Founding Families Open Enrollment</strong></p>
+            <p data-i18n-home="hubTorreviejaFam">Visionary Family: Mary Claudia &amp; Henry</p>
+          </article>
         </div>
-        <div class="transparency-callout-content">
-          <h3>Compromiso de Transparencia y Naturaleza Sin Fines de Lucro</h3>
-          <p><strong>CHANAK TRAINUP EDUCATION INC</strong> es una corporación sin fines de lucro legalmente registrada bajo el régimen <strong>501(c)(3) del IRS</strong> en los Estados Unidos (EIN: <strong>36-5154011</strong>). Todos nuestros proyectos son sustentados por donaciones, subsidios benéficos y fondos comunitarios. No procesamos ventas directas en este entorno.</p>
-          <a href="/transparencia/" style="color: var(--primary); font-weight: 600; text-decoration: underline;">Conoce nuestro reporte de transparencia y misión institucional &rarr;</a>
+        <div class="impact-strip hub-stat" data-i18n-home="hubStatText">32 students = Hub fully self-sustaining. Be a founding family.</div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="programs.html#homeschool-support" data-i18n-home="hubCta">Explore Community Hubs</a>
         </div>
       </div>
     </section>
 
-    <!-- Quick Intake / Contact section -->
-    <section class="section section-alt" id="solicitud">
-      <div class="section-header">
-        <span class="section-tag">Admisiones e Impacto</span>
-        <h2>Solicitud de Beca y Orientación Comunitaria</h2>
-        <p>Si deseas postular a un fondo de beca para tu hijo/a o necesitas asesoría pedagógica personalizada, envía tus datos al comité educativo.</p>
-      </div>
-
-      <div class="form-container">
-        <div class="form-alert-success">
-          <strong>¡Solicitud recibida con éxito!</strong> Su información ha sido remitida al Comité de Becas y Admisiones de CHANAK TRAINUP EDUCATION INC. Le responderemos en un plazo máximo de 48 horas hábiles.
+    <!-- Life Skills & Leadership Pathway Section -->
+    <section class="section" id="life-skills">
+      <div class="container">
+        <p class="eyebrow" data-i18n-home="lsEyebrow">Formation Pathway for Youth</p>
+        <h2 data-i18n-home="lsHeading">Life Skills &amp; Youth Leadership (Ages 10–18)</h2>
+        <p class="intro" data-i18n-home="lsIntro">We don't just form students. We form purpose-driven leaders.</p>
+        <div class="cards cards-four life-skill-cards">
+          <article class="card">
+            <h3 data-i18n-home="lsStage1Title">Seedling <span>(10–12)</span></h3>
+            <p data-i18n-home="lsStage1Desc">Identity, character roots, emotional foundations, first service.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n-home="lsStage2Title">Explorer <span>(12–14)</span></h3>
+            <p data-i18n-home="lsStage2Desc">Vocational discovery, purpose formula, teamwork &amp; empathy.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n-home="lsStage3Title">Builder <span>(14–16)</span></h3>
+            <p data-i18n-home="lsStage3Desc">Real leadership projects, financial literacy, problem-solving.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n-home="lsStage4Title">Launch <span>(16–18)</span></h3>
+            <p data-i18n-home="lsStage4Desc">Capstone project, university portfolio, college readiness &amp; mentorship.</p>
+          </article>
         </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="programs.html#leadership-life-skills" data-i18n-home="lsCta1">View Full Pathway</a>
+          <a class="btn btn-secondary" href="contact.html?program=diagnostic" data-i18n-home="lsCta2">Request Free Student Diagnostic</a>
+        </div>
+      </div>
+    </section>
 
-        <form data-foundation-form method="POST">
-          <div class="form-group">
-            <label for="fullname">Nombre y Apellidos del Padre, Madre o Tutor <span class="required">*</span></label>
-            <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Ej. Carlos Mendoza" required>
+    <!-- Adult Education & Lifelong Learning Section -->
+    <section class="section alt" id="adult-education-preview">
+      <div class="container grid-two">
+        <div>
+          <p class="eyebrow" data-i18n-home="aeEyebrow">Lifelong Learning</p>
+          <h2 data-i18n-home="aeHeading">Adult Education &amp; Parenting Empowerment</h2>
+          <p data-i18n-home="aeText">Empowering parents and community adults with practical tools for family leadership, digital literacy, conversational English, and vocational advancement. Through weekend workshops and church-hosted classes, we strengthen the family foundation.</p>
+          <ul class="checklist" style="margin: 20px 0;">
+            <li data-i18n-home="aeCheck1">Parenting guidance and adolescent communication workshops</li>
+            <li data-i18n-home="aeCheck2">Digital skills and workforce productivity training</li>
+            <li data-i18n-home="aeCheck3">ESL conversational language sessions for Hispanic parents</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="programs.html#adult-education" data-i18n-home="aeCta">Learn About Adult Courses</a>
           </div>
+        </div>
+        <figure class="visual-panel image-frame">
+          <img class="content-image focal-center" src="assets/mariela-speaking.jpg" alt="Mariela Andrade presenting adult education and parenting workshop" />
+          <figcaption data-i18n-home="aeCaption">Community workshops equipping parents and adult learners</figcaption>
+        </figure>
+      </div>
+    </section>
 
-          <div class="form-group">
-            <label for="email">Correo Electrónico Oficial de Contacto <span class="required">*</span></label>
-            <input type="email" id="email" name="email" class="form-control" placeholder="tucorreo@ejemplo.com" required>
+    <!-- Dual Diploma International Scholarship Highlight -->
+    <section class="section" id="dual-diploma-preview">
+      <div class="container grid-two">
+        <figure class="visual-panel image-frame">
+          <img class="content-image focal-center-right" src="assets/panama-graduation.jpg" alt="Students graduating with American High School diplomas" />
+          <figcaption data-i18n-home="ddCaption">Graduation ceremony celebrating accredited bilingual achievements</figcaption>
+        </figure>
+        <div>
+          <p class="eyebrow" data-i18n-home="ddEyebrow">Academic Inclusion</p>
+          <h2 data-i18n-home="ddHeading">Dual Diploma International Scholarship Fund</h2>
+          <p data-i18n-home="ddText">Through our philanthropic scholarship fund, students in Spanish-speaking communities can earn an accredited American High School Diploma simultaneously with their local studies, opening global university pathways through subsidized tuition and dedicated bilingual faculty.</p>
+          <div class="cta-row" style="margin-top: 24px;">
+            <a class="btn btn-primary" href="programs.html#dual-diploma" data-i18n-home="ddCta1">Scholarship Details</a>
+            <a class="btn btn-secondary" href="contact.html?program=dual-diploma" data-i18n-home="ddCta2">Apply for Aid</a>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="form-group">
-            <label for="phone">Teléfono / WhatsApp de Contacto</label>
-            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+1 (555) 000-0000">
-          </div>
+    <!-- Why This Matters Section -->
+    <section class="section alt" id="why-this-matters">
+      <div class="container grid-two">
+        <article>
+          <p class="eyebrow" data-i18n-home="needEyebrow">The Need</p>
+          <h2 data-i18n-home="needHeading">Why This Matters for Families, Youth, and Local Churches</h2>
+          <p data-i18n-home="needP1">Many families need practical educational support and trusted guidance close to home. Youth need purpose, mentoring, and values-based development that helps them grow in character and direction.</p>
+          <p data-i18n-home="needP2">Many churches are eager to serve their communities in tangible ways beyond Sunday gatherings, but often need support structures, partner networks, and implementation pathways to do that consistently.</p>
+          <p data-i18n-home="needP3">When church spaces, local partnerships, and mission resources are aligned, communities gain a stronger bridge between faith, family support, education, and service.</p>
+        </article>
+        <aside class="card">
+          <h3 data-i18n-home="needBoxTitle">What We See in Local Contexts</h3>
+          <ul class="checklist">
+            <li data-i18n-home="needBox1">Families need accessible support and practical next steps.</li>
+            <li data-i18n-home="needBox2">Teens need mentoring, leadership formation, and vocational direction.</li>
+            <li data-i18n-home="needBox3">Churches need a clear model for sustained neighborhood impact.</li>
+            <li data-i18n-home="needBox4">Mission partners need credible local pathways for giving and service.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
 
-          <div class="form-group">
-            <label for="program_select">Iniciativa o Programa de Interés <span class="required">*</span></label>
-            <select id="program_select" name="program_select" class="form-control" required>
-              <option value="">-- Seleccione una opción --</option>
-              <option value="dual-diploma-scholarship">Postulación a Beca / Admisión - Bachillerato Dual Internacional</option>
-              <option value="homeschool-mentorship">Orientación y Recursos - Apoyo a la Educación en el Hogar</option>
-              <option value="diagnostic-test">Solicitud de Evaluación Diagnóstica Gratuita</option>
-              <option value="other-inquiry">Consulta Institucional General</option>
-            </select>
-          </div>
+    <!-- Solution Model -->
+    <section class="section" id="our-solution">
+      <div class="container">
+        <p class="eyebrow" data-i18n-home="solEyebrow">Our Solution</p>
+        <h2 data-i18n-home="solHeading">A Clear Model for Mission-Driven Community Transformation</h2>
+        <div class="cards cards-three">
+          <article class="card feature-card">
+            <h3 data-i18n-home="solCard1Title">We Activate Local Partnerships</h3>
+            <p data-i18n-home="solCard1Desc">We align churches, community leaders, and mission partners around practical local priorities and service opportunities.</p>
+          </article>
+          <article class="card feature-card">
+            <h3 data-i18n-home="solCard2Title">We Provide Structure &amp; Programs</h3>
+            <p data-i18n-home="solCard2Desc">We help organize church-based learning support, family workshops, leadership pathways, and volunteer coordination.</p>
+          </article>
+          <article class="card feature-card">
+            <h3 data-i18n-home="solCard3Title">We Mobilize People and Resources</h3>
+            <p data-i18n-home="solCard3Desc">We connect donations, sponsorships, and local teams to concrete initiatives that serve children, adolescents, and families.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-          <div class="form-group">
-            <label for="message">Detalles sobre la situación académica del estudiante o motivo de la postulación:</label>
-            <textarea id="message" name="message" class="form-control" placeholder="Indique la edad del estudiante, grado escolar y contexto familiar..."></textarea>
-          </div>
+    <!-- Impact Visuals Section -->
+    <section class="section alt" id="impact-visuals">
+      <div class="container">
+        <p class="eyebrow" data-i18n-home="visEyebrow">Community Impact in Action</p>
+        <h2 data-i18n-home="visHeading">Church Spaces, Family Support, and Youth Formation</h2>
+        <div class="image-band">
+          <figure class="visual-panel image-frame">
+            <img class="content-image focal-center" src="assets/panama-classroom.jpg" alt="Students at Philadelphia International School in Panama" loading="lazy" decoding="async" />
+            <figcaption data-i18n-home="visCap1">Family Learning Support</figcaption>
+          </figure>
+          <figure class="visual-panel image-frame">
+            <img class="content-image focal-center-left" src="assets/team-educafe.jpg" alt="EducaFe team members serving together" loading="lazy" decoding="async" />
+            <figcaption data-i18n-home="visCap2">Youth Mentoring Activity</figcaption>
+          </figure>
+          <figure class="visual-panel image-frame">
+            <img class="content-image focal-center-top" src="assets/team-church-spain.jpg" alt="Team gathered with church partners in Spain" loading="lazy" decoding="async" />
+            <figcaption data-i18n-home="visCap3">Partnership Support Network</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-          <button type="submit" class="btn-cta" style="width: 100%; justify-content: center; padding: 13px; font-size: 0.96rem;">
-            Enviar Postulación al Comité Educativo
-          </button>
-          <p class="form-note" style="text-align: center;">Toda la información es estrictamente confidencial bajo nuestra <a href="/politica-de-privacidad/" style="color: var(--secondary);">Política de Privacidad</a>.</p>
-        </form>
+    <!-- What Your Donation Makes Possible -->
+    <section class="section soft" id="donation-impact">
+      <div class="container">
+        <p class="eyebrow" data-i18n-home="donEyebrow">What Your Donation Makes Possible</p>
+        <h2 data-i18n-home="donHeading">Donor Support Funds Concrete, Local Initiatives</h2>
+        <div class="cards cards-three">
+          <article class="card impact-card">
+            <h3 data-i18n-home="donCard1Title">Community Learning Hubs in Churches</h3>
+            <p data-i18n-home="donCard1Desc">Prepare and equip church spaces for recurring education support and mentoring.</p>
+          </article>
+          <article class="card impact-card">
+            <h3 data-i18n-home="donCard2Title">Family Guidance &amp; Parenting Workshops</h3>
+            <p data-i18n-home="donCard2Desc">Provide practical formation sessions that help families support children and teens.</p>
+          </article>
+          <article class="card impact-card">
+            <h3 data-i18n-home="donCard3Title">Books, Content &amp; Resources</h3>
+            <p data-i18n-home="donCard3Desc">Develop mission-aligned resources for learning, discipleship, and leadership growth.</p>
+          </article>
+          <article class="card impact-card">
+            <h3 data-i18n-home="donCard4Title">Life Skills &amp; Vocational Projects</h3>
+            <p data-i18n-home="donCard4Desc">Create pathways that connect youth purpose, responsibility, and future readiness.</p>
+          </article>
+          <article class="card impact-card">
+            <h3 data-i18n-home="donCard5Title">Community Service &amp; Outreach</h3>
+            <p data-i18n-home="donCard5Desc">Mobilize church and volunteer teams for local service initiatives and outreach opportunities.</p>
+          </article>
+          <article class="card impact-card">
+            <h3 data-i18n-home="donCard6Title">Team Deployment &amp; Training</h3>
+            <p data-i18n-home="donCard6Desc">Prepare leaders and volunteers to launch and sustain initiatives with consistency.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Replicable 5 Phases -->
+    <section class="section" id="replicable-model">
+      <div class="container">
+        <p class="eyebrow" data-i18n-home="phEyebrow">A Replicable Model</p>
+        <h2 data-i18n-home="phHeading">Five Phases for Local Launch and Expansion</h2>
+        <ol class="phase-list" aria-label="Five-phase implementation model">
+          <li data-i18n-home="ph1"><strong>Local Partnership:</strong> Build alignment with churches, local associations, and collaborators.</li>
+          <li data-i18n-home="ph2"><strong>Space Activation:</strong> Prepare church facilities for program delivery and community access.</li>
+          <li data-i18n-home="ph3"><strong>Training &amp; Launch:</strong> Equip teams and begin structured implementation.</li>
+          <li data-i18n-home="ph4"><strong>Ongoing Community Impact:</strong> Operate recurring support activities for youth and families.</li>
+          <li data-i18n-home="ph5"><strong>Replication:</strong> Extend the model to additional communities through shared learning.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section final-cta" id="get-involved">
+      <div class="container center-copy">
+        <p class="eyebrow" data-i18n-home="finalEyebrow">Join the Mission</p>
+        <h2 data-i18n-home="finalHeading">Help Activate Church-Based Community Impact</h2>
+        <p data-i18n-home="finalLead">Your gift or partnership can help churches serve families, guide youth, and build practical pathways for faith-driven local transformation.</p>
+        <div class="cta-row center-cta">
+          <a class="btn btn-primary" href="donate.html" data-i18n-home="finalCta1">Donate</a>
+          <a class="btn btn-secondary" href="contact.html" data-i18n-home="finalCta2">Partner With Us</a>
+          <a class="btn btn-secondary" href="programs.html" data-i18n-home="finalCta3">Explore Programs</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- MANDATORY INSTITUTIONAL FOOTER FOR GOOGLE AD GRANTS COMPLIANCE -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-col footer-legal-info">
-        <span class="footer-legal-badge">ORGANIZACIÓN 501(c)(3) SIN FINES DE LUCRO</span>
-        <h4>CHANAK TRAINUP EDUCATION INC</h4>
-        <p><strong>Estatus Fiscal Oficial:</strong> Organización exenta de impuestos bajo la Sección 501(c)(3) del Código del IRS de los Estados Unidos.</p>
-        <p><strong>Employer Identification Number (EIN):</strong> 36-5154011</p>
-        <p><strong>Sede Principal Legal:</strong> 7901 4th St N Ste 300, St. Petersburg, FL 33702, USA</p>
-        <p><strong>Correo Electrónico Institucional:</strong> <a href="mailto:administration@chanakacademy.org">administration@chanakacademy.org</a></p>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Chanak Foundation</h3>
+        <p>CHANAK TRAINUP EDUCATION, INC. is a nonprofit organization exempt from federal income tax under Section 501(c)(3) of the Internal Revenue Code.</p>
+        <p><strong>EIN:</strong> 36-5154011</p>
+        <p>Chanak Foundation operates as an educational initiative of CHANAK TRAINUP EDUCATION, INC.</p>
       </div>
-
-      <div class="footer-col">
-        <h4>Programas Comunitarios</h4>
+      <div>
+        <h3>Quick Links</h3>
         <ul class="footer-links">
-          <li><a href="/programas/dual-diploma/">Beca Bachillerato Dual</a></li>
-          <li><a href="/programas/homeschool-support/">Apoyo a la Educación en el Hogar</a></li>
-          <li><a href="/evaluacion-diagnostica/">Evaluaciones Diagnósticas</a></li>
-          <li><a href="/contacto/">Criterios de Elegibilidad</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="mission.html">Mission</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
         </ul>
       </div>
-
-      <div class="footer-col">
-        <h4>Gobernanza y Transparencia</h4>
-        <ul class="footer-links">
-          <li><a href="/transparencia/">Transparencia y Misión</a></li>
-          <li><a href="/politica-de-privacidad/">Política de Privacidad</a></li>
-          <li><a href="/terminos-de-servicio/">Términos de Servicio</a></li>
-          <li><a href="/contacto/">Contacto Oficial y Sede</a></li>
-        </ul>
+      <div>
+        <h3>Administrative Contact</h3>
+        <p><a href="mailto:administration@chanakacademy.org">administration@chanakacademy.org</a></p>
+        <p><a href="tel:+17866199807">+1 786 619 9807</a></p>
+        <address>
+          7901 4th St N, Ste 300<br />
+          St. Petersburg, FL 33702
+        </address>
       </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2026 CHANAK TRAINUP EDUCATION INC (501(c)(3)). Todos los derechos reservados.</p>
-      <p>Este sitio web opera exclusivamente bajo el subdominio benéfico <strong style="color:#94a3b8;">foundation.chanakacademy.org</strong> sin actividad comercial directa.</p>
     </div>
   </footer>
 
-  <script src="/assets/main.js"></script>
+<script>
+(function(){
+  const t = {
+    en: {
+      title: 'Chanak Foundation | Church-Centered Community Impact & Educational Mission',
+      desc: 'Chanak Foundation equips churches and mission partners to launch community learning hubs, youth life skills, adult education, dual diploma scholarships, and family support initiatives.',
+      heroEyebrow: 'Church-Centered Community Impact',
+      heroHeading: 'Transforming Churches into Centers of Educational and Community Impact',
+      heroLead: 'Chanak Foundation helps churches and mission-aligned partners activate practical local initiatives for children, youth, and families—through structured life skills, adult education, scholarship programs, and donor-funded community hubs.',
+      cta1: 'Donate Now',
+      cta2: 'Partner With Us',
+      cta3: 'Explore Programs',
+      trustLine: 'Faith-driven | Community-based | Education-centered | Scalable impact',
+      heroCaption: 'A local church can become a trusted place for learning support, mentoring, family guidance, and neighborhood outreach.',
+      pocEyebrow: 'PROOF OF CONCEPT',
+      pocHeading: "We Did It in Panama.<br>Now We're Doing It in Spain.",
+      pocText: "In 2020, Chanak's founding team helped launch the Philadelphia International School inside a local church in Panama City. In four years, it grew from 5 to 165 students — a nationally recognized model of faith-integrated education and family empowerment. Now we're applying that same proven model to Spain's Costa Blanca and broader communities.",
+      pocStat1: 'students in 4 years',
+      pocStat2: 'communities in Spain',
+      pocStat3: 'IRS recognized',
+      pocBtn: 'Support the Spain Expansion',
+      crisisEyebrow: 'The Need in Spain',
+      crisisHeading: "The Challenges We're Addressing",
+      crisisCard1Title: 'Youth Mental Health',
+      crisisCard1Desc: '#1 cause of non-natural death among Spanish youth 15–29 is suicide. Purpose and belonging are urgently needed.',
+      crisisCard2Title: 'School Bullying & Isolation',
+      crisisCard2Desc: '1 in 4 students affected by school harassment, requiring safe, supportive learning environments.',
+      crisisCard3Title: 'Economic Accessibility',
+      crisisCard3Desc: 'Private values-based education often costs €600–1,200/month. We deliver accessible church hubs for €200–280.',
+      crisisCta: 'See How We Help',
+      hubsEyebrow: 'Community Hubs',
+      hubsHeading: "Community Learning Hubs — Spain's Costa Blanca",
+      hubsIntro: 'Inside local churches. Academically rigorous. Financially accessible.',
+      hubJaveaTitle: 'Hub Jávea',
+      hubTorreviejaTitle: 'Hub Torrevieja',
+      hubOpenEnroll: 'Founding Families Open Enrollment',
+      hubJaveaFam: 'Visionary Family: Medalith & Juan Carlos',
+      hubTorreviejaFam: 'Visionary Family: Mary Claudia & Henry',
+      hubStatText: '32 students = Hub fully self-sustaining. Be a founding family.',
+      hubCta: 'Explore Community Hubs',
+      lsEyebrow: 'Formation Pathway for Youth',
+      lsHeading: 'Life Skills & Youth Leadership (Ages 10–18)',
+      lsIntro: "We don't just form students. We form purpose-driven leaders.",
+      lsStage1Title: 'Seedling (10–12)',
+      lsStage1Desc: 'Identity, character roots, emotional foundations, first service.',
+      lsStage2Title: 'Explorer (12–14)',
+      lsStage2Desc: 'Vocational discovery, purpose formula, teamwork & empathy.',
+      lsStage3Title: 'Builder (14–16)',
+      lsStage3Desc: 'Real leadership projects, financial literacy, problem-solving.',
+      lsStage4Title: 'Launch (16–18)',
+      lsStage4Desc: 'Capstone project, university portfolio, college readiness & mentorship.',
+      lsCta1: 'View Full Pathway',
+      lsCta2: 'Request Free Student Diagnostic',
+      aeEyebrow: 'Lifelong Learning',
+      aeHeading: 'Adult Education & Parenting Empowerment',
+      aeText: 'Empowering parents and community adults with practical tools for family leadership, digital literacy, conversational English, and vocational advancement. Through weekend workshops and church-hosted classes, we strengthen the family foundation.',
+      aeCheck1: 'Parenting guidance and adolescent communication workshops',
+      aeCheck2: 'Digital skills and workforce productivity training',
+      aeCheck3: 'ESL conversational language sessions for Hispanic parents',
+      aeCta: 'Learn About Adult Courses',
+      aeCaption: 'Community workshops equipping parents and adult learners',
+      ddEyebrow: 'Academic Inclusion',
+      ddHeading: 'Dual Diploma International Scholarship Fund',
+      ddText: 'Through our philanthropic scholarship fund, students in Spanish-speaking communities can earn an accredited American High School Diploma simultaneously with their local studies, opening global university pathways through subsidized tuition and dedicated bilingual faculty.',
+      ddCta1: 'Scholarship Details',
+      ddCta2: 'Apply for Aid',
+      ddCaption: 'Graduation ceremony celebrating accredited bilingual achievements',
+      needEyebrow: 'The Need',
+      needHeading: 'Why This Matters for Families, Youth, and Local Churches',
+      needP1: 'Many families need practical educational support and trusted guidance close to home. Youth need purpose, mentoring, and values-based development that helps them grow in character and direction.',
+      needP2: 'Many churches are eager to serve their communities in tangible ways beyond Sunday gatherings, but often need support structures, partner networks, and implementation pathways to do that consistently.',
+      needP3: 'When church spaces, local partnerships, and mission resources are aligned, communities gain a stronger bridge between faith, family support, education, and service.',
+      needBoxTitle: 'What We See in Local Contexts',
+      needBox1: 'Families need accessible support and practical next steps.',
+      needBox2: 'Teens need mentoring, leadership formation, and vocational direction.',
+      needBox3: 'Churches need a clear model for sustained neighborhood impact.',
+      needBox4: 'Mission partners need credible local pathways for giving and service.',
+      solEyebrow: 'Our Solution',
+      solHeading: 'A Clear Model for Mission-Driven Community Transformation',
+      solCard1Title: 'We Activate Local Partnerships',
+      solCard1Desc: 'We align churches, community leaders, and mission partners around practical local priorities and service opportunities.',
+      solCard2Title: 'We Provide Structure & Programs',
+      solCard2Desc: 'We help organize church-based learning support, family workshops, leadership pathways, and volunteer coordination.',
+      solCard3Title: 'We Mobilize People and Resources',
+      solCard3Desc: 'We connect donations, sponsorships, and local teams to concrete initiatives that serve children, adolescents, and families.',
+      visEyebrow: 'Community Impact in Action',
+      visHeading: 'Church Spaces, Family Support, and Youth Formation',
+      visCap1: 'Family Learning Support',
+      visCap2: 'Youth Mentoring Activity',
+      visCap3: 'Partnership Support Network',
+      donEyebrow: 'What Your Donation Makes Possible',
+      donHeading: 'Donor Support Funds Concrete, Local Initiatives',
+      donCard1Title: 'Community Learning Hubs in Churches',
+      donCard1Desc: 'Prepare and equip church spaces for recurring education support and mentoring.',
+      donCard2Title: 'Family Guidance & Parenting Workshops',
+      donCard2Desc: 'Provide practical formation sessions that help families support children and teens.',
+      donCard3Title: 'Books, Content & Resources',
+      donCard3Desc: 'Develop mission-aligned resources for learning, discipleship, and leadership growth.',
+      donCard4Title: 'Life Skills & Vocational Projects',
+      donCard4Desc: 'Create pathways that connect youth purpose, responsibility, and future readiness.',
+      donCard5Title: 'Community Service & Outreach',
+      donCard5Desc: 'Mobilize church and volunteer teams for local service initiatives and outreach opportunities.',
+      donCard6Title: 'Team Deployment & Training',
+      donCard6Desc: 'Prepare leaders and volunteers to launch and sustain initiatives with consistency.',
+      phEyebrow: 'A Replicable Model',
+      phHeading: 'Five Phases for Local Launch and Expansion',
+      ph1: '<strong>Local Partnership:</strong> Build alignment with churches, local associations, and collaborators.',
+      ph2: '<strong>Space Activation:</strong> Prepare church facilities for program delivery and community access.',
+      ph3: '<strong>Training & Launch:</strong> Equip teams and begin structured implementation.',
+      ph4: '<strong>Ongoing Community Impact:</strong> Operate recurring support activities for youth and families.',
+      ph5: '<strong>Replication:</strong> Extend the model to additional communities through shared learning.',
+      finalEyebrow: 'Join the Mission',
+      finalHeading: 'Help Activate Church-Based Community Impact',
+      finalLead: 'Your gift or partnership can help churches serve families, guide youth, and build practical pathways for faith-driven local transformation.',
+      finalCta1: 'Donate',
+      finalCta2: 'Partner With Us',
+      finalCta3: 'Explore Programs'
+    },
+    es: {
+      title: 'Chanak Foundation | Impacto Comunitario y Misión Educativa Centrada en la Iglesia',
+      desc: 'Chanak Foundation equipa a iglesias y aliados misioneros para abrir centros comunitarios de aprendizaje, programas de Life Skills en jóvenes, educación de adultos y becas de bachillerato dual.',
+      heroEyebrow: 'Impacto Comunitario Centrado en la Iglesia',
+      heroHeading: 'Transformamos Iglesias en Centros de Impacto Educativo y Comunitario',
+      heroLead: 'Chanak Foundation ayuda a iglesias y aliados a activar iniciativas locales prácticas para niños, jóvenes y familias: habilidades para la vida, educación para adultos, becas de estudio y centros comunitarios.',
+      cta1: 'Donar Ahora',
+      cta2: 'Asóciate con Nosotros',
+      cta3: 'Explorar Programas',
+      trustLine: 'Basado en la fe | Enraizado en la comunidad | Centrado en la educación | Impacto escalable',
+      heroCaption: 'Una iglesia local puede convertirse en un lugar de confianza para el apoyo al aprendizaje, mentoría, orientación familiar e impacto barrial.',
+      pocEyebrow: 'PRUEBA DE CONCEPTO',
+      pocHeading: 'Lo Hicimos en Panamá.<br>Ahora lo Hacemos en España.',
+      pocText: 'En 2020, el equipo fundador de Chanak ayudó a lanzar Philadelphia International School dentro de una iglesia local en Ciudad de Panamá. En cuatro años creció de 5 a 165 estudiantes, un modelo reconocido de educación con valores y empoderamiento familiar. Ahora aplicamos ese mismo modelo en la Costa Blanca y comunidades de España.',
+      pocStat1: 'alumnos en 4 años',
+      pocStat2: 'comunidades en España',
+      pocStat3: 'Reconocimiento IRS',
+      pocBtn: 'Apoyar la Expansión en España',
+      crisisEyebrow: 'La Necesidad en España',
+      crisisHeading: 'Los Desafíos que Abordamos',
+      crisisCard1Title: 'Salud Mental Juvenil',
+      crisisCard1Desc: 'El suicidio es la principal causa de muerte no natural en jóvenes de 15 a 29 años en España. Urge brindar propósito y pertenencia.',
+      crisisCard2Title: 'Acoso Escolar y Aislamiento',
+      crisisCard2Desc: '1 de cada 4 alumnos sufre acoso escolar. Se necesitan entornos seguros y cercanos de aprendizaje formativo.',
+      crisisCard3Title: 'Accesibilidad Económica',
+      crisisCard3Desc: 'La educación privada con valores suele costar €600–1.200/mes. Hacemos posibles centros comunitarios por €200–280.',
+      crisisCta: 'Conoce Cómo Ayudamos',
+      hubsEyebrow: 'Centros Comunitarios',
+      hubsHeading: 'Centros de Aprendizaje Comunitario — Costa Blanca, España',
+      hubsIntro: 'En iglesias locales. Académicamente rigurosos. Financieramente accesibles.',
+      hubJaveaTitle: 'Hub Jávea',
+      hubTorreviejaTitle: 'Hub Torrevieja',
+      hubOpenEnroll: 'Matrícula Abierta para Familias Fundadoras',
+      hubJaveaFam: 'Familia Visionaria: Medalith y Juan Carlos',
+      hubTorreviejaFam: 'Familia Visionaria: Mary Claudia y Henry',
+      hubStatText: '32 estudiantes = Centro autosostenible. Sé una familia fundadora.',
+      hubCta: 'Explorar Centros Comunitarios',
+      lsEyebrow: 'Ruta Formativa para Jóvenes',
+      lsHeading: 'Habilidades para la Vida (Life Skills) y Liderazgo (10 a 18 años)',
+      lsIntro: 'No solo formamos estudiantes. Formamos líderes con propósito.',
+      lsStage1Title: 'Seedling (10–12 años)',
+      lsStage1Desc: 'Identidad, raíces del carácter, inteligencia emocional y primer servicio.',
+      lsStage2Title: 'Explorer (12–14 años)',
+      lsStage2Desc: 'Descubrimiento vocacional, fórmula de propósito, trabajo en equipo.',
+      lsStage3Title: 'Builder (14–16 años)',
+      lsStage3Desc: 'Proyectos de liderazgo real, educación financiera y resolución de problemas.',
+      lsStage4Title: 'Launch (16–18 años)',
+      lsStage4Desc: 'Proyecto Capstone, portafolio universitario y orientación vocacional.',
+      lsCta1: 'Ver Ruta Completa',
+      lsCta2: 'Solicitar Diagnóstico Gratuito',
+      aeEyebrow: 'Aprendizaje Continuo',
+      aeHeading: 'Educación para Adultos y Fortalecimiento Parental',
+      aeText: 'Capacitamos a padres y adultos con herramientas prácticas de liderazgo familiar, alfabetización digital, inglés conversacional y desarrollo laboral a través de talleres de fin de semana y cursos comunitarios.',
+      aeCheck1: 'Talleres de orientación parental y comunicación con adolescentes',
+      aeCheck2: 'Habilidades digitales y productividad para el empleo',
+      aeCheck3: 'Inglés conversacional (ESL) para padres hispanohablantes',
+      aeCta: 'Ver Cursos de Adultos',
+      aeCaption: 'Talleres comunitarios para capacitar a padres y adultos',
+      ddEyebrow: 'Inclusión Académica',
+      ddHeading: 'Fondo de Becas para el Bachillerato Dual Internacional',
+      ddText: 'A través de nuestro fondo de becas, estudiantes de comunidades hispanas pueden cursar el High School Diploma estadounidense en paralelo a sus estudios locales, abriendo puertas universitarias globales con matrículas subsidiadas y docentes bilingües.',
+      ddCta1: 'Detalles de la Beca',
+      ddCta2: 'Solicitar Ayuda',
+      ddCaption: 'Ceremonia de graduación con doble titulación internacional',
+      needEyebrow: 'La Necesidad',
+      needHeading: 'Por Qué Esto Importa para Familias, Jóvenes e Iglesias Locales',
+      needP1: 'Muchas familias necesitan apoyo educativo cercano y orientación de confianza. Los jóvenes necesitan propósito, mentoría y desarrollo del carácter.',
+      needP2: 'Muchas iglesias desean servir a sus comunidades más allá del domingo, pero requieren estructuras y modelos para lograr un impacto sostenido.',
+      needP3: 'Al alinear espacios de iglesias, alianzas locales y recursos benéficos, las comunidades ganan un puente sólido entre fe, familia y educación.',
+      needBoxTitle: 'Lo que Vemos en el Terreno',
+      needBox1: 'Las familias necesitan apoyo accesible y pasos claros.',
+      needBox2: 'Los jóvenes necesitan mentoría y dirección vocacional.',
+      needBox3: 'Las iglesias necesitan un modelo para servir a su barrio.',
+      needBox4: 'Los donantes necesitan rutas creíbles y transparentes de servicio.',
+      solEyebrow: 'Nuestra Solución',
+      solHeading: 'Un Modelo Claro para la Transformación Comunitaria con Misión',
+      solCard1Title: 'Activamos Alianzas Locales',
+      solCard1Desc: 'Conectamos iglesias, líderes comunitarios y aliados en torno a prioridades locales y oportunidades de servicio.',
+      solCard2Title: 'Aportamos Estructura y Programas',
+      solCard2Desc: 'Organizamos apoyo pedagógico, talleres familiares, rutas de liderazgo y voluntariado.',
+      solCard3Title: 'Movilizamos Personas y Recursos',
+      solCard3Desc: 'Canalizamos donaciones, becas y equipos hacia proyectos concretos para niños y familias.',
+      visEyebrow: 'Impacto Comunitario en Acción',
+      visHeading: 'Espacios en Iglesias, Apoyo Familiar y Formación Juvenil',
+      visCap1: 'Acompañamiento pedagógico familiar',
+      visCap2: 'Actividades de mentoría juvenil',
+      visCap3: 'Red de alianzas comunitarias',
+      donEyebrow: 'Lo que Hace Posible su Donación',
+      donHeading: 'El Apoyo de Donantes Financia Proyectos Locales Concretos',
+      donCard1Title: 'Centros de Aprendizaje en Iglesias',
+      donCard1Desc: 'Acondicionar y equipar espacios para apoyo escolar recurrente y mentoría.',
+      donCard2Title: 'Talleres de Orientación Parental',
+      donCard2Desc: 'Sesiones formativas prácticas para que las familias apoyen a sus hijos.',
+      donCard3Title: 'Libros, Contenido y Recursos',
+      donCard3Desc: 'Desarrollo de materiales educativos abiertos y formativos.',
+      donCard4Title: 'Life Skills y Proyectos Vocacionales',
+      donCard4Desc: 'Rutas que conectan propósito juvenil, responsabilidad y preparación futura.',
+      donCard5Title: 'Servicio Comunitario',
+      donCard5Desc: 'Movilización de voluntarios para proyectos de impacto social local.',
+      donCard6Title: 'Capacitación de Equipos',
+      donCard6Desc: 'Preparación de líderes y voluntarios para sostener las iniciativas.',
+      phEyebrow: 'Un Modelo Replicable',
+      phHeading: 'Cinco Fases para el Lanzamiento y Expansión Local',
+      ph1: '<strong>Alianza Local:</strong> Alineación con iglesias y colaboradores de la comunidad.',
+      ph2: '<strong>Activación del Espacio:</strong> Adecuación de instalaciones para uso semanal.',
+      ph3: '<strong>Capacitación y Lanzamiento:</strong> Formación de equipos e inicio estructurado.',
+      ph4: '<strong>Impacto Continuo:</strong> Actividades recurrentes para jóvenes y familias.',
+      ph5: '<strong>Replicación:</strong> Expansión del modelo a nuevas comunidades.',
+      finalEyebrow: 'Únete a la Misión',
+      finalHeading: 'Ayuda a Activar el Impacto Comunitario en las Iglesias',
+      finalLead: 'Tu aporte o alianza ayuda a las iglesias a servir a las familias, guiar a los jóvenes y construir caminos de transformación local.',
+      finalCta1: 'Donar',
+      finalCta2: 'Asóciate con Nosotros',
+      finalCta3: 'Explorar Programas'
+    }
+  };
+
+  function apply(locale) {
+    const pack = t[locale] || t.en;
+    document.title = pack.title;
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute('content', pack.desc);
+
+    document.querySelectorAll('[data-i18n-home]').forEach((node) => {
+      const key = node.getAttribute('data-i18n-home');
+      if (pack[key]) {
+        node.innerHTML = pack[key];
+      }
+    });
+  }
+
+  window.addEventListener('site:localechange', (e) => apply((e.detail && e.detail.locale) || 'en'));
+  apply((window.chanakSiteLocale && window.chanakSiteLocale.getLocale()) || 'en');
+})();
+</script>
 </body>
 </html>
