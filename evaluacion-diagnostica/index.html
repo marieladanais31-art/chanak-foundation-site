@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación Diagnóstica y Orientación Formativa Gratuita | CHANAK Foundation</title>
+  <meta name="description" content="Herramienta diagnóstica pedagógica abierta y 100% gratuita de CHANAK TRAINUP EDUCATION INC (501c3) para evaluar competencias y rendimiento académico.">
+  <link rel="canonical" href="https://foundation.chanakacademy.org/evaluacion-diagnostica/">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+
+  <!-- Notice Bar -->
+  <aside class="tax-notice-bar" aria-label="Estatus Legal de la Organización">
+    CHANAK TRAINUP EDUCATION INC | Organización 501(c)(3) sin fines de lucro exenta de impuestos | EIN: <strong>36-5154011</strong> | St. Petersburg, FL
+  </aside>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="/" class="logo-group">
+        <img src="/assets/logo-chanak.png" alt="CHANAK Logo" class="logo-img" onerror="this.style.display='none'">
+        <div class="logo-text">
+          <span class="logo-title">CHANAK FOUNDATION</span>
+          <span class="logo-sub">501(c)(3) Tax-Exempt Non-Profit</span>
+        </div>
+      </a>
+      
+      <nav aria-label="Navegación Principal">
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-link">Inicio / Misión</a></li>
+          <li><a href="/programas/dual-diploma/" class="nav-link">Beca Dual Diploma</a></li>
+          <li><a href="/programas/homeschool-support/" class="nav-link">Apoyo Homeschool</a></li>
+          <li><a href="/evaluacion-diagnostica/" class="nav-link active">Diagnóstico Gratuito</a></li>
+          <li><a href="/transparencia/" class="nav-link">Transparencia</a></li>
+          <li><a href="/contacto/" class="btn-cta">Solicitar Admisión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <a href="/">Inicio</a> &gt; <a href="/#programas">Programas</a> &gt; <span>Evaluación Diagnóstica Formativa</span>
+  </div>
+
+  <main>
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <span class="badge-mission">Recurso Pedagógico Comunitario de Libre Acceso</span>
+      <h1>Evaluación Diagnóstica y Orientación Formativa Gratuita</h1>
+      <p>Un instrumento formativo diseñado para identificar brechas de aprendizaje, competencias clave y orientar el plan pedagógico del estudiante sin costo alguno.</p>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+      <div style="max-width: 880px; margin: 0 auto;">
+        
+        <h2>¿Por qué realizar una Evaluación Diagnóstica?</h2>
+        <p style="margin: 16px 0; font-size: 1.05rem; color: #334155;">
+          En <strong>CHANAK TRAINUP EDUCATION INC</strong> creemos que todo plan educativo exitoso inicia con un entendimiento claro del punto de partida de cada estudiante. Nuestra evaluación formativa no es un examen punitivo, sino un instrumento orientador de acceso 100% gratuito sustentado por nuestra misión no lucrativa.
+        </p>
+
+        <div class="grid-3" style="margin: 36px 0;">
+          <div style="background: white; border: 1px solid var(--border); border-radius: 12px; padding: 24px;">
+            <h4 style="color: var(--primary); margin-bottom: 8px;">Competencia en Inglés</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Mide comprensión lectora, vocabulario y soltura comunicativa bajo el Marco Común Europeo (MCER/CEFR).</p>
+          </div>
+          <div style="background: white; border: 1px solid var(--border); border-radius: 12px; padding: 24px;">
+            <h4 style="color: var(--primary); margin-bottom: 8px;">Razonamiento Matemático</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Detecta solidez en resolución de problemas, pensamiento lógico y fundamentos algebraicos.</p>
+          </div>
+          <div style="background: white; border: 1px solid var(--border); border-radius: 12px; padding: 24px;">
+            <h4 style="color: var(--primary); margin-bottom: 8px;">Lectura Crítica</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Evalúa la capacidad de análisis inferencial, extracción de ideas clave y pensamiento estructurado.</p>
+          </div>
+        </div>
+
+        <!-- Form Box for Diagnostic Request -->
+        <div class="form-container" style="max-width: 100%; margin-top: 40px;" id="iniciar">
+          <h3 style="color: var(--primary); margin-bottom: 8px;">Solicitar Acceso a la Evaluación Diagnóstica Gratuita</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px;">Le enviaremos las credenciales de acceso a la plataforma de evaluación abierta y las instrucciones de aplicación.</p>
+          
+          <div class="form-alert-success">
+            <strong>¡Solicitud de evaluación confirmada!</strong> En breve recibirá en su correo electrónico las instrucciones y enlace seguro para que el estudiante realice el diagnóstico.
+          </div>
+
+          <form data-foundation-form method="POST">
+            <input type="hidden" name="programa_solicitado" value="Evaluacion Diagnostica Gratuita">
+
+            <div class="form-group">
+              <label for="parent_diag">Nombre del Padre, Madre o Tutor <span class="required">*</span></label>
+              <input type="text" id="parent_diag" name="parent_name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <label for="student_diag">Nombre del Estudiante <span class="required">*</span></label>
+              <input type="text" id="student_diag" name="student_name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <label for="grade_diag">Edad y Grado Escolar Actual <span class="required">*</span></label>
+              <input type="text" id="grade_diag" name="student_grade" class="form-control" placeholder="Ej. 13 años / 8º Grado" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email_diag">Correo Electrónico (para envío del enlace del diagnóstico e informe) <span class="required">*</span></label>
+              <input type="email" id="email_diag" name="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <label for="focus_area">Área primordial de interés a evaluar:</label>
+              <select id="focus_area" name="focus_area" class="form-control">
+                <option value="general">Evaluación Integral (Inglés + Matemáticas + Lectura)</option>
+                <option value="ingles-dual">Nivel de Inglés para Postulación al Bachillerato Dual</option>
+                <option value="homeschool-placement">Nivelación Diagnóstica para Educación en el Hogar</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn-cta" style="width: 100%; justify-content: center; padding: 14px; font-size: 1rem;">
+              Solicitar Enlace de Evaluación Gratuita
+            </button>
+            <p class="form-note" style="text-align: center;">Sin costo, sin suscripciones, ni requerimiento de métodos de pago.</p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- MANDATORY INSTITUTIONAL FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col footer-legal-info">
+        <span class="footer-legal-badge">ORGANIZACIÓN 501(c)(3) SIN FINES DE LUCRO</span>
+        <h4>CHANAK TRAINUP EDUCATION INC</h4>
+        <p><strong>Estatus Fiscal:</strong> Entidad exenta de impuestos bajo la Sección 501(c)(3) del IRS.</p>
+        <p><strong>EIN:</strong> 36-5154011</p>
+        <p><strong>Dirección:</strong> 7901 4th St N Ste 300, St. Petersburg, FL 33702, USA</p>
+        <p><strong>Contacto:</strong> <a href="mailto:administration@chanakacademy.org">administration@chanakacademy.org</a></p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Programas Comunitarios</h4>
+        <ul class="footer-links">
+          <li><a href="/programas/dual-diploma/">Beca Bachillerato Dual</a></li>
+          <li><a href="/programas/homeschool-support/">Apoyo a la Educación en el Hogar</a></li>
+          <li><a href="/evaluacion-diagnostica/">Evaluaciones Diagnósticas</a></li>
+          <li><a href="/contacto/">Criterios de Elegibilidad</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Gobernanza y Transparencia</h4>
+        <ul class="footer-links">
+          <li><a href="/transparencia/">Transparencia y Misión</a></li>
+          <li><a href="/politica-de-privacidad/">Política de Privacidad</a></li>
+          <li><a href="/terminos-de-servicio/">Términos de Servicio</a></li>
+          <li><a href="/contacto/">Contacto Oficial y Sede</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 CHANAK TRAINUP EDUCATION INC (501(c)(3)). Todos los derechos reservados.</p>
+      <p>Entorno institucional de impacto social: <strong style="color:#94a3b8;">foundation.chanakacademy.org</strong></p>
+    </div>
+  </footer>
+
+  <script src="/assets/main.js"></script>
+</body>
+</html>
