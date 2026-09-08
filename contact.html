@@ -395,5 +395,25 @@
     window.location.href = 'mailto:administration@chanakacademy.org?subject=' + subject + '&body=' + body;
   });
 </script>
+
+<!-- Conversión: envío del formulario de solicitud de beca -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-CONVERSION_ID');
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.querySelector('#project-brief form');
+    if (form) {
+      form.addEventListener('submit', function () {
+        gtag('event', 'conversion', {
+          send_to: 'AW-CONVERSION_ID/SCHOLARSHIP_LABEL'
+        });
+      });
+    }
+  });
+</script>
 </body>
 </html>

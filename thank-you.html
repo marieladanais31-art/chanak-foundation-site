@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gracias por tu donación | Thank You | Chanak Foundation</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<!-- ======================================================================
+     CONVERSION TRACKING — GOOGLE AD GRANTS
+     ======================================================================
+     This page only loads after Stripe confirms a completed payment (it is
+     the return URL configured on the donation button). That is why the
+     "Donation completed" conversion event fires on THIS page's load,
+     rather than on the outbound click to Stripe.
+
+     TO DO BEFORE GOING LIVE (technical team / Elías):
+     1) Replace AW-CONVERSION_ID with the account's Google Ads conversion ID
+        (format AW-XXXXXXXXX). Get it from:
+        Google Ads > Tools & Settings > Conversions >
+        (create/open the "Donation completed" action) > Tag setup.
+     2) Replace DONATION_LABEL with the conversion label Google generates
+        for that specific action.
+     3) The scholarship-application form-submit conversion is a separate
+        snippet that belongs on contact.html, not on this page.
+     ====================================================================== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-CONVERSION_ID');
+  gtag('event', 'conversion', {
+    'send_to': 'AW-CONVERSION_ID/DONATION_LABEL'
+  });
+</script>
+<!-- ==================================================================== -->
+
+<style>
+  :root{
+    --ground:#FBFAF7;
+    --surface:#FFFFFF;
+    --surface-sunk:#F3F1EA;
+    --ink:#16233D;
+    --ink-soft:#4E586C;
+    --ink-faint:#7C8496;
+    --rule:#E2DED2;
+    --brass:#9A7A2F;
+    --brass-soft:#EFE6CE;
+    --ok:#2F6F53;
+    --ok-soft:#DFEDE5;
+    --shadow:0 1px 2px rgba(22,35,61,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#0E1420;
+      --surface:#151D2C;
+      --surface-sunk:#111927;
+      --ink:#E9E6DD;
+      --ink-soft:#A9B0BF;
+      --ink-faint:#7A8394;
+      --rule:#25304290;
+      --brass:#D9B968;
+      --brass-soft:#2A2418;
+      --ok:#7FC7A4;
+      --ok-soft:#16281F;
+      --shadow:none;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0E1420; --surface:#151D2C; --surface-sunk:#111927;
+    --ink:#E9E6DD; --ink-soft:#A9B0BF; --ink-faint:#7A8394;
+    --rule:#25304290; --brass:#D9B968; --brass-soft:#2A2418;
+    --ok:#7FC7A4; --ok-soft:#16281F; --shadow:none;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--ground);
+    color:var(--ink);
+    font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  header{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:22px 32px;border-bottom:1px solid var(--rule);
+  }
+  header .brand{display:flex;flex-direction:column;line-height:1.2;}
+  header .brand b{font-family:"Source Serif 4",Georgia,serif;font-size:1.15rem;font-weight:600;}
+  header .brand span{font-size:.72rem;color:var(--ink-faint);}
+  .langswitch{
+    display:flex;background:var(--brass-soft);border-radius:999px;padding:3px;gap:2px;
+    flex-shrink:0;
+  }
+  .langswitch button{
+    border:none;background:transparent;padding:6px 14px;border-radius:999px;
+    font-family:"IBM Plex Sans",sans-serif;font-size:.78rem;font-weight:600;
+    color:var(--ink-soft);cursor:pointer;
+  }
+  .langswitch button.active{background:var(--surface);color:var(--ink);box-shadow:var(--shadow);}
+  main{
+    flex:1;display:flex;align-items:center;justify-content:center;
+    padding:48px 24px;
+  }
+  .card{
+    max-width:560px;width:100%;
+    background:var(--surface);
+    border:1px solid var(--rule);
+    border-radius:6px;
+    box-shadow:var(--shadow);
+    padding:44px 40px 40px;
+    text-align:center;
+  }
+  .badge{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:56px;height:56px;border-radius:50%;
+    background:var(--ok-soft);color:var(--ok);
+    font-size:1.6rem;margin-bottom:20px;
+  }
+  .eyebrow{
+    font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--brass);font-weight:600;margin-bottom:10px;
+  }
+  h1{
+    font-family:"Source Serif 4",Georgia,serif;
+    font-size:1.85rem;font-weight:600;letter-spacing:-.01em;
+    margin:0 0 16px;
+  }
+  p{margin:0 0 14px;color:var(--ink-soft);}
+  p:last-of-type{margin-bottom:0;}
+  .verse{
+    margin:24px 0;padding:16px 20px;
+    background:var(--surface-sunk);border-left:3px solid var(--brass);
+    border-radius:2px;font-style:italic;color:var(--ink);font-size:.92rem;
+    text-align:left;
+  }
+  .verse cite{display:block;margin-top:8px;font-style:normal;font-size:.78rem;color:var(--ink-faint);}
+  .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px;}
+  .btn{
+    display:inline-block;padding:11px 22px;border-radius:4px;
+    font-size:.92rem;font-weight:600;text-decoration:none;
+    transition:opacity .15s;
+  }
+  .btn:hover{opacity:.85;}
+  .btn-primary{background:var(--brass);color:#fff;}
+  .btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--rule);}
+  footer{
+    text-align:center;padding:24px;font-size:.75rem;color:var(--ink-faint);
+  }
+  footer a{color:var(--ink-faint);}
+
+  [data-lang-block]{display:none;}
+  [data-lang-block].active{display:block;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <b>Chanak Foundation</b>
+    <span data-lang-block data-lang="es" class="active">Una iniciativa educativa de Chanak TrainUp Education, Inc. · 501(c)(3)</span>
+    <span data-lang-block data-lang="en">An educational initiative of Chanak TrainUp Education, Inc. · 501(c)(3)</span>
+  </div>
+  <div class="langswitch" role="group" aria-label="Idioma / Language">
+    <button type="button" data-lang-btn="es" class="active" onclick="setLang('es')">Español</button>
+    <button type="button" data-lang-btn="en" onclick="setLang('en')">English</button>
+  </div>
+</header>
+
+<main>
+  <div class="card">
+    <div class="badge">✓</div>
+
+    <div data-lang-block data-lang="es" class="active">
+      <div class="eyebrow">Donación confirmada</div>
+      <h1>Gracias por tu generosidad</h1>
+      <p>Hemos recibido tu donación correctamente. Tu aporte se destina directamente al Fondo Solidario de Chanak Foundation, que sostiene becas Dual Diploma y la apertura de nuevos Hubs educativos.</p>
+      <p>En breve recibirás por correo electrónico el recibo de Stripe con el detalle de tu transacción. Como organización 501(c)(3) en Estados Unidos, tu donación puede ser deducible de impuestos según tu situación fiscal; conserva ese recibo para tu declaración.</p>
+      <div class="verse">
+        «Cada uno dé como propuso en su corazón: no con tristeza, ni por necesidad, porque Dios ama al dador alegre.»
+        <cite>2 Corintios 9:7</cite>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://foundation.chanakacademy.org/impact.html">Ver el impacto de tu apoyo</a>
+        <a class="btn btn-secondary" href="https://foundation.chanakacademy.org/">Volver al inicio</a>
+      </div>
+    </div>
+
+    <div data-lang-block data-lang="en">
+      <div class="eyebrow">Donation confirmed</div>
+      <h1>Thank you for your generosity</h1>
+      <p>We've successfully received your donation. Your gift goes directly to Chanak Foundation's Solidarity Fund, which sustains Dual Diploma scholarships and the opening of new education Hubs.</p>
+      <p>You'll shortly receive a Stripe receipt by email with the details of your transaction. As a U.S. 501(c)(3) organization, your donation may be tax-deductible depending on your situation; please keep that receipt for your records.</p>
+      <div class="verse">
+        "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver."
+        <cite>2 Corinthians 9:7</cite>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://foundation.chanakacademy.org/impact.html">See the impact of your support</a>
+        <a class="btn btn-secondary" href="https://foundation.chanakacademy.org/">Back to home</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  Chanak Foundation · Chanak TrainUp Education, Inc. — <a href="https://foundation.chanakacademy.org/">foundation.chanakacademy.org</a>
+</footer>
+
+<script>
+  function setLang(lang){
+    document.querySelectorAll('[data-lang-block]').forEach(function(el){
+      el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+    });
+    document.querySelectorAll('[data-lang-btn]').forEach(function(btn){
+      btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === lang);
+    });
+    document.documentElement.setAttribute('lang', lang);
+    try { localStorage.setItem('chanak_lang', lang); } catch(e) {}
+  }
+  (function(){
+    var saved = null;
+    try { saved = localStorage.getItem('chanak_lang'); } catch(e) {}
+    if (!saved) {
+      saved = (navigator.language || '').toLowerCase().indexOf('en') === 0 ? 'en' : 'es';
+    }
+    setLang(saved);
+  })();
+</script>
+
+</body>
+</html>
