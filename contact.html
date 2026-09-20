@@ -392,28 +392,25 @@
       'Category: ' + category + '\n\n' +
       'Message / Details:\n' + message
     );
-    window.location.href = 'mailto:administration@chanakacademy.org?subject=' + subject + '&body=' + body;
-  });
-</script>
+    const mailtoUrl = 'mailto:administration@chanakacademy.org?subject=' + subject + '&body=' + body;
+    let navigationStarted = false;
+    const openEmail = function () {
+      if (navigationStarted) return;
+      navigationStarted = true;
+      window.location.href = mailtoUrl;
+    };
 
-<!-- Conversión: envío del formulario de solicitud de beca -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-CONVERSION_ID');
-
-  document.addEventListener('DOMContentLoaded', function () {
-    var form = document.querySelector('#project-brief form');
-    if (form) {
-      form.addEventListener('submit', function () {
-        gtag('event', 'conversion', {
-          send_to: 'AW-CONVERSION_ID/SCHOLARSHIP_LABEL'
-        });
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-18109980849/lOuCCKX0lbUcELHBwbtD',
+        event_callback: openEmail
       });
+      window.setTimeout(openEmail, 1000);
+    } else {
+      openEmail();
     }
   });
 </script>
+
 </body>
 </html>
