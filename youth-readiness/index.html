@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chanak Saint Cloud Youth Life & Career Readiness Platform</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="chanak-seal.png">
+</head>
+<body>
+
+  <!-- Top Application Bar -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="header-brand">
+        <img src="logo-chanak.png" alt="Chanak Logo" class="header-logo" onerror="this.style.display='none'">
+        <div class="header-titles">
+          <h1>
+            Chanak Saint Cloud Youth Platform
+          </h1>
+          <p>
+            <span>Veterans Memorial Library Pilot</span>
+            <span class="badge-grant">🤝 Walmart Spark Good Grant #5214</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Dual Role Switcher -->
+        <div class="role-switcher">
+          <button id="roleStudentBtn" class="role-btn active">👨‍🎓 Estudiante</button>
+          <button id="roleFacilitatorBtn" class="role-btn">👩‍🏫 Facilitadora (Karen)</button>
+        </div>
+
+        <button id="soundToggleBtn" class="icon-btn">🔊 Audio ON</button>
+        <button id="langToggleBtn" class="icon-btn">🇺🇸 Switch to English</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Modern Navigation Bar -->
+  <nav class="app-navbar">
+    <div class="nav-container" id="mainNavBar">
+      <button class="nav-tab-btn active" data-tab="roadmap">🗺️ Ruta de 4 Semanas y Clases</button>
+      <button class="nav-tab-btn" data-tab="resume">📄 Taller de Currículum</button>
+      <button class="nav-tab-btn" data-tab="paycheck">💵 Nómina y Talón (Paystub)</button>
+      <button class="nav-tab-btn" data-tab="budget">💰 Laboratorio de Presupuesto</button>
+      <button class="nav-tab-btn" data-tab="roleplays">🎭 Dramatizaciones Laborales (Día 3)</button>
+      <button class="nav-tab-btn" data-tab="scamGame">🛡️ Detector de Estafas (Día 14)</button>
+      <button class="nav-tab-btn" data-tab="interview">🎙️ Simulador de Entrevistas (9 Preguntas)</button>
+      <button class="nav-tab-btn" data-tab="pitch">⚡ Elevator Pitch de 30s</button>
+      <button class="nav-tab-btn" data-tab="facilitator">📊 Panel de Cohorte y Reporte Walmart</button>
+      <button class="nav-tab-btn" data-tab="certificate">🎓 Certificado Oficial</button>
+    </div>
+  </nav>
+
+  <!-- Main Application Body -->
+  <main class="app-main">
+
+    <!-- TAB 1: 4-WEEK ROADMAP & INTERACTIVE SESSIONS (KAREN'S PLAN) -->
+    <section id="view-roadmap" class="view-panel active">
+      <div id="roadmapWeeksContainer">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- TAB 2: RÉSUMÉ STUDIO (HIGH SCHOOL FIRST CV) -->
+    <section id="view-resume" class="view-panel">
+      <div class="two-col-studio">
+        <!-- Form Editor Panel -->
+        <div class="studio-panel no-print">
+          <div class="studio-header">
+            <h3>✏️ Creador Profesional de Currículum para High School</h3>
+            <p>Especialmente diseñado para adolescentes de 16 a 18 años con o sin experiencia laboral previa.</p>
+          </div>
+
+          <div class="form-group-modern">
+            <label>Nombre Completo / Full Name</label>
+            <input type="text" id="in_res_fullName" placeholder="Ej: Mateo Rodriguez">
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div class="form-group-modern">
+              <label>Teléfono / Phone</label>
+              <input type="text" id="in_res_phone" placeholder="(407) 555-0192">
+            </div>
+            <div class="form-group-modern">
+              <label>Correo / Email</label>
+              <input type="email" id="in_res_email" placeholder="estudiante@email.com">
+            </div>
+          </div>
+
+          <div class="form-group-modern">
+            <label>Ciudad y Estado / Location</label>
+            <input type="text" id="in_res_city" placeholder="St. Cloud, FL">
+          </div>
+
+          <div class="form-group-modern">
+            <label>Perfil y Objetivo Profesional (Career Objective)</label>
+            <textarea id="in_res_headline" rows="2" placeholder="Estudiante motivado en busca de su primera oportunidad..."></textarea>
+            <small>Tip: Menciona tu puntualidad, ganas de aprender y actitud positiva.</small>
+          </div>
+
+          <div style="display:grid; grid-template-columns:1.3fr 1fr; gap:1rem;">
+            <div class="form-group-modern">
+              <label>Escuela Secundaria / High School</label>
+              <input type="text" id="in_res_school" placeholder="St. Cloud High School">
+            </div>
+            <div class="form-group-modern">
+              <label>Grado / Grade Level</label>
+              <input type="text" id="in_res_grade" placeholder="11th Grade · Grad. Mayo 2028">
+            </div>
+          </div>
+
+          <div class="form-group-modern">
+            <label>GPA y Honores Académicos</label>
+            <input type="text" id="in_res_gpa" placeholder="GPA: 3.7 / 4.0 · Cursos de Honor">
+          </div>
+
+          <div class="form-group-modern">
+            <label>Habilidades Clave (separadas por comas)</label>
+            <input type="text" id="in_res_skills" placeholder="Bilingüe (Inglés/Español), Manejo de Caja, Puntualidad">
+          </div>
+
+          <div class="form-group-modern">
+            <label>Liderazgo, Deportes y Clubes Extracurriculares</label>
+            <textarea id="in_res_activities" rows="2" placeholder="Capitán de fútbol, coro de iglesia, club de robótica..."></textarea>
+          </div>
+
+          <div class="form-group-modern">
+            <label>Voluntariado y Servicio Comunitario en Osceola</label>
+            <textarea id="in_res_volunteerExp" rows="2" placeholder="Banco de alimentos, biblioteca, eventos comunitarios..."></textarea>
+          </div>
+
+          <button id="printResumeActionBtn" class="btn-modern btn-primary-dark" style="width:100%;">
+            🖨️ Imprimir / Guardar en PDF Oficial
+          </button>
+        </div>
+
+        <!-- Live Résumé Preview Sheet -->
+        <div class="resume-preview-wrapper">
+          <div id="renderedResumePaper" class="resume-paper">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: FLORIDA PAYCHECK & PAYSTUB INSPECTOR (ONLINE DAYS 9 & 10) -->
+    <section id="view-paycheck" class="view-panel">
+      <div class="two-col-studio">
+        <!-- Controls & Inputs -->
+        <div class="studio-panel">
+          <div class="studio-header">
+            <h3>💵 Simulador de Nómina y Cheque Real de Florida</h3>
+            <p>Entiende con números reales por qué el dinero en tu cuenta bancaria es menor a tu sueldo bruto.</p>
+          </div>
+
+          <div class="form-group-modern">
+            <label>Tarifa por Hora / Hourly Wage (USD)</label>
+            <input type="number" id="input_payRate" value="14.00" step="0.50" min="11">
+            <small>Salario mínimo en Florida: $13.00/hr (en transición según ley estatal).</small>
+          </div>
+
+          <div class="form-group-modern">
+            <label>Horas Trabajadas por Semana / Weekly Hours</label>
+            <input type="number" id="input_payHours" value="20" min="5" max="40">
+            <small>Rango promedio para estudiantes de secundaria: 15–20 horas/semana.</small>
+          </div>
+
+          <div class="form-group-modern">
+            <label>Frecuencia de Pago / Pay Frequency</label>
+            <select id="input_payFreq">
+              <option value="biweekly" selected>Quincenal / Bi-Weekly (Cada 2 semanas - Típico de Walmart / Retail)</option>
+              <option value="weekly">Semanal / Weekly (Cada viernes)</option>
+            </select>
+          </div>
+
+          <div style="background:#EFF6FF; border-left:4px solid #2563EB; padding:1.25rem; border-radius:0 12px 12px 0; margin-top:2rem;">
+            <strong style="color:#1D4ED8; font-size:0.95rem; display:block; margin-bottom:0.35rem;">
+              📌 Ley Fiscal de Florida para Jóvenes:
+            </strong>
+            <p style="font-size:0.88rem; color:#1E40AF; line-height:1.5;">
+              En Florida <strong>NO existe impuesto estatal sobre la renta</strong> (0%). Sin embargo, las retenciones federales obligatorias (Social Security 6.2%, Medicare 1.45% y Retención de Impuesto Federal W-4) se deducen automáticamente de cada cheque.
+            </p>
+          </div>
+        </div>
+
+        <!-- Interactive Paystub Widget -->
+        <div>
+          <div id="paystubLiveWidget">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: MONTHLY BUDGET LAB WITH CANVAS CHART (ONLINE DAYS 11 & 12) -->
+    <section id="view-budget" class="view-panel">
+      <div class="studio-panel" style="margin-bottom:2rem;">
+        <div class="studio-header">
+          <h3>💰 Laboratorio Interactivo de Presupuesto Mensual</h3>
+          <p>Administra con mayordomía tu primer sueldo de St. Cloud basado en tus ingresos netos reales.</p>
+        </div>
+
+        <div id="budgetKpiBanner" style="display:flex; gap:1.25rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <div class="two-col-studio" style="align-items:center;">
+          <!-- Sliders and Inputs -->
+          <div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+              <div class="form-group-modern">
+                <label>📱 Celular (Plan familiar o prepago)</label>
+                <input type="number" id="bgt_phone" value="45">
+              </div>
+              <div class="form-group-modern">
+                <label>🚗 Gasolina / Pases de Transporte</label>
+                <input type="number" id="bgt_transport" value="70">
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+              <div class="form-group-modern">
+                <label>🍔 Comida / Snacks fuera de casa</label>
+                <input type="number" id="bgt_food" value="85">
+              </div>
+              <div class="form-group-modern">
+                <label>🎮 Diversión / Salidas con amigos</label>
+                <input type="number" id="bgt_entertainment" value="55">
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+              <div class="form-group-modern">
+                <label>👟 Ropa y Cuidado Personal</label>
+                <input type="number" id="bgt_personal" value="40">
+              </div>
+              <div class="form-group-modern">
+                <label>🏦 Fondo de Ahorro / Emergencias</label>
+                <input type="number" id="bgt_savings" value="100">
+              </div>
+            </div>
+
+            <div class="form-group-modern">
+              <label>🤝 Diezmo / Donaciones / Generosidad</label>
+              <input type="number" id="bgt_giving" value="35">
+            </div>
+          </div>
+
+          <!-- HTML5 Canvas Donut Chart -->
+          <div style="text-align:center; background:#F8FAFC; border:1px solid #E2E8F0; border-radius:16px; padding:2rem;">
+            <strong style="color:var(--primary); font-size:1rem; display:block; margin-bottom:1rem;">
+              📊 Distribución Visual de tu Dinero
+            </strong>
+            <canvas id="budgetCanvasDonut" width="200" height="200" style="display:block; margin:0 auto;"></canvas>
+            <div style="margin-top:1rem; font-size:0.8rem; color:var(--text-muted);">
+              Azul: Celular · Verde: Ahorro · Amarillo: Transporte · Rosa: Salidas · Dorado: Generosidad
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: WORKPLACE ROLEPLAYS (IN-PERSON DAY 3) -->
+    <section id="view-roleplays" class="view-panel">
+      <div class="studio-panel" style="margin-bottom:1.5rem;">
+        <div class="studio-header">
+          <h3>🎭 Baraja de Dramatizaciones Laborales (Día 3 en la Biblioteca)</h3>
+          <p>
+            Karen guía a los jóvenes en la biblioteca para pensar bajo presión en situaciones reales en vez de memorizar reglas.
+          </p>
+        </div>
+        <div id="roleplayDeckContainer">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 6: SCAM DETECTOR GAME (ONLINE DAY 14) -->
+    <section id="view-scamGame" class="view-panel">
+      <div class="studio-panel" style="margin-bottom:1.5rem;">
+        <div class="studio-header">
+          <h3>🛡️ Juego del Detective: ¿Estafa o Empleo Legítimo?</h3>
+          <p>
+            Aprende a proteger tu número de Seguro Social, tu cuenta de banco y tu seguridad reconociendo ofertas fraudulentas en internet.
+          </p>
+        </div>
+        <div id="scamGameContainer">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 7: MOCK INTERVIEW SUITE (ONLINE DAY 16 & IN-PERSON DAY 4) -->
+    <section id="view-interview" class="view-panel">
+      <div class="two-col-studio">
+        <!-- Interactive Stage -->
+        <div class="studio-panel">
+          <div class="studio-header">
+            <h3>🎙️ Simulador de Entrevista Laboral (9 Preguntas Oficiales)</h3>
+            <p>Entrena con cronómetro de 60 segundos y escucha cómo suena una respuesta modelo profesional.</p>
+          </div>
+
+          <div id="interviewStageBox">
+            <!-- Rendered dynamically -->
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:0.5rem; flex-wrap:wrap; margin-top:1.5rem;">
+            <div style="display:flex; gap:0.5rem;">
+              <button id="interviewPrevQBtn" class="btn-modern btn-secondary-outline">⬅ Anterior</button>
+              <button id="interviewNextQBtn" class="btn-modern btn-secondary-outline">Siguiente ➡</button>
+            </div>
+            <div style="display:flex; gap:0.5rem;">
+              <button id="interviewStartTimerBtn" class="btn-modern btn-primary-dark">▶ Iniciar 60 Segundos</button>
+              <button id="interviewToggleModelBtn" class="btn-modern btn-accent-gold">💡 Ver Respuesta Modelo</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Strategy Box & STAR Method -->
+        <div class="studio-panel">
+          <h4 style="color:var(--primary); font-size:1.15rem; margin-bottom:1rem; font-weight:800;">
+            🌟 El Método STAR para Responder
+          </h4>
+          <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:1.5rem;">
+            En la Biblioteca Veterans Memorial de St. Cloud, Karen enseña esta técnica probada para responder preguntas de comportamiento sin divagar:
+          </p>
+
+          <div style="display:flex; flex-direction:column; gap:1rem;">
+            <div style="background:#EFF6FF; border:1px solid #BFDBFE; padding:1rem; border-radius:10px;">
+              <strong style="color:#1D4ED8; font-size:0.95rem;">S — Situation (Situación):</strong>
+              <p style="font-size:0.88rem; color:#1E40AF; margin-top:0.25rem;">Describe el contexto de la escuela, deportes o grupo juvenil donde ocurrió el reto.</p>
+            </div>
+            <div style="background:#ECFDF5; border:1px solid #A7F3D0; padding:1rem; border-radius:10px;">
+              <strong style="color:#047857; font-size:0.95rem;">T — Task (Tarea):</strong>
+              <p style="font-size:0.88rem; color:#065F46; margin-top:0.25rem;">Explica cuál era tu responsabilidad específica en ese momento.</p>
+            </div>
+            <div style="background:#FFFBEB; border:1px solid #FDE68A; padding:1rem; border-radius:10px;">
+              <strong style="color:#B45309; font-size:0.95rem;">A — Action (Acción):</strong>
+              <p style="font-size:0.88rem; color:#92400E; margin-top:0.25rem;">Narra exactamente qué hiciste con iniciativa, respeto y proactividad.</p>
+            </div>
+            <div style="background:#F5F3FF; border:1px solid #DDD6FE; padding:1rem; border-radius:10px;">
+              <strong style="color:#6D28D9; font-size:0.95rem;">R — Result (Resultado):</strong>
+              <p style="font-size:0.88rem; color:#5B21B6; margin-top:0.25rem;">Comparte el desenlace positivo y qué aprendiste para el futuro.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 8: 30-SECOND ELEVATOR PITCH (ONLINE DAY 15) -->
+    <section id="view-pitch" class="view-panel">
+      <div class="two-col-studio">
+        <div class="studio-panel">
+          <div class="studio-header">
+            <h3>⚡ Constructor de Elevator Pitch de 30 Segundos</h3>
+            <p>Fórmula de 4 pasos probada por Karen para causar impacto en menos de medio minuto.</p>
+          </div>
+
+          <div class="form-group-modern">
+            <label>1. ¿Quién soy? (Who am I?)</label>
+            <input type="text" id="in_pitch_whoAmI">
+          </div>
+
+          <div class="form-group-modern">
+            <label>2. ¿Qué puedo aportar? (What can I offer?)</label>
+            <input type="text" id="in_pitch_whatIOffer">
+          </div>
+
+          <div class="form-group-modern">
+            <label>3. ¿Por qué me interesa trabajar o hacer voluntariado? (Why interested?)</label>
+            <input type="text" id="in_pitch_whyInterested">
+          </div>
+
+          <div class="form-group-modern">
+            <label>4. ¿Por qué esta empresa u organización? (Why this organization?)</label>
+            <input type="text" id="in_pitch_whyCompany">
+          </div>
+        </div>
+
+        <div>
+          <div id="elevatorPitchCard">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 9: FACILITATOR DASHBOARD (KAREN'S VIEW) & WALMART REPORT -->
+    <section id="view-facilitator" class="view-panel">
+      <div class="stats-hero-banner" style="margin-bottom:1.5rem;">
+        <div class="hero-left">
+          <div class="hero-kicker">👩‍🏫 PANEL DE CONTROL DEL FACILITADOR</div>
+          <h2>Cohorte St. Cloud 2027 · Coordinación de Karen Pujols</h2>
+          <p>
+            Monitoreo en vivo de los 15 estudiantes, asistencia a los 4 sábados en la biblioteca y generación automatizada de reportes de impacto para el grant de Walmart Spark Good.
+          </p>
+        </div>
+        <div>
+          <button id="exportWalmartReportBtn" class="btn-modern btn-accent-gold" style="font-size:1rem; padding:1rem 1.5rem;">
+            📊 Generar Reporte Oficial para Walmart Spark
+          </button>
+        </div>
+      </div>
+
+      <div class="studio-panel">
+        <h4 style="color:var(--primary); font-size:1.2rem; margin-bottom:1rem; font-weight:800;">
+          👥 Registro de Asistencia y Entregables de la Cohorte (15 Alumnos)
+        </h4>
+        <div style="overflow-x:auto;">
+          <table class="roster-table">
+            <thead>
+              <tr>
+                <th>Estudiante</th>
+                <th>Edad</th>
+                <th>Escuela</th>
+                <th>Asistencia Sábados</th>
+                <th>Currículum</th>
+                <th>Presupuesto</th>
+                <th>Puntaje Entrevista</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody id="rosterTableBody">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 10: OFFICIAL CERTIFICATE GENERATOR -->
+    <section id="view-certificate" class="view-panel">
+      <div class="studio-panel no-print" style="max-width:650px; margin:0 auto 2rem; text-align:center;">
+        <h3 style="color:var(--primary); font-size:1.35rem; margin-bottom:0.5rem; font-weight:800;">
+          🎓 Emisión de Certificado Oficial Chanak
+        </h3>
+        <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1.25rem;">
+          Ingresa el nombre del estudiante para personalizar su diploma de finalización del programa.
+        </p>
+
+        <div class="form-group-modern" style="text-align:left;">
+          <label>Nombre Completo del Graduado:</label>
+          <input type="text" id="certInputName" value="Mateo Rodriguez">
+        </div>
+
+        <button id="printCertActionBtn" class="btn-modern btn-primary-dark" style="width:100%;">
+          🖨️ Imprimir / Descargar Certificado en Alta Resolución
+        </button>
+      </div>
+
+      <div id="officialDiplomaRender">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+  </main>
+
+  <script src="curriculum-data-full.js"></script>
+  <script src="app-full.js"></script>
+</body>
+</html>
