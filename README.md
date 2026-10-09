@@ -1,6 +1,6 @@
 # chanak-foundation-site
 
-Nonprofit website for foundation.chanakacademy.org under CHANAK TRAINUP EDUCATION, INC.
+Nonprofit website for chanakfoundation.org under CHANAK TRAINUP EDUCATION, INC.
 
 ## Branch sync status
 

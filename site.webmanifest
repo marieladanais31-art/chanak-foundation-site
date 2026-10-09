@@ -1,0 +1,21 @@
+{
+  "name": "Chanak Foundation",
+  "short_name": "Chanak",
+  "description": "CHANAK TRAINUP EDUCATION, INC. — 501(c)(3) Public Charity",
+  "start_url": "https://chanakfoundation.org/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#16233D",
+  "icons": [
+    {
+      "src": "/assets/chanak_logo_embedded.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/assets/logo-chanak.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 /**
- * CHANAK TRAINUP EDUCATION INC (501c3) - foundation.chanakacademy.org
+ * CHANAK TRAINUP EDUCATION INC (501c3) - chanakfoundation.org
  * Client-side script for institutional form handling & non-profit intake
  */
 
