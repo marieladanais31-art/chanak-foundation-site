@@ -29,6 +29,7 @@ module.exports = async (req, res) => {
       preferred_language,
       message,
       consent_given,
+      academy_contact_consent,
       source_url,
       locale,
       website_hp // Honeypot field
@@ -66,12 +67,16 @@ module.exports = async (req, res) => {
       preferred_language: preferred_language ? String(preferred_language).slice(0, 20) : 'both',
       message: message ? String(message).slice(0, 1500) : null,
       consent_given: Boolean(consent_given),
+      academy_contact_consent: Boolean(academy_contact_consent),
       source_url: source_url ? String(source_url).slice(0, 300) : null,
       locale: locale ? String(locale).slice(0, 10) : 'en',
       created_at: new Date().toISOString()
     };
 
-    // 3. Supabase Integration
+    let savedInSupabase = false;
+    let emailDispatched = false;
+
+    // 3. Supabase Database Persistence
     const supabaseUrl = process.env.SUPABASE_URL;
     const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY;
 
@@ -94,29 +99,83 @@ module.exports = async (req, res) => {
           console.error('[Supabase Error]', response.status, errText);
         } else {
           console.log('[Supabase] Successfully saved inquiry for', payload.guardian_email);
+          savedInSupabase = true;
         }
       } catch (dbErr) {
         console.error('[Supabase Network Error]', dbErr);
       }
     } else {
-      console.log('[Supabase Pending Config] Inquiry received in sandbox mode:', payload);
+      console.warn('[Supabase Warning] SUPABASE_URL or keys not configured in environment variables.');
     }
 
-    // 4. Admin Notification
-    console.log('[Notification Alert] New Orientation Request to info@chanakfoundation.org:', {
-      guardian: payload.guardian_name,
-      email: payload.guardian_email,
-      state: payload.state_code,
-      grade: payload.grade_range,
-      lang: payload.preferred_language
-    });
+    // 4. Email Backup via Resend (to info@chanakfoundation.org)
+    const resendApiKey = process.env.RESEND_API_KEY;
+    if (resendApiKey) {
+      try {
+        const emailResponse = await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${resendApiKey}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            from: process.env.RESEND_FROM || 'Chanak Foundation <onboarding@resend.dev>',
+            to: ['info@chanakfoundation.org'],
+            reply_to: payload.guardian_email,
+            subject: `Nueva Solicitud de Orientación: ${payload.guardian_name} (${payload.state_code.toUpperCase()})`,
+            html: `
+              <h2>Nueva Solicitud de Orientación Educativa</h2>
+              <p><strong>Tutor / Padre:</strong> ${payload.guardian_name}</p>
+              <p><strong>Correo electrónico:</strong> <a href="mailto:${payload.guardian_email}">${payload.guardian_email}</a></p>
+              <p><strong>Estado de Residencia:</strong> ${payload.state_code}</p>
+              <p><strong>Nivel Escolar:</strong> ${payload.grade_range || 'No especificado'}</p>
+              <p><strong>Idioma Preferido:</strong> ${payload.preferred_language}</p>
+              <p><strong>Notas / Preguntas:</strong> ${payload.message || 'Ninguna'}</p>
+              <p><strong>Consentimiento Orientación:</strong> Aceptado</p>
+              <p><strong>Autorización Contacto Academy:</strong> ${payload.academy_contact_consent ? '<span style="color:#15803d;font-weight:bold;">SÍ (Autorizado para compartir con Academy)</span>' : '<span style="color:#b91c1c;font-weight:bold;">NO (No autorizado - Solo Chanak Foundation)</span>'}</p>
+              <p><strong>URL de Origen:</strong> ${payload.source_url || 'N/A'}</p>
+              <p><strong>Fecha / Hora:</strong> ${payload.created_at}</p>
+            `
+          })
+        });
+
+        if (emailResponse.ok) {
+          console.log('[Resend] Email notification successfully delivered to info@chanakfoundation.org');
+          emailDispatched = true;
+        } else {
+          const emailErr = await emailResponse.text();
+          console.error('[Resend Error]', emailResponse.status, emailErr);
+        }
+      } catch (emailErr) {
+        console.error('[Resend Network Error]', emailErr);
+      }
+    } else {
+      console.warn('[Resend Warning] RESEND_API_KEY not configured.');
+    }
+
+    // 5. Check if at least one persistence/notification path succeeded
+    const isPersisted = savedInSupabase || emailDispatched;
+
+    if (!isPersisted) {
+      console.error('[Persistence Failed] Neither Supabase nor Resend succeeded or are configured.');
+      return res.status(503).json({
+        success: false,
+        error: 'No pudimos guardar tu solicitud, escríbenos a info@chanakfoundation.org',
+        message: 'No pudimos guardar tu solicitud, escríbenos a info@chanakfoundation.org'
+      });
+    }
 
     return res.status(200).json({
       success: true,
-      message: 'Orientation inquiry submitted successfully'
+      message: 'Orientation inquiry submitted successfully',
+      saved_in_supabase: savedInSupabase,
+      email_dispatched: emailDispatched
     });
   } catch (err) {
     console.error('[Server Error in submit-orientation]', err);
-    return res.status(500).json({ success: false, error: 'Internal Server Error' });
+    return res.status(500).json({
+      success: false,
+      error: 'No pudimos guardar tu solicitud, escríbenos a info@chanakfoundation.org'
+    });
   }
 };

@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS public.orientation_inquiries (
     preferred_language TEXT NOT NULL DEFAULT 'both',
     message TEXT,
     consent_given BOOLEAN NOT NULL DEFAULT false,
+    academy_contact_consent BOOLEAN NOT NULL DEFAULT false,
     source_url TEXT,
     locale TEXT DEFAULT 'en',
     ip_hash TEXT,

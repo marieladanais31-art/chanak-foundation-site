@@ -1,0 +1,76 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/es/education-funding/arizona(.*)",
+      "destination": "/es/education-funding/?estado=arizona",
+      "permanent": true
+    },
+    {
+      "source": "/es/education-funding/florida(.*)",
+      "destination": "/es/education-funding/?estado=florida",
+      "permanent": true
+    },
+    {
+      "source": "/es/education-funding/utah(.*)",
+      "destination": "/es/education-funding/?estado=utah",
+      "permanent": true
+    },
+    {
+      "source": "/es/education-funding/wyoming(.*)",
+      "destination": "/es/education-funding/?estado=wyoming",
+      "permanent": true
+    },
+    {
+      "source": "/es/education-funding/alabama(.*)",
+      "destination": "/es/education-funding/?estado=alabama",
+      "permanent": true
+    },
+    {
+      "source": "/es/education-funding/south-carolina(.*)",
+      "destination": "/es/education-funding/?estado=south-carolina",
+      "permanent": true
+    },
+    {
+      "source": "/es/education-funding/new-hampshire(.*)",
+      "destination": "/es/education-funding/?estado=new-hampshire",
+      "permanent": true
+    },
+    {
+      "source": "/education-funding/arizona(.*)",
+      "destination": "/education-funding/?estado=arizona",
+      "permanent": true
+    },
+    {
+      "source": "/education-funding/florida(.*)",
+      "destination": "/education-funding/?estado=florida",
+      "permanent": true
+    },
+    {
+      "source": "/education-funding/utah(.*)",
+      "destination": "/education-funding/?estado=utah",
+      "permanent": true
+    },
+    {
+      "source": "/education-funding/wyoming(.*)",
+      "destination": "/education-funding/?estado=wyoming",
+      "permanent": true
+    },
+    {
+      "source": "/education-funding/alabama(.*)",
+      "destination": "/education-funding/?estado=alabama",
+      "permanent": true
+    },
+    {
+      "source": "/education-funding/south-carolina(.*)",
+      "destination": "/education-funding/?estado=south-carolina",
+      "permanent": true
+    },
+    {
+      "source": "/education-funding/new-hampshire(.*)",
+      "destination": "/education-funding/?estado=new-hampshire",
+      "permanent": true
+    }
+  ]
+}

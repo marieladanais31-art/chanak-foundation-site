@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Fondos Estatales de Educación y Cuentas ESA en EE. UU. | Chanak Foundation</title>
-  <meta name="description" content="Guía neutral y completa para familias sobre programas de fondos estatales de educación (ESA, vouchers y becas) en Arizona, Florida, Utah, Wyoming, Alabama, Carolina del Sur y New Hampshire.">
+  <meta name="description" content="Guía informativa completa para familias sobre programas de fondos estatales de educación (ESA y becas de elección escolar) en Arizona, Florida, Utah, Wyoming, Alabama, Carolina del Sur y New Hampshire.">
   <link rel="canonical" href="https://chanakfoundation.org/es/education-funding/">
   <link rel="alternate" hreflang="en" href="https://chanakfoundation.org/education-funding/">
   <link rel="alternate" hreflang="es" href="https://chanakfoundation.org/es/education-funding/">
   <link rel="alternate" hreflang="x-default" href="https://chanakfoundation.org/education-funding/">
   <meta property="og:title" content="Fondos Estatales de Educación y Cuentas ESA en EE. UU. | Chanak Foundation">
-  <meta property="og:description" content="Guía neutral y completa para familias sobre programas de fondos estatales de educación (ESA, vouchers y becas) en Arizona, Florida, Utah, Wyoming, Alabama, Carolina del Sur y New Hampshire.">
+  <meta property="og:description" content="Guía informativa para familias sobre programas de fondos estatales de educación (ESA y becas de elección escolar) en EE. UU.">
   <meta property="og:url" content="https://chanakfoundation.org/es/education-funding/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://chanakfoundation.org/assets/chanak_logo_embedded.svg">
@@ -25,6 +25,60 @@
     gtag('config', 'AW-18109980849');
     gtag('config', 'GT-NSSXS5N6');
   </script>
+  <style>
+    .state-tab-btn {
+      padding: 0.75rem 1.25rem;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--primary);
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .state-tab-btn:hover {
+      background: var(--surface-alt);
+      border-color: var(--primary);
+    }
+    .state-tab-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(15, 34, 64, 0.15);
+    }
+    .table-container {
+      overflow-x: auto;
+      margin: 2rem 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.92rem;
+    }
+    .comparison-table th {
+      background: var(--surface);
+      color: var(--primary);
+      padding: 1rem 1.25rem;
+      font-weight: 700;
+      border-bottom: 2px solid var(--line);
+    }
+    .comparison-table td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--line);
+      vertical-align: middle;
+    }
+    .comparison-table tr:hover td {
+      background: #fafafa;
+    }
+  </style>
 </head>
 <body>
   
@@ -38,38 +92,101 @@
       </span>
     </a>
     <nav>
-      
-        <ul class="nav-links">
-          <li><a href="/about.html">Nosotros</a></li>
-          <li><a href="/mission.html">Misión</a></li>
-          <li><a href="/programs.html">Programas</a></li>
-          <li><a href="/es/education-funding/" style="color:var(--primary);font-weight:700">Fondos Estatales</a></li>
-          <li><a href="/impact.html">Impacto</a></li>
-          <li><a href="/funders.html">Financiadores</a></li>
-          <li><a href="/contact.html">Contacto</a></li>
-          <li><a href="/education-funding/" class="lang-switch" style="padding:4px 10px;border:1px solid var(--line);border-radius:20px;font-size:13px;font-weight:600;color:var(--ink)">English</a></li>
-          <li><a href="/donate.html" style="background:#C9A84C;color:#fff;padding:8px 16px;border-radius:4px;font-weight:bold">Donar</a></li>
-        </ul>
-        
+      <ul class="nav-links">
+        <li><a href="/about.html">Nosotros</a></li>
+        <li><a href="/mission.html">Misión</a></li>
+        <li><a href="/programs.html">Programas</a></li>
+        <li><a href="/es/education-funding/" style="color:var(--primary);font-weight:700">Fondos Estatales</a></li>
+        <li><a href="/impact.html">Impacto</a></li>
+        <li><a href="/funders.html">Financiadores</a></li>
+        <li><a href="/contact.html">Contacto</a></li>
+        <li><a href="/education-funding/" id="langSwitcherLink" class="lang-switch" style="padding:4px 10px;border:1px solid var(--line);border-radius:20px;font-size:13px;font-weight:600;color:var(--ink)">English</a></li>
+        <li><a href="/donate.html" style="background:#C9A84C;color:#fff;padding:8px 16px;border-radius:4px;font-weight:bold">Donar</a></li>
+      </ul>
     </nav>
   </div>
 </header>
 
+<main>
+  <!-- HERO PRINCIPAL -->
+  <section class="hero" style="padding:4rem 0 2.5rem 0;background:linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);border-bottom:1px solid var(--line);">
+    <div class="container" style="max-width:960px;">
+      <p class="eyebrow" style="letter-spacing:1px;font-weight:700;">ORIENTACIÓN EDUCATIVA GRATUITA PARA FAMILIAS · ELECCIÓN ESCOLAR EN EE. UU.</p>
+      <h1 style="font-size:2.5rem;line-height:1.2;color:var(--primary);margin-top:0.5rem;margin-bottom:1.25rem;">Fondos Estatales de Educación y Cuentas de Ahorro para la Educación (ESA)</h1>
+      <p class="hero-lead" style="font-size:1.15rem;color:var(--ink-soft);line-height:1.7;margin-bottom:2rem;">
+        Guía informativa completa para que las familias conozcan los programas de elección escolar en los Estados Unidos, sus plataformas de gestión gubernamental (ClassWallet, Odyssey, Step Up) y cómo acceder a orientación personalizada y 100% gratuita.
+      </p>
+      
+      <!-- BANNER INSTITUCIONAL OBLIGATORIO DE TRANSPARENCIA -->
+      <div style="background:#fef3c7;border-left:4px solid #f59e0b;padding:1.25rem 1.5rem;border-radius:8px;margin-bottom:2rem;">
+        <h4 style="margin-top:0;color:#92400e;font-size:1.05rem;font-weight:700;">Declaración de Transparencia Institucional</h4>
+        <p style="margin-bottom:0.5rem;color:#78350f;font-size:0.95rem;line-height:1.6;">
+          <strong>Chanak Foundation</strong> es una organización sin fines de lucro 501(c)(3) que ofrece orientación gratuita a familias. Los servicios educativos los presta <strong>Chanak International Academy</strong> (operada por Chanak TrainUp Education Inc., FLDOE #134620, candidata a la acreditación MSA-CESS), una entidad relacionada.
+        </p>
+        <p style="margin:0;color:#78350f;font-size:0.88rem;line-height:1.5;">
+          Chanak no garantiza aprobación, cobertura ni montos; eso lo decide el programa de cada estado.
+        </p>
+      </div>
 
-  <main>
-    <section class="hero" style="padding:4rem 0 3rem 0;background:linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);border-bottom:1px solid var(--line);">
+      <!-- BOTONES DE ACCIÓN RÁPIDA -->
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="#selector-estados" class="btn btn-primary" style="padding:0.8rem 1.5rem;font-weight:700;">Explorar Guía por Estado ↓</a>
+        <a href="#tabla-programas" class="btn btn-secondary" style="padding:0.8rem 1.5rem;font-weight:600;">Ver Tabla Comparativa</a>
+        <a href="#formulario-orientacion" class="btn btn-secondary" style="padding:0.8rem 1.5rem;font-weight:600;">Solicitar Orientación Gratuita</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTOR SELECTOR DE ESTADOS (INTERACTIVO CON ?estado=) -->
+  <section class="section" id="selector-estados" style="padding:3rem 0;background:var(--surface);border-bottom:1px solid var(--line);">
+    <div class="container">
+      <div style="text-align:center;max-width:850px;margin:0 auto 2rem auto;">
+        <p class="eyebrow" style="font-weight:700;">SELECCIÓN DE ESTADO</p>
+        <h2 style="font-size:2rem;color:var(--primary);margin:0.25rem 0 0.75rem 0;">Consulte los Requisitos y Normativas de su Estado</h2>
+        <p style="font-size:1rem;color:var(--ink-soft);line-height:1.6;">
+          Haga clic en un estado para ver de inmediato su normativa oficial, requisitos de postulación, calendario de desembolsos y preguntas frecuentes:
+        </p>
+      </div>
+
+      <!-- TABS DE ESTADOS -->
+      <div style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:2rem;">
+        <button type="button" class="state-tab-btn" data-target="arizona">Arizona (ESA)</button>
+        <button type="button" class="state-tab-btn" data-target="florida">Florida (Step Up)</button>
+        <button type="button" class="state-tab-btn" data-target="utah">Utah (UFA)</button>
+        <button type="button" class="state-tab-btn" data-target="wyoming">Wyoming (ESA)</button>
+        <button type="button" class="state-tab-btn" data-target="alabama">Alabama (CHOOSE)</button>
+        <button type="button" class="state-tab-btn" data-target="south-carolina">Carolina del Sur (ESTF)</button>
+        <button type="button" class="state-tab-btn" data-target="new-hampshire">New Hampshire (EFA)</button>
+      </div>
+
+      <!-- CONTENEDOR DE GUÍAS DE ESTADO -->
+      <div id="state-guides-container">
+        
+      <!-- ================= ESTADO: ARIZONA ================= -->
+      <article id="state-guide-arizona" class="state-detail-panel" data-state="arizona" style="display:none;background:#fff;border:1px solid var(--line);border-radius:12px;padding:2.5rem 2rem;margin-bottom:3rem;box-shadow:0 8px 30px rgba(0,0,0,0.05);">
+        <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--line);padding-bottom:1rem;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;">
+          <div>
+            <span style="background:var(--surface-alt);border:1px solid var(--line);padding:3px 10px;border-radius:20px;font-size:0.85rem;font-weight:700;color:var(--primary);text-transform:uppercase;">ClassWallet</span>
+            <h2 style="font-size:2.2rem;color:var(--primary);margin:0.5rem 0 0 0;">Guía Informativa de Arizona</h2>
+            <p style="font-size:1.1rem;color:var(--ink-soft);margin:0.25rem 0 0 0;font-weight:600;">Cuenta de Becas de Empoderamiento (ESA)</p>
+          </div>
+          <div>
+            <a href="#formulario-orientacion" class="btn btn-primary" style="padding:0.75rem 1.5rem;font-weight:700;">Solicitar Orientación para Arizona ↓</a>
+          </div>
+        </div>
+        <section class="hero" style="padding:4rem 0 3rem 0;background:linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);border-bottom:1px solid var(--line);">
       <div class="container" style="max-width:960px;">
-        <p class="eyebrow" style="letter-spacing:1px;font-weight:700;">GUÍA NACIONAL DE FONDOS ESTATALES · ELECCIÓN ESCOLAR</p>
-        <h1 style="font-size:2.5rem;line-height:1.2;color:var(--primary);margin-top:0.5rem;margin-bottom:1.25rem;">Cuentas de Ahorro para la Educación (ESA) y Fondos Estatales para Familias</h1>
-        <p class="hero-lead" style="font-size:1.15rem;color:var(--ink-soft);line-height:1.7;margin-bottom:2rem;">Información verificada, neutral e independiente para familias que buscan comprender los programas de financiamiento educativo público en los Estados Unidos, sus plataformas de gestión (ClassWallet, Odyssey, Step Up) y cómo acceder a orientación gratuita.</p>
+        <p class="eyebrow" style="letter-spacing:1px;font-weight:700;">Guía informativa PARA FAMILIAS · ARIZONA</p>
+        <h1 style="font-size:2.5rem;line-height:1.2;color:var(--primary);margin-top:0.5rem;margin-bottom:1.25rem;">Cómo funcionan las cuentas de educación de Arizona (Empowerment Scholarship Account - ESA) para familias</h1>
+        <p class="hero-lead" style="font-size:1.15rem;color:var(--ink-soft);line-height:1.7;margin-bottom:2rem;">Guía informativa para familias de Arizona que utilizan la Cuenta de Becas de Empoderamiento (ESA), la gestión en ClassWallet y opciones educativas calificadas.</p>
         
         <div style="background:#fef3c7;border-left:4px solid #f59e0b;padding:1.25rem 1.5rem;border-radius:8px;margin-bottom:2.5rem;">
-          <h4 style="margin-top:0;color:#92400e;font-size:1.1rem;font-weight:700;">Transparencia y Declaración Institucional</h4>
+          <h4 style="margin-top:0;color:#92400e;font-size:1.1rem;font-weight:700;">Transparencia y Naturaleza Jurídica</h4>
           <p style="margin-bottom:0.5rem;color:#78350f;font-size:0.95rem;line-height:1.6;">
-            <strong>Chanak Foundation</strong> es una organización sin fines de lucro 501(c)(3) (EIN: 36-5154011) que ofrece orientación educativa gratuita a familias. Los servicios educativos los presta <strong>Chanak International Academy</strong> (operada por Chanak TrainUp Education Inc., FLDOE #134620, candidata a la acreditación MSA-CESS), una entidad relacionada.
+            <strong>Chanak Foundation</strong> es una organización sin fines de lucro 501(c)(3) (EIN: 36-5154011) que ofrece orientación educativa gratuita a las familias. Los servicios educativos los presta <strong>Chanak International Academy</strong> (operada por Chanak TrainUp Education Inc., FLDOE #134620, candidata a la acreditación MSA-CESS), una entidad relacionada.
           </p>
           <p style="margin:0;color:#78350f;font-size:0.9rem;line-height:1.5;">
-            <em>Aviso importante:</em> Chanak no garantiza aprobación, cobertura ni montos de fondos; esas decisiones corresponden exclusivamente al programa oficial de cada estado.
+            <em>Aviso importante:</em> Chanak no garantiza aprobación, cobertura ni montos de fondos; esas decisiones corresponden exclusivamente al programa oficial del estado de Arizona.
           </p>
         </div>
         
@@ -79,322 +196,1747 @@
     
         <section class="section" style="padding:3.5rem 0;border-bottom:1px solid var(--line);">
           <div class="container">
-            <p class="eyebrow">DIRECTORIO DE ESTADOS PARTICIPANTES</p>
-            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">Programas Estatales Disponibles</h2>
-            <p style="font-size:1.05rem;line-height:1.7;color:var(--ink-soft);max-width:900px;margin-bottom:2.5rem;">
-              Las Cuentas de Ahorro para la Educación (ESA) y las becas de elección escolar permiten a los padres destinar los fondos que el estado asigna para la educación de sus hijos hacia opciones formativas personalizadas. Seleccione su estado para consultar requisitos detallados, calendarios de postulación y pasos para autorizar proveedores:
+            <p class="eyebrow">ADMINISTRACIÓN Y FUNCIONAMIENTO OFICIAL</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">¿Cómo funciona el programa Cuenta de Becas de Empoderamiento (ESA)?</h2>
+            <p style="font-size:1.05rem;line-height:1.7;color:var(--ink-soft);max-width:900px;margin-bottom:2rem;">
+              El programa de Becas de Empoderamiento (ESA) de Arizona permite a los padres optar por no asistir al distrito escolar público o charter y recibir fondos estatales directamente para personalizar la educación de sus hijos mediante proveedores educativos calificados, planes curriculares individuales y materiales formativos.
             </p>
 
-            <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));gap:1.5rem;margin-bottom:3rem;">
-              
-            <article class="card" style="display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);border-radius:10px;padding:1.5rem;background:#fff;">
-              <div>
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
-                  <span style="font-weight:700;font-size:1.25rem;color:var(--primary);">Arizona</span>
-                  <span style="background:var(--surface-alt);border:1px solid var(--line);padding:2px 8px;border-radius:20px;font-size:0.8rem;font-weight:600;color:var(--primary);">ClassWallet</span>
+            <div class="cards cards-three" style="margin-bottom:2.5rem;">
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">🏛️</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Organismo Administrador</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);">Departamento de Educación de Arizona (ADE). Respaldado bajo la normativa: <em>Estatutos Revisados de Arizona Título 15 (Expansión Universal ESA)</em>.</p>
+                <div style="margin-top:1rem;">
+                  <a href="https://www.azed.gov/esa/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:700;font-size:0.9rem;text-decoration:underline;">Ver portal oficial del estado ↗</a>
                 </div>
-                <h3 style="font-size:1.05rem;color:var(--ink);margin:0 0 0.5rem 0;">Cuenta de Becas de Empoderamiento (ESA)</h3>
-                <p style="font-size:0.88rem;color:var(--ink-soft);line-height:1.5;margin-bottom:1rem;">
-                  <strong>Plataforma:</strong> ClassWallet<br>
-                  <strong>Depósitos:</strong> Asignaciones trimestrales directamente en las cuentas de ClassWallet<br>
-                  <strong>Estatus Chanak:</strong> <span style="background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:4px;font-size:0.78rem;">Servicio sujeto a la aprobación del programa [REVISAR CON MARIELA]</span>
-                </p>
-              </div>
-              <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.5rem;">
-                <a href="/es/education-funding/arizona/" class="btn btn-primary" style="text-align:center;padding:0.6rem 1rem;font-size:0.9rem;font-weight:600;border-radius:6px;">
-                  Ver Guía Completa de Arizona →
-                </a>
-                <a href="https://www.azed.gov/esa/" target="_blank" rel="noopener noreferrer" style="text-align:center;font-size:0.8rem;color:var(--ink-soft);text-decoration:underline;">
-                  Portal oficial del estado ↗
-                </a>
-              </div>
-            </article>
-            
-            <article class="card" style="display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);border-radius:10px;padding:1.5rem;background:#fff;">
-              <div>
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
-                  <span style="font-weight:700;font-size:1.25rem;color:var(--primary);">Florida</span>
-                  <span style="background:var(--surface-alt);border:1px solid var(--line);padding:2px 8px;border-radius:20px;font-size:0.8rem;font-weight:600;color:var(--primary);">EMA Marketplace</span>
-                </div>
-                <h3 style="font-size:1.05rem;color:var(--ink);margin:0 0 0.5rem 0;">Step Up for Students (Beca PEP y FES-UA)</h3>
-                <p style="font-size:0.88rem;color:var(--ink-soft);line-height:1.5;margin-bottom:1rem;">
-                  <strong>Plataforma:</strong> EMA Marketplace<br>
-                  <strong>Depósitos:</strong> Depósitos trimestrales de fondos de estudiantes administrados a través del Asistente de Mercado Educativo (EMA)<br>
-                  <strong>Estatus Chanak:</strong> <span style="background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:4px;font-size:0.78rem;">Servicio sujeto a la aprobación del programa [REVISAR CON MARIELA]</span>
-                </p>
-              </div>
-              <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.5rem;">
-                <a href="/es/education-funding/florida/" class="btn btn-primary" style="text-align:center;padding:0.6rem 1rem;font-size:0.9rem;font-weight:600;border-radius:6px;">
-                  Ver Guía Completa de Florida →
-                </a>
-                <a href="https://www.stepupforstudents.org/" target="_blank" rel="noopener noreferrer" style="text-align:center;font-size:0.8rem;color:var(--ink-soft);text-decoration:underline;">
-                  Portal oficial del estado ↗
-                </a>
-              </div>
-            </article>
-            
-            <article class="card" style="display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);border-radius:10px;padding:1.5rem;background:#fff;">
-              <div>
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
-                  <span style="font-weight:700;font-size:1.25rem;color:var(--primary);">Utah</span>
-                  <span style="background:var(--surface-alt);border:1px solid var(--line);padding:2px 8px;border-radius:20px;font-size:0.8rem;font-weight:600;color:var(--primary);">Odyssey</span>
-                </div>
-                <h3 style="font-size:1.05rem;color:var(--ink);margin:0 0 0.5rem 0;">Beca Utah Fits All (UFA)</h3>
-                <p style="font-size:0.88rem;color:var(--ink-soft);line-height:1.5;margin-bottom:1rem;">
-                  <strong>Plataforma:</strong> Odyssey<br>
-                  <strong>Depósitos:</strong> Beca anual dividida en desembolsos programados a través de Odyssey<br>
-                  <strong>Estatus Chanak:</strong> <span style="background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:4px;font-size:0.78rem;">Servicio sujeto a la aprobación del programa [REVISAR CON MARIELA]</span>
-                </p>
-              </div>
-              <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.5rem;">
-                <a href="/es/education-funding/utah/" class="btn btn-primary" style="text-align:center;padding:0.6rem 1rem;font-size:0.9rem;font-weight:600;border-radius:6px;">
-                  Ver Guía Completa de Utah →
-                </a>
-                <a href="https://www.utaheducationfitsall.org/" target="_blank" rel="noopener noreferrer" style="text-align:center;font-size:0.8rem;color:var(--ink-soft);text-decoration:underline;">
-                  Portal oficial del estado ↗
-                </a>
-              </div>
-            </article>
-            
-            <article class="card" style="display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);border-radius:10px;padding:1.5rem;background:#fff;">
-              <div>
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
-                  <span style="font-weight:700;font-size:1.25rem;color:var(--primary);">Wyoming</span>
-                  <span style="background:var(--surface-alt);border:1px solid var(--line);padding:2px 8px;border-radius:20px;font-size:0.8rem;font-weight:600;color:var(--primary);">Odyssey</span>
-                </div>
-                <h3 style="font-size:1.05rem;color:var(--ink);margin:0 0 0.5rem 0;">Cuenta de Ahorros para la Educación de Wyoming (ESA)</h3>
-                <p style="font-size:0.88rem;color:var(--ink-soft);line-height:1.5;margin-bottom:1rem;">
-                  <strong>Plataforma:</strong> Odyssey<br>
-                  <strong>Depósitos:</strong> Desembolsos estatales escalonados gestionados en las cuentas digitales de Odyssey<br>
-                  <strong>Estatus Chanak:</strong> <span style="background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:4px;font-size:0.78rem;">Servicio sujeto a la aprobación del programa [REVISAR CON MARIELA]</span>
-                </p>
-              </div>
-              <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.5rem;">
-                <a href="/es/education-funding/wyoming/" class="btn btn-primary" style="text-align:center;padding:0.6rem 1rem;font-size:0.9rem;font-weight:600;border-radius:6px;">
-                  Ver Guía Completa de Wyoming →
-                </a>
-                <a href="https://edu.wyoming.gov/parents/education-savings-accounts/" target="_blank" rel="noopener noreferrer" style="text-align:center;font-size:0.8rem;color:var(--ink-soft);text-decoration:underline;">
-                  Portal oficial del estado ↗
-                </a>
-              </div>
-            </article>
-            
-            <article class="card" style="display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);border-radius:10px;padding:1.5rem;background:#fff;">
-              <div>
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
-                  <span style="font-weight:700;font-size:1.25rem;color:var(--primary);">Alabama</span>
-                  <span style="background:var(--surface-alt);border:1px solid var(--line);padding:2px 8px;border-radius:20px;font-size:0.8rem;font-weight:600;color:var(--primary);">ClassWallet</span>
-                </div>
-                <h3 style="font-size:1.05rem;color:var(--ink);margin:0 0 0.5rem 0;">Ley CHOOSE de Alabama de 2024</h3>
-                <p style="font-size:0.88rem;color:var(--ink-soft);line-height:1.5;margin-bottom:1rem;">
-                  <strong>Plataforma:</strong> ClassWallet<br>
-                  <strong>Depósitos:</strong> Distribuciones de crédito fiscal reembolsable/ESA estatal a través de ClassWallet<br>
-                  <strong>Estatus Chanak:</strong> <span style="background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:4px;font-size:0.78rem;">Servicio sujeto a la aprobación del programa [REVISAR CON MARIELA]</span>
-                </p>
-              </div>
-              <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.5rem;">
-                <a href="/es/education-funding/alabama/" class="btn btn-primary" style="text-align:center;padding:0.6rem 1rem;font-size:0.9rem;font-weight:600;border-radius:6px;">
-                  Ver Guía Completa de Alabama →
-                </a>
-                <a href="https://classwallet.com/alchoose/" target="_blank" rel="noopener noreferrer" style="text-align:center;font-size:0.8rem;color:var(--ink-soft);text-decoration:underline;">
-                  Portal oficial del estado ↗
-                </a>
-              </div>
-            </article>
-            
-            <article class="card" style="display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);border-radius:10px;padding:1.5rem;background:#fff;">
-              <div>
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
-                  <span style="font-weight:700;font-size:1.25rem;color:var(--primary);">Carolina del Sur</span>
-                  <span style="background:var(--surface-alt);border:1px solid var(--line);padding:2px 8px;border-radius:20px;font-size:0.8rem;font-weight:600;color:var(--primary);">ClassWallet</span>
-                </div>
-                <h3 style="font-size:1.05rem;color:var(--ink);margin:0 0 0.5rem 0;">Fondo Fiduciario de Becas Educativas (ESTF)</h3>
-                <p style="font-size:0.88rem;color:var(--ink-soft);line-height:1.5;margin-bottom:1rem;">
-                  <strong>Plataforma:</strong> ClassWallet<br>
-                  <strong>Depósitos:</strong> Asignaciones trimestrales en cuenta para gastos educativos elegibles<br>
-                  <strong>Estatus Chanak:</strong> <span style="background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:4px;font-size:0.78rem;">Servicio sujeto a la aprobación del programa [REVISAR CON MARIELA]</span>
-                </p>
-              </div>
-              <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.5rem;">
-                <a href="/es/education-funding/south-carolina/" class="btn btn-primary" style="text-align:center;padding:0.6rem 1rem;font-size:0.9rem;font-weight:600;border-radius:6px;">
-                  Ver Guía Completa de Carolina del Sur →
-                </a>
-                <a href="https://sc-estf-program.com/en/" target="_blank" rel="noopener noreferrer" style="text-align:center;font-size:0.8rem;color:var(--ink-soft);text-decoration:underline;">
-                  Portal oficial del estado ↗
-                </a>
-              </div>
-            </article>
-            
-            <article class="card" style="display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);border-radius:10px;padding:1.5rem;background:#fff;">
-              <div>
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
-                  <span style="font-weight:700;font-size:1.25rem;color:var(--primary);">New Hampshire</span>
-                  <span style="background:var(--surface-alt);border:1px solid var(--line);padding:2px 8px;border-radius:20px;font-size:0.8rem;font-weight:600;color:var(--primary);">ClassWallet</span>
-                </div>
-                <h3 style="font-size:1.05rem;color:var(--ink);margin:0 0 0.5rem 0;">Cuenta de Libertad Educativa (EFA)</h3>
-                <p style="font-size:0.88rem;color:var(--ink-soft);line-height:1.5;margin-bottom:1rem;">
-                  <strong>Plataforma:</strong> ClassWallet<br>
-                  <strong>Depósitos:</strong> Subvenciones estatales de adecuación por alumno desembolsadas en cuotas mediante ClassWallet<br>
-                  <strong>Estatus Chanak:</strong> <span style="background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:4px;font-size:0.78rem;">Servicio sujeto a la aprobación del programa [REVISAR CON MARIELA]</span>
-                </p>
-              </div>
-              <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.5rem;">
-                <a href="/es/education-funding/new-hampshire/" class="btn btn-primary" style="text-align:center;padding:0.6rem 1rem;font-size:0.9rem;font-weight:600;border-radius:6px;">
-                  Ver Guía Completa de New Hampshire →
-                </a>
-                <a href="https://nh.scholarshipfund.org/apply/nh-education-freedom-accounts/" target="_blank" rel="noopener noreferrer" style="text-align:center;font-size:0.8rem;color:var(--ink-soft);text-decoration:underline;">
-                  Portal oficial del estado ↗
-                </a>
-              </div>
-            </article>
-            
+              </article>
+
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">💳</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Plataforma de Gestión</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);">Arizona utiliza ClassWallet como su sistema oficial de administración financiera. Tras la aprobación del Departamento de Educación de Arizona, los padres disponen de una billetera digital donde se abonan las asignaciones trimestrales. Mediante la función Direct Pay de ClassWallet, autorizan pagos a proveedores educativos registrados sin adelantar fondos de su bolsillo.</p>
+                <div style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-soft);"><strong>Plataforma:</strong> ClassWallet</div>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">📅</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Ciclos y Facturación</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);"><strong>Depósitos:</strong> Asignaciones trimestrales directamente en las cuentas de ClassWallet</p>
+                <p style="font-size:0.95rem;color:var(--ink-soft);margin-top:0.5rem;"><strong>Reglas de Factura:</strong> Facturación de proveedor de pago directo con recibos desglosados en ClassWallet</p>
+              </article>
             </div>
           </div>
         </section>
         
     
         <section class="section alt" style="padding:3.5rem 0;background:var(--bg);border-bottom:1px solid var(--line);">
+          <div class="container grid-two" style="gap:3rem;">
+            <div>
+              <p class="eyebrow">REQUISITOS DOCUMENTALES</p>
+              <h2 style="font-size:1.85rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1.25rem;">Documentos Habituales Solicitados</h2>
+              <p style="color:var(--ink-soft);font-size:1rem;line-height:1.6;margin-bottom:1.5rem;">
+                Cada estado establece requisitos específicos para verificar la residencia legal y la edad escolar de los beneficiarios. Tenga preparados estos documentos antes de postular:
+              </p>
+              <ul style="color:var(--ink);font-size:0.95rem;line-height:1.6;padding-left:1.25rem;">
+                <li style='margin-bottom:0.6rem;'>Comprobante de residencia legal en Arizona (factura de servicios públicos, hipoteca o contrato de arrendamiento)</li><li style='margin-bottom:0.6rem;'>Certificado de nacimiento oficial del alumno o documento legal equivalente</li><li style='margin-bottom:0.6rem;'>Contrato oficial de padres del ESA firmado electrónicamente con el ADE</li><li style='margin-bottom:0.6rem;'>Comprobante oficial de baja del colegio público o charter anterior (en caso de transición)</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="eyebrow">PASOS PARA LA FAMILIA</p>
+              <h2 style="font-size:1.85rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1.25rem;">Ruta de Postulación y Pago</h2>
+              <ol style="color:var(--ink);font-size:0.95rem;line-height:1.6;padding-left:1.25rem;list-style-type:none;">
+                <li style='margin-bottom:1rem;'><strong>Paso 1:</strong> Enviar la solicitud electrónica del estudiante mediante el portal oficial del ADE en AZEdu.gov/esa.</li><li style='margin-bottom:1rem;'><strong>Paso 2:</strong> Firmar el contrato de compromiso familiar tras recibir la carta de aceptación del Departamento de Educación.</li><li style='margin-bottom:1rem;'><strong>Paso 3:</strong> Activar la cuenta de tutor en la plataforma ClassWallet al recibir las credenciales oficiales.</li><li style='margin-bottom:1rem;'><strong>Paso 4:</strong> Verificar el saldo trimestral asignado y autorizar los servicios de proveedores calificados mediante ClassWallet Direct Pay.</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section" style="padding:3.5rem 0;border-bottom:1px solid var(--line);">
           <div class="container">
-            <p class="eyebrow">TECNOLOGÍA Y ADMINISTRACIÓN FINANCIERA</p>
-            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">¿Cómo operan las plataformas digitales (ClassWallet, Odyssey, Step Up)?</h2>
+            <p class="eyebrow">PROPUESTA FORMATIVA Y PEDAGÓGICA</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:0.75rem;">¿Qué Ofrece Chanak a las Familias?</h2>
             <p style="font-size:1.05rem;line-height:1.7;color:var(--ink-soft);max-width:850px;margin-bottom:2rem;">
-              Los estados no envían cheques directos a las familias para evitar fraudes y garantizar la transparencia. En su lugar, utilizan plataformas de monederos digitales gubernamentales:
+              Chanak promueve una formación integral con atención personalizada para estudiantes y familias que buscan excelencia académica y valores sólidos.
             </p>
 
-            <div class="cards cards-three">
+            <div class="cards cards-three" style="margin-bottom:2rem;">
               <article class="card">
-                <h3 style="font-size:1.2rem;color:var(--primary);margin-top:0;">ClassWallet</h3>
+                <div style="font-size:2.2rem;font-weight:800;color:var(--primary);margin-bottom:0.5rem;">60<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Currículo Central de EE. UU.</h3>
                 <p style="font-size:0.92rem;color:var(--ink-soft);">
-                  Utilizado en Arizona, Alabama, Carolina del Sur y New Hampshire. Permite a las familias pagar a proveedores calificados mediante la función <em>Direct Pay</em> (Pago Directo) sin necesidad de pagar por adelantado.
+                  Enfoque en <em>Mastery Learning</em> (aprendizaje para el dominio). El estudiante avanza demostrando comprensión sólida de cada unidad de aprendizaje sin lagunas formativas.
                 </p>
               </article>
+
               <article class="card">
-                <h3 style="font-size:1.2rem;color:var(--primary);margin-top:0;">Odyssey</h3>
+                <div style="font-size:2.2rem;font-weight:800;color:#0d9488;margin-bottom:0.5rem;">20<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Idioma y Cultura de Herencia</h3>
                 <p style="font-size:0.92rem;color:var(--ink-soft);">
-                  Utilizado en Utah y Wyoming. Gestiona el marketplace digital donde los Proveedores Calificados emiten facturas electrónicas y los padres autorizan transferencias de saldo estatal.
+                  Atención y mentoría bilingüe en inglés y español. Preservamos las raíces culturales e idiomáticas familiares mientras se fortalece la fluidez académica en inglés.
                 </p>
               </article>
+
               <article class="card">
-                <h3 style="font-size:1.2rem;color:var(--primary);margin-top:0;">EMA (Step Up for Students)</h3>
+                <div style="font-size:2.2rem;font-weight:800;color:#b45309;margin-bottom:0.5rem;">20<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Life Skills y Cosmovisión Bíblica</h3>
                 <p style="font-size:0.92rem;color:var(--ink-soft);">
-                  Plataforma oficial en Florida para becas PEP y FES-UA. Administra las cuentas de los estudiantes, el catálogo de proveedores aprobados y la liquidación directa de cuotas escolares.
+                  Desarrollo de carácter, habilidades prácticas para la vida, mayordomía y liderazgo comunitario fundamentados en una perspectiva cristiana ecuménica y respetuosa.
                 </p>
+              </article>
+            </div>
+
+            <!-- Service Status Note -->
+            <div style="background:var(--surface-alt);border:1px solid var(--line);padding:1.25rem 1.5rem;border-radius:8px;margin-bottom:2rem;">
+              <h4 style="margin:0 0 0.5rem 0;color:var(--primary);font-size:1.05rem;">Estatus de Chanak en Arizona</h4>
+              <p style="margin:0;font-size:0.95rem;color:var(--ink-soft);line-height:1.6;">
+                <strong>Estado actual:</strong> <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-weight:600;">Servicio sujeto a la aprobación del programa</span>.
+                Chanak International Academy tramita y actualiza continuamente sus homologaciones con cada plataforma estatal (ClassWallet).
+              </p>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section alt" style="padding:3.5rem 0;background:var(--bg);border-bottom:1px solid var(--line);">
+          <div class="container" style="max-width:850px;">
+            <p class="eyebrow">PREGUNTAS FRECUENTES ORIENTATIVAS</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:2rem;">Preguntas Frecuentes sobre Cuenta de Becas de Empoderamiento (ESA)</h2>
+            
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Cualquier estudiante de K-12 en Arizona puede solicitar el programa ESA?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Sí. Arizona cuenta con elegibilidad universal para cualquier estudiante de kindergarten a 12º grado residente en el estado, siempre que no asista a tiempo completo a una escuela pública o charter mientras perciba fondos del ESA.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Cómo protege a las familias el sistema Direct Pay de ClassWallet?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">ClassWallet Direct Pay permite que el estado liquide directamente a los proveedores educativos autorizados. Los padres revisan y autorizan cada factura digitalmente sin tener que desembolsar dinero propio.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Cómo se tratan fiscalmente los fondos de la cuenta ESA?</h3>
+         <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">De acuerdo con las directrices del Departamento de Educación de Arizona, los fondos del programa ESA destinados a gastos educativos calificados no constituyen ingresos imponibles a nivel estatal. Chanak Foundation ofrece exclusivamente orientación pedagógica y de acceso; no proporciona asesoramiento fiscal ni legal. Se recomienda a las familias consultar a un profesional tributario calificado o las directrices del Departamento de Ingresos de Arizona (ADOR) para su situación particular.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Qué sucede con el saldo que no se gasta al terminar el ciclo lectivo?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Los fondos no utilizados en una cuenta activa de ESA se acumulan automáticamente para los siguientes trimestres y cursos escolares, facilitando la planificación formativa a largo plazo.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Chanak Foundation cobra por orientar sobre el programa ESA de Arizona?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">No. Chanak Foundation es una organización benéfica sin fines de lucro 501(c)(3) que brinda orientación e información 100% gratuita para apoyar a las familias en la comprensión de los trámites estatales.</p>
+          </div>
+        
+          </div>
+        </section>
+        
+    
+        
+        
+
+    
+        <section class="section" style="padding:3.5rem 0;background:var(--surface);border-bottom:1px solid var(--line);">
+          <div class="container" style="max-width:850px;">
+            <p class="eyebrow">FUENTES NORMATIVAS VERIFICADAS</p>
+            <h2 style="font-size:1.75rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">Fuentes Oficiales y Marco Normativo</h2>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin-bottom:1.5rem;">
+              Chanak Foundation brinda orientación educativa imparcial y verificada fundamentada exclusivamente en estatutos estatales públicos, directrices administrativas y normativas de desembolso vigentes. Puede consultar directamente los portales oficiales y la normativa aplicable a continuación:
+            </p>
+            <div style="background:#fff;border:1px solid var(--line);border-radius:8px;padding:1.5rem;">
+              <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.85rem;">
+                
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://www.azed.gov/esa/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Departamento de Educación de Arizona (ADE) — Portal Oficial ESA</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Directrices oficiales de postulación, criterios de elegibilidad y políticas administrativas del estado.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://www.azed.gov/esa/parent-handbook" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Manual de Padres de Arizona ESA (ADE)</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Manual oficial para familias sobre gastos educativos permitidos, pago directo y desembolsos trimestrales.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://classwallet.com/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Plataforma ClassWallet Arizona</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Plataforma digital autorizada por el estado para revisión de facturas, gestión de proveedores y autorización de fondos.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://www.azleg.gov/arsDetail/?title=15" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Estatutos Revisados de Arizona (A.R.S. § 15-2401 a § 15-2404)</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Marco legislativo estatal que fundamenta el programa universal de Cuentas de Becas de Empoderamiento.</p>
+            </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div style="text-align:center;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--line);">
+          <a href="#formulario-orientacion" class="btn btn-primary" style="padding:0.85rem 2rem;font-size:1.05rem;font-weight:700;">Ir al Formulario de Orientación Gratuita de Arizona ↓</a>
+        </div>
+      </article>
+    
+
+      <!-- ================= ESTADO: FLORIDA ================= -->
+      <article id="state-guide-florida" class="state-detail-panel" data-state="florida" style="display:none;background:#fff;border:1px solid var(--line);border-radius:12px;padding:2.5rem 2rem;margin-bottom:3rem;box-shadow:0 8px 30px rgba(0,0,0,0.05);">
+        <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--line);padding-bottom:1rem;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;">
+          <div>
+            <span style="background:var(--surface-alt);border:1px solid var(--line);padding:3px 10px;border-radius:20px;font-size:0.85rem;font-weight:700;color:var(--primary);text-transform:uppercase;">EMA Marketplace</span>
+            <h2 style="font-size:2.2rem;color:var(--primary);margin:0.5rem 0 0 0;">Guía Informativa de Florida</h2>
+            <p style="font-size:1.1rem;color:var(--ink-soft);margin:0.25rem 0 0 0;font-weight:600;">Step Up for Students (Beca PEP y FES-UA)</p>
+          </div>
+          <div>
+            <a href="#formulario-orientacion" class="btn btn-primary" style="padding:0.75rem 1.5rem;font-weight:700;">Solicitar Orientación para Florida ↓</a>
+          </div>
+        </div>
+        <section class="hero" style="padding:4rem 0 3rem 0;background:linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);border-bottom:1px solid var(--line);">
+      <div class="container" style="max-width:960px;">
+        <p class="eyebrow" style="letter-spacing:1px;font-weight:700;">Guía informativa PARA FAMILIAS · FLORIDA</p>
+        <h1 style="font-size:2.5rem;line-height:1.2;color:var(--primary);margin-top:0.5rem;margin-bottom:1.25rem;">Cómo funcionan las cuentas de educación de Florida (Step Up for Students - PEP y FES-UA) para familias</h1>
+        <p class="hero-lead" style="font-size:1.15rem;color:var(--ink-soft);line-height:1.7;margin-bottom:2rem;">Orientación oficial para familias de Florida que utilizan el Programa de Educación Personalizada (PEP) y la Beca Family Empowerment (FES-UA) mediante la plataforma EMA.</p>
+        
+        <div style="background:#fef3c7;border-left:4px solid #f59e0b;padding:1.25rem 1.5rem;border-radius:8px;margin-bottom:2.5rem;">
+          <h4 style="margin-top:0;color:#92400e;font-size:1.1rem;font-weight:700;">Transparencia y Naturaleza Jurídica</h4>
+          <p style="margin-bottom:0.5rem;color:#78350f;font-size:0.95rem;line-height:1.6;">
+            <strong>Chanak Foundation</strong> es una organización sin fines de lucro 501(c)(3) (EIN: 36-5154011) que ofrece orientación educativa gratuita a las familias. Los servicios educativos los presta <strong>Chanak International Academy</strong> (operada por Chanak TrainUp Education Inc., FLDOE #134620, candidata a la acreditación MSA-CESS), una entidad relacionada.
+          </p>
+          <p style="margin:0;color:#78350f;font-size:0.9rem;line-height:1.5;">
+            <em>Aviso importante:</em> Chanak no garantiza aprobación, cobertura ni montos de fondos; esas decisiones corresponden exclusivamente al programa oficial del estado de Florida.
+          </p>
+        </div>
+        
+      </div>
+    </section>
+
+    
+        <section class="section" style="padding:3.5rem 0;border-bottom:1px solid var(--line);">
+          <div class="container">
+            <p class="eyebrow">ADMINISTRACIÓN Y FUNCIONAMIENTO OFICIAL</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">¿Cómo funciona el programa Step Up for Students (Beca PEP y FES-UA)?</h2>
+            <p style="font-size:1.05rem;line-height:1.7;color:var(--ink-soft);max-width:900px;margin-bottom:2rem;">
+              Florida ofrece cuentas de ahorro para la educación gestionadas a través de Organizaciones de Financiamiento de Becas (SFO), principalmente Step Up for Students. El Programa de Educación Personalizada (PEP) y la Beca Family Empowerment para Habilidades Únicas (FES-UA) destinan fondos estatales a familias que eligen itinerarios formativos flexibles fuera de las aulas tradicionales.
+            </p>
+
+            <div class="cards cards-three" style="margin-bottom:2.5rem;">
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">🏛️</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Organismo Administrador</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);">Departamento de Educación de Florida (FLDOE) y Step Up For Students. Respaldado bajo la normativa: <em>Ley HB 1 de Florida (Expansión Universal de Elección Escolar)</em>.</p>
+                <div style="margin-top:1rem;">
+                  <a href="https://www.stepupforstudents.org/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:700;font-size:0.9rem;text-decoration:underline;">Ver portal oficial del estado ↗</a>
+                </div>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">💳</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Plataforma de Gestión</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);">Todos los fondos de becas de Florida se administran mediante el portal Education Market Assistant (EMA). Los padres gestionan las asignaciones, autorizan pagos directos a proveedores aprobados y controlan los gastos educativos dentro de este entorno digital oficial.</p>
+                <div style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-soft);"><strong>Plataforma:</strong> EMA Marketplace</div>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">📅</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Ciclos y Facturación</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);"><strong>Depósitos:</strong> Depósitos trimestrales de fondos de estudiantes administrados a través del Asistente de Mercado Educativo (EMA)</p>
+                <p style="font-size:0.95rem;color:var(--ink-soft);margin-top:0.5rem;"><strong>Reglas de Factura:</strong> Reembolso directo a proveedores y autorización de catálogo en EMA</p>
               </article>
             </div>
           </div>
         </section>
         
     
-        <section class="section" style="padding:3rem 0;text-align:center;background:#fff;border-bottom:1px solid var(--line);">
-          <div class="container" style="max-width:750px;">
-            <p class="eyebrow">OPCIONES EDUCATIVAS RELACIONADAS</p>
-            <h2 style="font-size:1.6rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">Chanak International Academy</h2>
-            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin-bottom:1.5rem;">
-              Chanak International Academy es una entidad educativa relacionada (candidata a la acreditación MSA-CESS, FLDOE #134620). Para conocer los detalles de sus programas en los diferentes estados, puede visitar su portal oficial independiente.
-            </p>
-            <a href="https://www.chanakacademy.org/scholarships/" target="_blank" rel="noopener" class="btn btn-secondary" data-track="academy-referral" data-state="hub" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;font-weight:600;">
-              <span>Ver programas de Chanak Academy en estados aprobados ↗</span>
-            </a>
-            <p style="font-size:0.8rem;color:var(--ink-soft);margin-top:0.75rem;">
-              Enlace externo informativo. Chanak Foundation ofrece asesoría independiente y no condiciona su orientación a ningún proveedor.
-            </p>
+        <section class="section alt" style="padding:3.5rem 0;background:var(--bg);border-bottom:1px solid var(--line);">
+          <div class="container grid-two" style="gap:3rem;">
+            <div>
+              <p class="eyebrow">REQUISITOS DOCUMENTALES</p>
+              <h2 style="font-size:1.85rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1.25rem;">Documentos Habituales Solicitados</h2>
+              <p style="color:var(--ink-soft);font-size:1rem;line-height:1.6;margin-bottom:1.5rem;">
+                Cada estado establece requisitos específicos para verificar la residencia legal y la edad escolar de los beneficiarios. Tenga preparados estos documentos antes de postular:
+              </p>
+              <ul style="color:var(--ink);font-size:0.95rem;line-height:1.6;padding-left:1.25rem;">
+                <li style='margin-bottom:0.6rem;'>Comprobante de residencia en Florida (licencia de conducir, registro de vehículo, recibo de luz o contrato de alquiler)</li><li style='margin-bottom:0.6rem;'>Certificado de nacimiento o pasaporte oficial del alumno para verificación de edad</li><li style='margin-bottom:0.6rem;'>Número de Seguro Social del estudiante o identificador estatal alternativo</li><li style='margin-bottom:0.6rem;'>Carta de registro de educación en el hogar ante el distrito escolar o constancia de no matriculación en escuela pública</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="eyebrow">PASOS PARA LA FAMILIA</p>
+              <h2 style="font-size:1.85rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1.25rem;">Ruta de Postulación y Pago</h2>
+              <ol style="color:var(--ink);font-size:0.95rem;line-height:1.6;padding-left:1.25rem;list-style-type:none;">
+                <li style='margin-bottom:1rem;'><strong>Paso 1:</strong> Crear el perfil familiar en StepUpForStudents.org durante los períodos de convocatoria abierta.</li><li style='margin-bottom:1rem;'><strong>Paso 2:</strong> Completar la solicitud digital de PEP o FES-UA adjuntando los justificantes de residencia.</li><li style='margin-bottom:1rem;'><strong>Paso 3:</strong> Recibir la carta formal de adjudicación y acceder a la plataforma Education Market Assistant (EMA).</li><li style='margin-bottom:1rem;'><strong>Paso 4:</strong> Elegir proveedores formativos aprobados en el catálogo de EMA y autorizar los pagos correspondientes.</li>
+              </ol>
+            </div>
           </div>
         </section>
         
-
-    <section class="section" id="orientacion" style="padding:4rem 0;background:var(--bg);">
-      <div class="container">
-        
-<div class="card" style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:2.5rem 2rem;box-shadow:0 10px 30px rgba(0,0,0,0.06);margin-top:2rem;">
-  <div style="max-width:700px;margin:0 auto;">
-    <h3 style="font-size:1.75rem;color:var(--primary);margin-top:0;margin-bottom:0.75rem;font-weight:700;">Solicitar Orientación Gratuita</h3>
-    <p style="color:var(--ink-soft);font-size:1rem;line-height:1.6;margin-bottom:1.75rem;">Complete este formulario para recibir asesoramiento personalizado sin costo sobre fondos de educación estatal y opciones pedagógicas para su familia. Chanak nunca solicita contraseñas de ClassWallet, Odyssey o Step Up.</p>
     
-    <form id="orientationForm" novalidate>
-      <input type="text" name="website_hp" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <input type="hidden" name="locale" value="es">
-      
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem;">
-        <div>
-          <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:0.4rem;color:var(--ink);">Nombre y Apellido del Padre / Tutor *</label>
-          <input type="text" name="guardian_name" required style="width:100%;padding:0.75rem;border:1px solid var(--line);border-radius:6px;font-size:0.95rem;font-family:inherit;">
-        </div>
-        <div>
-          <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:0.4rem;color:var(--ink);">Correo Electrónico *</label>
-          <input type="email" name="guardian_email" required style="width:100%;padding:0.75rem;border:1px solid var(--line);border-radius:6px;font-size:0.95rem;font-family:inherit;">
-        </div>
-      </div>
-      
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem;">
-        <div>
-          <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:0.4rem;color:var(--ink);">Estado de Residencia *</label>
-          <select name="state_code" required style="width:100%;padding:0.75rem;border:1px solid var(--line);border-radius:6px;font-size:0.95rem;font-family:inherit;background:#fff;">
+        <section class="section" style="padding:3.5rem 0;border-bottom:1px solid var(--line);">
+          <div class="container">
+            <p class="eyebrow">PROPUESTA FORMATIVA Y PEDAGÓGICA</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:0.75rem;">¿Qué Ofrece Chanak a las Familias?</h2>
+            <p style="font-size:1.05rem;line-height:1.7;color:var(--ink-soft);max-width:850px;margin-bottom:2rem;">
+              Chanak promueve una formación integral con atención personalizada para estudiantes y familias que buscan excelencia académica y valores sólidos.
+            </p>
+
+            <div class="cards cards-three" style="margin-bottom:2rem;">
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:var(--primary);margin-bottom:0.5rem;">60<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Currículo Central de EE. UU.</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Enfoque en <em>Mastery Learning</em> (aprendizaje para el dominio). El estudiante avanza demostrando comprensión sólida de cada unidad de aprendizaje sin lagunas formativas.
+                </p>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:#0d9488;margin-bottom:0.5rem;">20<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Idioma y Cultura de Herencia</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Atención y mentoría bilingüe en inglés y español. Preservamos las raíces culturales e idiomáticas familiares mientras se fortalece la fluidez académica en inglés.
+                </p>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:#b45309;margin-bottom:0.5rem;">20<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Life Skills y Cosmovisión Bíblica</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Desarrollo de carácter, habilidades prácticas para la vida, mayordomía y liderazgo comunitario fundamentados en una perspectiva cristiana ecuménica y respetuosa.
+                </p>
+              </article>
+            </div>
+
+            <!-- Service Status Note -->
+            <div style="background:var(--surface-alt);border:1px solid var(--line);padding:1.25rem 1.5rem;border-radius:8px;margin-bottom:2rem;">
+              <h4 style="margin:0 0 0.5rem 0;color:var(--primary);font-size:1.05rem;">Estatus de Chanak en Florida</h4>
+              <p style="margin:0;font-size:0.95rem;color:var(--ink-soft);line-height:1.6;">
+                <strong>Estado actual:</strong> <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-weight:600;">Servicio sujeto a la aprobación del programa</span>.
+                Chanak International Academy tramita y actualiza continuamente sus homologaciones con cada plataforma estatal (EMA Marketplace).
+              </p>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section alt" style="padding:3.5rem 0;background:var(--bg);border-bottom:1px solid var(--line);">
+          <div class="container" style="max-width:850px;">
+            <p class="eyebrow">PREGUNTAS FRECUENTES ORIENTATIVAS</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:2rem;">Preguntas Frecuentes sobre Step Up for Students (Beca PEP y FES-UA)</h2>
             
-          <option value="arizona" selected>Arizona — Empowerment Scholarship Account (ESA)</option>
-          <option value="florida" >Florida — Step Up for Students (PEP / FES-UA)</option>
-          <option value="utah" >Utah — Utah Fits All Scholarship (UFA)</option>
-          <option value="wyoming" >Wyoming — Wyoming ESA</option>
-          <option value="alabama" >Alabama — The CHOOSE Act of 2024</option>
-          <option value="south-carolina" >South Carolina — Education Scholarship Trust Fund (ESTF)</option>
-          <option value="new-hampshire" >New Hampshire — Education Freedom Account (EFA)</option>
-          <option value="other" >Otro Estado / Consulta General</option>
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Qué es el Programa de Educación Personalizada (PEP) en Florida?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">El programa PEP es una cuenta de ahorro educativo para alumnos de Florida que no asisten a tiempo completo a una escuela física pública o privada, permitiendo destinar la beca a currículo, programas formativos y acompañamiento pedagógico.</p>
+          </div>
         
-          </select>
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Cómo opera el mercado EMA para el pago de servicios?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">EMA funciona como un catálogo digital verificado donde los padres seleccionan directamente a los proveedores autorizados. El estado liquida las facturas aprobadas sin requerir desembolso familiar previo.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Las familias hispanohablantes pueden recibir asesoría en español?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Sí. Chanak Foundation brinda orientación bilingüe totalmente gratuita en inglés y español para acompañar a las familias en cada paso del proceso.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Las plazas de beca están garantizadas en Florida PEP?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Los cupos anuales de cuentas PEP están fijados por ley estatal. Se aconseja presentar la postulación al inicio de la convocatoria oficial.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Cuál es la función de Chanak Foundation frente a los proveedores en Florida?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Chanak Foundation ofrece orientación gratuita. La formación pedagógica es impartida por Chanak International Academy (código FLDOE #134620), una entidad relacionada.</p>
+          </div>
+        
+          </div>
+        </section>
+        
+    
+        
+        
+
+    
+        <section class="section" style="padding:3.5rem 0;background:var(--surface);border-bottom:1px solid var(--line);">
+          <div class="container" style="max-width:850px;">
+            <p class="eyebrow">FUENTES NORMATIVAS VERIFICADAS</p>
+            <h2 style="font-size:1.75rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">Fuentes Oficiales y Marco Normativo</h2>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin-bottom:1.5rem;">
+              Chanak Foundation brinda orientación educativa imparcial y verificada fundamentada exclusivamente en estatutos estatales públicos, directrices administrativas y normativas de desembolso vigentes. Puede consultar directamente los portales oficiales y la normativa aplicable a continuación:
+            </p>
+            <div style="background:#fff;border:1px solid var(--line);border-radius:8px;padding:1.5rem;">
+              <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.85rem;">
+                
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://www.stepupforstudents.org/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Step Up for Students (Organización Administradora Oficial)</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Entidad oficial autorizada por el estado para la administración de becas PEP y FES-UA en Florida.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://www.stepupforstudents.org/scholarships/personalized-education-program/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Directrices del Programa de Educación Personalizada (PEP)</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Guía informativa sobre Planes de Aprendizaje del Estudiante (SLP), cronograma de desembolsos y gastos elegibles.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://www.fldoe.org/schools/school-choice/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Departamento de Educación de Florida (FLDOE) — Elección Escolar</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Autoridad regulatoria estatal supervisora de opciones escolares privadas y organizaciones de becas.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://www.flsenate.gov/Laws/Statutes/2023/1002.394" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Estatutos de Florida § 1002.394 y § 1002.395 (Ley HB 1)</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Marco legal que establece el acceso universal a becas educativas en todo el estado de Florida.</p>
+            </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div style="text-align:center;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--line);">
+          <a href="#formulario-orientacion" class="btn btn-primary" style="padding:0.85rem 2rem;font-size:1.05rem;font-weight:700;">Ir al Formulario de Orientación Gratuita de Florida ↓</a>
         </div>
-        <div>
-          <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:0.4rem;color:var(--ink);">Nivel o Grado Escolar Aproximado</label>
-          <select name="grade_range" style="width:100%;padding:0.75rem;border:1px solid var(--line);border-radius:6px;font-size:0.95rem;font-family:inherit;background:#fff;">
-            
-          <option value="">Seleccione el rango escolar...</option>
-          <option value="k-5">Primaria / Elementary (Grados K–5)</option>
-          <option value="6-8">Secundaria / Middle School (Grados 6–8)</option>
-          <option value="9-12">Bachillerato / High School (Grados 9–12)</option>
-          <option value="multiple">Varios hijos en diferentes niveles</option>
-        
-          </select>
+      </article>
+    
+
+      <!-- ================= ESTADO: UTAH ================= -->
+      <article id="state-guide-utah" class="state-detail-panel" data-state="utah" style="display:none;background:#fff;border:1px solid var(--line);border-radius:12px;padding:2.5rem 2rem;margin-bottom:3rem;box-shadow:0 8px 30px rgba(0,0,0,0.05);">
+        <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--line);padding-bottom:1rem;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;">
+          <div>
+            <span style="background:var(--surface-alt);border:1px solid var(--line);padding:3px 10px;border-radius:20px;font-size:0.85rem;font-weight:700;color:var(--primary);text-transform:uppercase;">Odyssey</span>
+            <h2 style="font-size:2.2rem;color:var(--primary);margin:0.5rem 0 0 0;">Guía Informativa de Utah</h2>
+            <p style="font-size:1.1rem;color:var(--ink-soft);margin:0.25rem 0 0 0;font-weight:600;">Beca Utah Fits All (UFA)</p>
+          </div>
+          <div>
+            <a href="#formulario-orientacion" class="btn btn-primary" style="padding:0.75rem 1.5rem;font-weight:700;">Solicitar Orientación para Utah ↓</a>
+          </div>
         </div>
-      </div>
-
-      <div style="margin-bottom:1.25rem;">
-        <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:0.4rem;color:var(--ink);">Idioma de Preferencia para la Orientación</label>
-        <select name="preferred_language" style="width:100%;padding:0.75rem;border:1px solid var(--line);border-radius:6px;font-size:0.95rem;font-family:inherit;background:#fff;">
-          
-          <option value="es" selected>Español</option>
-          <option value="en">Inglés (English)</option>
-          <option value="both">Bilingüe (Español e Inglés)</option>
+        <section class="hero" style="padding:4rem 0 3rem 0;background:linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);border-bottom:1px solid var(--line);">
+      <div class="container" style="max-width:960px;">
+        <p class="eyebrow" style="letter-spacing:1px;font-weight:700;">Guía informativa PARA FAMILIAS · UTAH</p>
+        <h1 style="font-size:2.5rem;line-height:1.2;color:var(--primary);margin-top:0.5rem;margin-bottom:1.25rem;">Cómo funcionan las cuentas de educación de Utah (Utah Fits All Scholarship - UFA) para familias</h1>
+        <p class="hero-lead" style="font-size:1.15rem;color:var(--ink-soft);line-height:1.7;margin-bottom:2rem;">Guía completa para familias sobre las Cuentas de Ahorro para la Educación de Utah Fits All (UFA), la plataforma Odyssey y los gastos formativos autorizados.</p>
         
-        </select>
-      </div>
-
-      <div style="margin-bottom:1.25rem;">
-        <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:0.4rem;color:var(--ink);">Preguntas o Comentarios Adicionales (Opcional)</label>
-        <textarea name="message" rows="3" style="width:100%;padding:0.75rem;border:1px solid var(--line);border-radius:6px;font-size:0.95rem;font-family:inherit;resize:vertical;"></textarea>
-      </div>
-
-      <div style="margin-bottom:1.5rem;">
-        <label style="display:flex;align-items:flex-start;gap:0.6rem;font-size:0.85rem;line-height:1.5;color:var(--ink-soft);cursor:pointer;">
-          <input type="checkbox" name="consent_given" required style="margin-top:0.25rem;flex-shrink:0;">
-          <span>Acepto recibir orientación educativa gratuita de Chanak Foundation. Entiendo que Chanak no garantiza aprobación ni montos de fondos estatales y que nunca solicita credenciales de acceso a las plataformas de becas. *</span>
-        </label>
-      </div>
-
-      <div style="margin-bottom:1rem;">
-        <button type="submit" id="submitBtn" class="btn btn-primary" style="width:100%;padding:0.9rem 1.5rem;font-size:1.05rem;font-weight:700;border-radius:6px;cursor:pointer;">
-          Enviar Solicitud de Orientación Gratuita
-        </button>
-      </div>
-
-      <div id="formFeedback" style="display:none;padding:1rem;border-radius:6px;font-size:0.92rem;line-height:1.5;"></div>
-      <p style="font-size:0.8rem;color:var(--ink-soft);margin-top:1rem;line-height:1.4;text-align:center;">Privacidad garantizada: No solicitamos datos de identificación personal de los estudiantes (ni nombres de menores ni fechas de nacimiento). Sus datos solo se usan para responder a su consulta.</p>
-    </form>
-  </div>
-</div>
-
+        <div style="background:#fef3c7;border-left:4px solid #f59e0b;padding:1.25rem 1.5rem;border-radius:8px;margin-bottom:2.5rem;">
+          <h4 style="margin-top:0;color:#92400e;font-size:1.1rem;font-weight:700;">Transparencia y Naturaleza Jurídica</h4>
+          <p style="margin-bottom:0.5rem;color:#78350f;font-size:0.95rem;line-height:1.6;">
+            <strong>Chanak Foundation</strong> es una organización sin fines de lucro 501(c)(3) (EIN: 36-5154011) que ofrece orientación educativa gratuita a las familias. Los servicios educativos los presta <strong>Chanak International Academy</strong> (operada por Chanak TrainUp Education Inc., FLDOE #134620, candidata a la acreditación MSA-CESS), una entidad relacionada.
+          </p>
+          <p style="margin:0;color:#78350f;font-size:0.9rem;line-height:1.5;">
+            <em>Aviso importante:</em> Chanak no garantiza aprobación, cobertura ni montos de fondos; esas decisiones corresponden exclusivamente al programa oficial del estado de Utah.
+          </p>
+        </div>
+        
       </div>
     </section>
-  </main>
 
-  
+    
+        <section class="section" style="padding:3.5rem 0;border-bottom:1px solid var(--line);">
+          <div class="container">
+            <p class="eyebrow">ADMINISTRACIÓN Y FUNCIONAMIENTO OFICIAL</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">¿Cómo funciona el programa Beca Utah Fits All (UFA)?</h2>
+            <p style="font-size:1.05rem;line-height:1.7;color:var(--ink-soft);max-width:900px;margin-bottom:2rem;">
+              El programa de becas Utah Fits All otorga financiamiento estatal mediante Cuentas de Ahorro para la Educación, facilitando a las familias la personalización pedagógica fuera del modelo escolar convencional.
+            </p>
+
+            <div class="cards cards-three" style="margin-bottom:2.5rem;">
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">🏛️</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Organismo Administrador</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);">Junta de Educación del Estado de Utah (USBE) y ACE Scholarships. Respaldado bajo la normativa: <em>Código de Utah Sección 53F-6-401 (Programa de Becas Utah Fits All)</em>.</p>
+                <div style="margin-top:1rem;">
+                  <a href="https://www.utaheducationfitsall.org/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:700;font-size:0.9rem;text-decoration:underline;">Ver portal oficial del estado ↗</a>
+                </div>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">💳</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Plataforma de Gestión</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);">Utah Fits All opera mediante el mercado digital Odyssey. ACE Scholarships supervisa el cumplimiento normativo mientras Odyssey aloja las cuentas de las familias, verifica proveedores calificados y gestiona la facturación directa.</p>
+                <div style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-soft);"><strong>Plataforma:</strong> Odyssey</div>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">📅</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Ciclos y Facturación</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);"><strong>Depósitos:</strong> Beca anual dividida en desembolsos programados a través de Odyssey</p>
+                <p style="font-size:0.95rem;color:var(--ink-soft);margin-top:0.5rem;"><strong>Reglas de Factura:</strong> Facturación digital de Proveedor Calificado a través del mercado Odyssey</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section alt" style="padding:3.5rem 0;background:var(--bg);border-bottom:1px solid var(--line);">
+          <div class="container grid-two" style="gap:3rem;">
+            <div>
+              <p class="eyebrow">REQUISITOS DOCUMENTALES</p>
+              <h2 style="font-size:1.85rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1.25rem;">Documentos Habituales Solicitados</h2>
+              <p style="color:var(--ink-soft);font-size:1rem;line-height:1.6;margin-bottom:1.5rem;">
+                Cada estado establece requisitos específicos para verificar la residencia legal y la edad escolar de los beneficiarios. Tenga preparados estos documentos antes de postular:
+              </p>
+              <ul style="color:var(--ink);font-size:0.95rem;line-height:1.6;padding-left:1.25rem;">
+                <li style='margin-bottom:0.6rem;'>Comprobante de residencia legal en Utah (identificación estatal, recibo de suministros o contrato de alquiler)</li><li style='margin-bottom:0.6rem;'>Certificado de nacimiento oficial del alumno para acreditar edad e identidad</li><li style='margin-bottom:0.6rem;'>Verificación de ingresos brutos ajustados (para determinar tramos de prioridad)</li><li style='margin-bottom:0.6rem;'>Declaración de no asistencia a tiempo completo en escuela pública</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="eyebrow">PASOS PARA LA FAMILIA</p>
+              <h2 style="font-size:1.85rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1.25rem;">Ruta de Postulación y Pago</h2>
+              <ol style="color:var(--ink);font-size:0.95rem;line-height:1.6;padding-left:1.25rem;list-style-type:none;">
+                <li style='margin-bottom:1rem;'><strong>Paso 1:</strong> Presentar la postulación en línea en el portal de Utah Fits All en UtahEducationFitsAll.org.</li><li style='margin-bottom:1rem;'><strong>Paso 2:</strong> Adjuntar la documentación de ingresos y residencia durante la convocatoria oficial.</li><li style='margin-bottom:1rem;'><strong>Paso 3:</strong> Activar la cuenta del alumno en la plataforma Odyssey tras la confirmación de la beca.</li><li style='margin-bottom:1rem;'><strong>Paso 4:</strong> Seleccionar proveedores calificados en Odyssey para autorizar los servicios educativos.</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section" style="padding:3.5rem 0;border-bottom:1px solid var(--line);">
+          <div class="container">
+            <p class="eyebrow">PROPUESTA FORMATIVA Y PEDAGÓGICA</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:0.75rem;">¿Qué Ofrece Chanak a las Familias?</h2>
+            <p style="font-size:1.05rem;line-height:1.7;color:var(--ink-soft);max-width:850px;margin-bottom:2rem;">
+              Chanak promueve una formación integral con atención personalizada para estudiantes y familias que buscan excelencia académica y valores sólidos.
+            </p>
+
+            <div class="cards cards-three" style="margin-bottom:2rem;">
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:var(--primary);margin-bottom:0.5rem;">60<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Currículo Central de EE. UU.</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Enfoque en <em>Mastery Learning</em> (aprendizaje para el dominio). El estudiante avanza demostrando comprensión sólida de cada unidad de aprendizaje sin lagunas formativas.
+                </p>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:#0d9488;margin-bottom:0.5rem;">20<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Idioma y Cultura de Herencia</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Atención y mentoría bilingüe en inglés y español. Preservamos las raíces culturales e idiomáticas familiares mientras se fortalece la fluidez académica en inglés.
+                </p>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:#b45309;margin-bottom:0.5rem;">20<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Life Skills y Cosmovisión Bíblica</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Desarrollo de carácter, habilidades prácticas para la vida, mayordomía y liderazgo comunitario fundamentados en una perspectiva cristiana ecuménica y respetuosa.
+                </p>
+              </article>
+            </div>
+
+            <!-- Service Status Note -->
+            <div style="background:var(--surface-alt);border:1px solid var(--line);padding:1.25rem 1.5rem;border-radius:8px;margin-bottom:2rem;">
+              <h4 style="margin:0 0 0.5rem 0;color:var(--primary);font-size:1.05rem;">Estatus de Chanak en Utah</h4>
+              <p style="margin:0;font-size:0.95rem;color:var(--ink-soft);line-height:1.6;">
+                <strong>Estado actual:</strong> <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-weight:600;">Servicio sujeto a la aprobación del programa</span>.
+                Chanak International Academy tramita y actualiza continuamente sus homologaciones con cada plataforma estatal (Odyssey).
+              </p>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section alt" style="padding:3.5rem 0;background:var(--bg);border-bottom:1px solid var(--line);">
+          <div class="container" style="max-width:850px;">
+            <p class="eyebrow">PREGUNTAS FRECUENTES ORIENTATIVAS</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:2rem;">Preguntas Frecuentes sobre Beca Utah Fits All (UFA)</h2>
+            
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Quién administra la beca Utah Fits All?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">ACE Scholarships actúa como entidad administradora designada bajo contrato con la Junta de Educación de Utah, utilizando Odyssey para la gestión de cuentas y proveedores.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Las familias con menores ingresos tienen prioridad en Utah Fits All?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Sí. La legislación de Utah establece tramos prioritarios para hogares con ingresos situados bajo determinados umbrales de pobreza federal, abriendo posteriormente las plazas al resto de familias según presupuesto.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Los fondos de Odyssey cubren planes curriculares y acompañamiento académico?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Sí. Los materiales educativos aprobados, currículos individuales y el acompañamiento formativo calificado son conceptos autorizados.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Qué debe hacer la familia si su solicitud figura como incompleta?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Los padres deben ingresar a su cuenta en el portal y adjuntar la documentación requerida con la mayor diligencia antes de que concluya el plazo de revisión.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿La orientación de Chanak Foundation es gratuita?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Sí. Chanak Foundation brinda orientación informativa gratuita para ayudar a las familias de Utah a comprender los requisitos del programa.</p>
+          </div>
+        
+          </div>
+        </section>
+        
+    
+        
+        
+
+    
+        <section class="section" style="padding:3.5rem 0;background:var(--surface);border-bottom:1px solid var(--line);">
+          <div class="container" style="max-width:850px;">
+            <p class="eyebrow">FUENTES NORMATIVAS VERIFICADAS</p>
+            <h2 style="font-size:1.75rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">Fuentes Oficiales y Marco Normativo</h2>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin-bottom:1.5rem;">
+              Chanak Foundation brinda orientación educativa imparcial y verificada fundamentada exclusivamente en estatutos estatales públicos, directrices administrativas y normativas de desembolso vigentes. Puede consultar directamente los portales oficiales y la normativa aplicable a continuación:
+            </p>
+            <div style="background:#fff;border:1px solid var(--line);border-radius:8px;padding:1.5rem;">
+              <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.85rem;">
+                
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://www.utaheducationfitsall.org/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Portal Oficial de la Beca Utah Fits All (UFA)</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Portal oficial del estado para convocatorias, requisitos y centro de ayuda a las familias.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://www.acescholarships.org/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>ACE Scholarships Utah (Administrador Oficial del Programa)</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Organización designada para la revisión de solicitudes, tramos de ingresos y asignación de becas.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://www.withodyssey.com/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Plataforma Digital Odyssey</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Plataforma tecnológica de monedero digital para desembolsos y facturación de proveedores calificados en Utah.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://le.utah.gov/xcode/Title53F/Chapter6/Part4/53F-6-S401.html" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Código de Utah § 53F-6-401 y siguientes (Proyecto de Ley HB 215)</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Legislación estatal que crea y regula el programa de becas Utah Fits All.</p>
+            </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div style="text-align:center;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--line);">
+          <a href="#formulario-orientacion" class="btn btn-primary" style="padding:0.85rem 2rem;font-size:1.05rem;font-weight:700;">Ir al Formulario de Orientación Gratuita de Utah ↓</a>
+        </div>
+      </article>
+    
+
+      <!-- ================= ESTADO: WYOMING ================= -->
+      <article id="state-guide-wyoming" class="state-detail-panel" data-state="wyoming" style="display:none;background:#fff;border:1px solid var(--line);border-radius:12px;padding:2.5rem 2rem;margin-bottom:3rem;box-shadow:0 8px 30px rgba(0,0,0,0.05);">
+        <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--line);padding-bottom:1rem;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;">
+          <div>
+            <span style="background:var(--surface-alt);border:1px solid var(--line);padding:3px 10px;border-radius:20px;font-size:0.85rem;font-weight:700;color:var(--primary);text-transform:uppercase;">Odyssey</span>
+            <h2 style="font-size:2.2rem;color:var(--primary);margin:0.5rem 0 0 0;">Guía Informativa de Wyoming</h2>
+            <p style="font-size:1.1rem;color:var(--ink-soft);margin:0.25rem 0 0 0;font-weight:600;">Cuenta de Ahorros para la Educación de Wyoming (ESA)</p>
+          </div>
+          <div>
+            <a href="#formulario-orientacion" class="btn btn-primary" style="padding:0.75rem 1.5rem;font-weight:700;">Solicitar Orientación para Wyoming ↓</a>
+          </div>
+        </div>
+        <section class="hero" style="padding:4rem 0 3rem 0;background:linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);border-bottom:1px solid var(--line);">
+      <div class="container" style="max-width:960px;">
+        <p class="eyebrow" style="letter-spacing:1px;font-weight:700;">Guía informativa PARA FAMILIAS · WYOMING</p>
+        <h1 style="font-size:2.5rem;line-height:1.2;color:var(--primary);margin-top:0.5rem;margin-bottom:1.25rem;">Cómo funcionan las cuentas de educación de Wyoming (Wyoming ESA) para familias</h1>
+        <p class="hero-lead" style="font-size:1.15rem;color:var(--ink-soft);line-height:1.7;margin-bottom:2rem;">Guía clara y verificada para familias sobre las Cuentas de Ahorro para la Educación de Wyoming, la gestión en Odyssey y los servicios formativos autorizados.</p>
+        
+        <div style="background:#fef3c7;border-left:4px solid #f59e0b;padding:1.25rem 1.5rem;border-radius:8px;margin-bottom:2.5rem;">
+          <h4 style="margin-top:0;color:#92400e;font-size:1.1rem;font-weight:700;">Transparencia y Naturaleza Jurídica</h4>
+          <p style="margin-bottom:0.5rem;color:#78350f;font-size:0.95rem;line-height:1.6;">
+            <strong>Chanak Foundation</strong> es una organización sin fines de lucro 501(c)(3) (EIN: 36-5154011) que ofrece orientación educativa gratuita a las familias. Los servicios educativos los presta <strong>Chanak International Academy</strong> (operada por Chanak TrainUp Education Inc., FLDOE #134620, candidata a la acreditación MSA-CESS), una entidad relacionada.
+          </p>
+          <p style="margin:0;color:#78350f;font-size:0.9rem;line-height:1.5;">
+            <em>Aviso importante:</em> Chanak no garantiza aprobación, cobertura ni montos de fondos; esas decisiones corresponden exclusivamente al programa oficial del estado de Wyoming.
+          </p>
+        </div>
+        
+      </div>
+    </section>
+
+    
+        <section class="section" style="padding:3.5rem 0;border-bottom:1px solid var(--line);">
+          <div class="container">
+            <p class="eyebrow">ADMINISTRACIÓN Y FUNCIONAMIENTO OFICIAL</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">¿Cómo funciona el programa Cuenta de Ahorros para la Educación de Wyoming (ESA)?</h2>
+            <p style="font-size:1.05rem;line-height:1.7;color:var(--ink-soft);max-width:900px;margin-bottom:2rem;">
+              El programa de Cuentas de Ahorro para la Educación (ESA) de Wyoming apoya a las familias brindando fondos estatales directos para servicios educativos elegibles de pre-K a 12º grado, escolarización alternativa y soluciones curriculares.
+            </p>
+
+            <div class="cards cards-three" style="margin-bottom:2.5rem;">
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">🏛️</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Organismo Administrador</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);">Departamento de Educación de Wyoming (WDE). Respaldado bajo la normativa: <em>Ley de Cuentas de Ahorro para la Educación de Wyoming (HEA 0053)</em>.</p>
+                <div style="margin-top:1rem;">
+                  <a href="https://edu.wyoming.gov/parents/education-savings-accounts/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:700;font-size:0.9rem;text-decoration:underline;">Ver portal oficial del estado ↗</a>
+                </div>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">💳</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Plataforma de Gestión</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);">El ESA de Wyoming utiliza Odyssey como plataforma tecnológica oficial. Las familias disponen de una cuenta digital donde las asignaciones estatales se destinan a proveedores y recursos curriculares aprobados.</p>
+                <div style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-soft);"><strong>Plataforma:</strong> Odyssey</div>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">📅</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Ciclos y Facturación</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);"><strong>Depósitos:</strong> Desembolsos estatales escalonados gestionados en las cuentas digitales de Odyssey</p>
+                <p style="font-size:0.95rem;color:var(--ink-soft);margin-top:0.5rem;"><strong>Reglas de Factura:</strong> Reclamos y aprobaciones de proveedores desglosados mediante el portal de Odyssey</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section alt" style="padding:3.5rem 0;background:var(--bg);border-bottom:1px solid var(--line);">
+          <div class="container grid-two" style="gap:3rem;">
+            <div>
+              <p class="eyebrow">REQUISITOS DOCUMENTALES</p>
+              <h2 style="font-size:1.85rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1.25rem;">Documentos Habituales Solicitados</h2>
+              <p style="color:var(--ink-soft);font-size:1rem;line-height:1.6;margin-bottom:1.5rem;">
+                Cada estado establece requisitos específicos para verificar la residencia legal y la edad escolar de los beneficiarios. Tenga preparados estos documentos antes de postular:
+              </p>
+              <ul style="color:var(--ink);font-size:0.95rem;line-height:1.6;padding-left:1.25rem;">
+                <li style='margin-bottom:0.6rem;'>Comprobante de residencia en Wyoming</li><li style='margin-bottom:0.6rem;'>Certificado de nacimiento o documento acreditativo de edad del alumno</li><li style='margin-bottom:0.6rem;'>Verificación de ingresos del hogar para baremación de tramos</li><li style='margin-bottom:0.6rem;'>Acuerdo de opción educativa familiar</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="eyebrow">PASOS PARA LA FAMILIA</p>
+              <h2 style="font-size:1.85rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1.25rem;">Ruta de Postulación y Pago</h2>
+              <ol style="color:var(--ink);font-size:0.95rem;line-height:1.6;padding-left:1.25rem;list-style-type:none;">
+                <li style='margin-bottom:1rem;'><strong>Paso 1:</strong> Presentar la solicitud durante la convocatoria oficial del WDE.</li><li style='margin-bottom:1rem;'><strong>Paso 2:</strong> Validar la documentación del hogar y aceptar los términos del programa ESA.</li><li style='margin-bottom:1rem;'><strong>Paso 3:</strong> Ingresar a Odyssey para consultar el saldo formativo asignado.</li><li style='margin-bottom:1rem;'><strong>Paso 4:</strong> Autorizar los pagos a proveedores educativos registrados.</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section" style="padding:3.5rem 0;border-bottom:1px solid var(--line);">
+          <div class="container">
+            <p class="eyebrow">PROPUESTA FORMATIVA Y PEDAGÓGICA</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:0.75rem;">¿Qué Ofrece Chanak a las Familias?</h2>
+            <p style="font-size:1.05rem;line-height:1.7;color:var(--ink-soft);max-width:850px;margin-bottom:2rem;">
+              Chanak promueve una formación integral con atención personalizada para estudiantes y familias que buscan excelencia académica y valores sólidos.
+            </p>
+
+            <div class="cards cards-three" style="margin-bottom:2rem;">
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:var(--primary);margin-bottom:0.5rem;">60<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Currículo Central de EE. UU.</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Enfoque en <em>Mastery Learning</em> (aprendizaje para el dominio). El estudiante avanza demostrando comprensión sólida de cada unidad de aprendizaje sin lagunas formativas.
+                </p>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:#0d9488;margin-bottom:0.5rem;">20<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Idioma y Cultura de Herencia</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Atención y mentoría bilingüe en inglés y español. Preservamos las raíces culturales e idiomáticas familiares mientras se fortalece la fluidez académica en inglés.
+                </p>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:#b45309;margin-bottom:0.5rem;">20<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Life Skills y Cosmovisión Bíblica</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Desarrollo de carácter, habilidades prácticas para la vida, mayordomía y liderazgo comunitario fundamentados en una perspectiva cristiana ecuménica y respetuosa.
+                </p>
+              </article>
+            </div>
+
+            <!-- Service Status Note -->
+            <div style="background:var(--surface-alt);border:1px solid var(--line);padding:1.25rem 1.5rem;border-radius:8px;margin-bottom:2rem;">
+              <h4 style="margin:0 0 0.5rem 0;color:var(--primary);font-size:1.05rem;">Estatus de Chanak en Wyoming</h4>
+              <p style="margin:0;font-size:0.95rem;color:var(--ink-soft);line-height:1.6;">
+                <strong>Estado actual:</strong> <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-weight:600;">Servicio sujeto a la aprobación del programa</span>.
+                Chanak International Academy tramita y actualiza continuamente sus homologaciones con cada plataforma estatal (Odyssey).
+              </p>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section alt" style="padding:3.5rem 0;background:var(--bg);border-bottom:1px solid var(--line);">
+          <div class="container" style="max-width:850px;">
+            <p class="eyebrow">PREGUNTAS FRECUENTES ORIENTATIVAS</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:2rem;">Preguntas Frecuentes sobre Cuenta de Ahorros para la Educación de Wyoming (ESA)</h2>
+            
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Los alumnos de preescolar pueden participar en el ESA de Wyoming?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Sí, los niños de 4 años en adelante pueden calificar conforme a las directrices establecidas por el Departamento de Educación de Wyoming.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Qué plataforma digital utiliza Wyoming?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Wyoming utiliza la plataforma Odyssey para la gestión de cuentas y pagos a proveedores.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Las familias pueden elegir acompañamiento con cosmovisión bíblica?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Los padres tienen la libertad de seleccionar proveedores aprobados que se ajusten a sus valores formativos y principios pedagógicos.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Existen baremos de ingresos en el ESA de Wyoming?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">La ley de Wyoming contempla escalas de asignación escalonadas según los ingresos del hogar respecto al umbral federal de pobreza.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Chanak Foundation administra los fondos estatales de Wyoming?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">No. El Departamento de Educación de Wyoming administra los fondos. Chanak Foundation solo ofrece orientación informativa gratuita.</p>
+          </div>
+        
+          </div>
+        </section>
+        
+    
+        
+        
+
+    
+        <section class="section" style="padding:3.5rem 0;background:var(--surface);border-bottom:1px solid var(--line);">
+          <div class="container" style="max-width:850px;">
+            <p class="eyebrow">FUENTES NORMATIVAS VERIFICADAS</p>
+            <h2 style="font-size:1.75rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">Fuentes Oficiales y Marco Normativo</h2>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin-bottom:1.5rem;">
+              Chanak Foundation brinda orientación educativa imparcial y verificada fundamentada exclusivamente en estatutos estatales públicos, directrices administrativas y normativas de desembolso vigentes. Puede consultar directamente los portales oficiales y la normativa aplicable a continuación:
+            </p>
+            <div style="background:#fff;border:1px solid var(--line);border-radius:8px;padding:1.5rem;">
+              <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.85rem;">
+                
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://edu.wyoming.gov/parents/education-savings-accounts/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Departamento de Educación de Wyoming (WDE) — Cuentas ESA</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Portal oficial del departamento estatal con información de plazos, umbrales de ingreso y normativa.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://www.withodyssey.com/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Plataforma Odyssey para Wyoming</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Proveedor tecnológico autorizado para gestión de cuentas, reclamos y pagos directos en Wyoming.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://wyoleg.gov/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Ley Promulgada de Wyoming N.º 47 / W.S. 21-2-901 y ss.</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Legislación estatal que establece las Cuentas de Ahorro para la Educación en Wyoming.</p>
+            </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div style="text-align:center;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--line);">
+          <a href="#formulario-orientacion" class="btn btn-primary" style="padding:0.85rem 2rem;font-size:1.05rem;font-weight:700;">Ir al Formulario de Orientación Gratuita de Wyoming ↓</a>
+        </div>
+      </article>
+    
+
+      <!-- ================= ESTADO: ALABAMA ================= -->
+      <article id="state-guide-alabama" class="state-detail-panel" data-state="alabama" style="display:none;background:#fff;border:1px solid var(--line);border-radius:12px;padding:2.5rem 2rem;margin-bottom:3rem;box-shadow:0 8px 30px rgba(0,0,0,0.05);">
+        <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--line);padding-bottom:1rem;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;">
+          <div>
+            <span style="background:var(--surface-alt);border:1px solid var(--line);padding:3px 10px;border-radius:20px;font-size:0.85rem;font-weight:700;color:var(--primary);text-transform:uppercase;">ClassWallet</span>
+            <h2 style="font-size:2.2rem;color:var(--primary);margin:0.5rem 0 0 0;">Guía Informativa de Alabama</h2>
+            <p style="font-size:1.1rem;color:var(--ink-soft);margin:0.25rem 0 0 0;font-weight:600;">Ley CHOOSE de Alabama de 2024</p>
+          </div>
+          <div>
+            <a href="#formulario-orientacion" class="btn btn-primary" style="padding:0.75rem 1.5rem;font-weight:700;">Solicitar Orientación para Alabama ↓</a>
+          </div>
+        </div>
+        <section class="hero" style="padding:4rem 0 3rem 0;background:linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);border-bottom:1px solid var(--line);">
+      <div class="container" style="max-width:960px;">
+        <p class="eyebrow" style="letter-spacing:1px;font-weight:700;">Guía informativa PARA FAMILIAS · ALABAMA</p>
+        <h1 style="font-size:2.5rem;line-height:1.2;color:var(--primary);margin-top:0.5rem;margin-bottom:1.25rem;">Cómo funcionan las cuentas de educación de Alabama (CHOOSE Act of 2024) para familias</h1>
+        <p class="hero-lead" style="font-size:1.15rem;color:var(--ink-soft);line-height:1.7;margin-bottom:2rem;">Guía esencial sobre la Ley CHOOSE de Alabama, las Cuentas de Ahorro para la Educación mediante crédito fiscal y la gestión en ClassWallet para padres.</p>
+        
+        <div style="background:#fef3c7;border-left:4px solid #f59e0b;padding:1.25rem 1.5rem;border-radius:8px;margin-bottom:2.5rem;">
+          <h4 style="margin-top:0;color:#92400e;font-size:1.1rem;font-weight:700;">Transparencia y Naturaleza Jurídica</h4>
+          <p style="margin-bottom:0.5rem;color:#78350f;font-size:0.95rem;line-height:1.6;">
+            <strong>Chanak Foundation</strong> es una organización sin fines de lucro 501(c)(3) (EIN: 36-5154011) que ofrece orientación educativa gratuita a las familias. Los servicios educativos los presta <strong>Chanak International Academy</strong> (operada por Chanak TrainUp Education Inc., FLDOE #134620, candidata a la acreditación MSA-CESS), una entidad relacionada.
+          </p>
+          <p style="margin:0;color:#78350f;font-size:0.9rem;line-height:1.5;">
+            <em>Aviso importante:</em> Chanak no garantiza aprobación, cobertura ni montos de fondos; esas decisiones corresponden exclusivamente al programa oficial del estado de Alabama.
+          </p>
+        </div>
+        
+      </div>
+    </section>
+
+    
+        <section class="section" style="padding:3.5rem 0;border-bottom:1px solid var(--line);">
+          <div class="container">
+            <p class="eyebrow">ADMINISTRACIÓN Y FUNCIONAMIENTO OFICIAL</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">¿Cómo funciona el programa Ley CHOOSE de Alabama de 2024?</h2>
+            <p style="font-size:1.05rem;line-height:1.7;color:var(--ink-soft);max-width:900px;margin-bottom:2rem;">
+              La Ley CHOOSE de Alabama proporciona créditos fiscales reembolsables depositados en Cuentas de Ahorro para la Educación a estudiantes elegibles para costear matrícula, currículo, acompañamiento pedagógico y servicios formativos.
+            </p>
+
+            <div class="cards cards-three" style="margin-bottom:2.5rem;">
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">🏛️</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Organismo Administrador</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);">Departamento de Ingresos de Alabama y Departamento de Educación del Estado. Respaldado bajo la normativa: <em>Ley 2024-85 de Alabama (Ley CHOOSE de Creación de Esperanza y Oportunidad Educativa)</em>.</p>
+                <div style="margin-top:1rem;">
+                  <a href="https://classwallet.com/alchoose/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:700;font-size:0.9rem;text-decoration:underline;">Ver portal oficial del estado ↗</a>
+                </div>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">💳</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Plataforma de Gestión</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);">Alabama colabora con ClassWallet para brindar un entorno digital seguro donde los padres gestionan sus asignaciones estatales de ESA y autorizan pagos a proveedores.</p>
+                <div style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-soft);"><strong>Plataforma:</strong> ClassWallet</div>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">📅</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Ciclos y Facturación</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);"><strong>Depósitos:</strong> Distribuciones de crédito fiscal reembolsable/ESA estatal a través de ClassWallet</p>
+                <p style="font-size:0.95rem;color:var(--ink-soft);margin-top:0.5rem;"><strong>Reglas de Factura:</strong> Aprobación de proveedores de Pago Directo por el Departamento de Ingresos de Alabama</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section alt" style="padding:3.5rem 0;background:var(--bg);border-bottom:1px solid var(--line);">
+          <div class="container grid-two" style="gap:3rem;">
+            <div>
+              <p class="eyebrow">REQUISITOS DOCUMENTALES</p>
+              <h2 style="font-size:1.85rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1.25rem;">Documentos Habituales Solicitados</h2>
+              <p style="color:var(--ink-soft);font-size:1rem;line-height:1.6;margin-bottom:1.5rem;">
+                Cada estado establece requisitos específicos para verificar la residencia legal y la edad escolar de los beneficiarios. Tenga preparados estos documentos antes de postular:
+              </p>
+              <ul style="color:var(--ink);font-size:0.95rem;line-height:1.6;padding-left:1.25rem;">
+                <li style='margin-bottom:0.6rem;'>Documentación de residencia en Alabama (declaración de impuestos estatal, recibo de suministros)</li><li style='margin-bottom:0.6rem;'>Comprobante de edad del estudiante (certificado de nacimiento)</li><li style='margin-bottom:0.6rem;'>Verificación de ingresos brutos ajustados</li><li style='margin-bottom:0.6rem;'>Compromiso de participación en opción educativa</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="eyebrow">PASOS PARA LA FAMILIA</p>
+              <h2 style="font-size:1.85rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1.25rem;">Ruta de Postulación y Pago</h2>
+              <ol style="color:var(--ink);font-size:0.95rem;line-height:1.6;padding-left:1.25rem;list-style-type:none;">
+                <li style='margin-bottom:1rem;'><strong>Paso 1:</strong> Crear un perfil de tutor en el portal del Departamento de Ingresos de Alabama / ClassWallet.</li><li style='margin-bottom:1rem;'><strong>Paso 2:</strong> Completar la solicitud anual adjuntando los justificantes del hogar.</li><li style='margin-bottom:1rem;'><strong>Paso 3:</strong> Activar la cuenta de ESA en ClassWallet tras la confirmación oficial.</li><li style='margin-bottom:1rem;'><strong>Paso 4:</strong> Autorizar los pagos a proveedores mediante ClassWallet Direct Pay.</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section" style="padding:3.5rem 0;border-bottom:1px solid var(--line);">
+          <div class="container">
+            <p class="eyebrow">PROPUESTA FORMATIVA Y PEDAGÓGICA</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:0.75rem;">¿Qué Ofrece Chanak a las Familias?</h2>
+            <p style="font-size:1.05rem;line-height:1.7;color:var(--ink-soft);max-width:850px;margin-bottom:2rem;">
+              Chanak promueve una formación integral con atención personalizada para estudiantes y familias que buscan excelencia académica y valores sólidos.
+            </p>
+
+            <div class="cards cards-three" style="margin-bottom:2rem;">
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:var(--primary);margin-bottom:0.5rem;">60<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Currículo Central de EE. UU.</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Enfoque en <em>Mastery Learning</em> (aprendizaje para el dominio). El estudiante avanza demostrando comprensión sólida de cada unidad de aprendizaje sin lagunas formativas.
+                </p>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:#0d9488;margin-bottom:0.5rem;">20<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Idioma y Cultura de Herencia</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Atención y mentoría bilingüe en inglés y español. Preservamos las raíces culturales e idiomáticas familiares mientras se fortalece la fluidez académica en inglés.
+                </p>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:#b45309;margin-bottom:0.5rem;">20<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Life Skills y Cosmovisión Bíblica</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Desarrollo de carácter, habilidades prácticas para la vida, mayordomía y liderazgo comunitario fundamentados en una perspectiva cristiana ecuménica y respetuosa.
+                </p>
+              </article>
+            </div>
+
+            <!-- Service Status Note -->
+            <div style="background:var(--surface-alt);border:1px solid var(--line);padding:1.25rem 1.5rem;border-radius:8px;margin-bottom:2rem;">
+              <h4 style="margin:0 0 0.5rem 0;color:var(--primary);font-size:1.05rem;">Estatus de Chanak en Alabama</h4>
+              <p style="margin:0;font-size:0.95rem;color:var(--ink-soft);line-height:1.6;">
+                <strong>Estado actual:</strong> <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-weight:600;">Servicio sujeto a la aprobación del programa</span>.
+                Chanak International Academy tramita y actualiza continuamente sus homologaciones con cada plataforma estatal (ClassWallet).
+              </p>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section alt" style="padding:3.5rem 0;background:var(--bg);border-bottom:1px solid var(--line);">
+          <div class="container" style="max-width:850px;">
+            <p class="eyebrow">PREGUNTAS FRECUENTES ORIENTATIVAS</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:2rem;">Preguntas Frecuentes sobre Ley CHOOSE de Alabama de 2024</h2>
+            
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Cuándo entra en vigor pleno la Ley CHOOSE de Alabama?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">El programa se implementa de forma escalonada priorizando a familias con menores ingresos y necesidades especiales antes de extenderse al acceso universal en Alabama.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Qué plataforma digital gestiona los pagos en Alabama?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">ClassWallet es el proveedor designado para la administración de las cuentas de la Ley CHOOSE de Alabama.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Las familias que educan en el hogar pueden participar?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Sí, los estudiantes elegibles de educación en el hogar y escuelas no públicas pueden usar el programa para gastos educativos autorizados por la normativa estatal.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Las familias deben adelantar el pago a los proveedores?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">A través de ClassWallet Direct Pay, los pagos se liquidan digitalmente desde la cuenta estatal al proveedor registrado sin que la familia adelante dinero de su bolsillo.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Qué rol cumple Chanak Foundation?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Chanak Foundation brinda asesoría educativa gratuita para orientar a las familias de Alabama.</p>
+          </div>
+        
+          </div>
+        </section>
+        
+    
+        
+        
+
+    
+        <section class="section" style="padding:3.5rem 0;background:var(--surface);border-bottom:1px solid var(--line);">
+          <div class="container" style="max-width:850px;">
+            <p class="eyebrow">FUENTES NORMATIVAS VERIFICADAS</p>
+            <h2 style="font-size:1.75rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">Fuentes Oficiales y Marco Normativo</h2>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin-bottom:1.5rem;">
+              Chanak Foundation brinda orientación educativa imparcial y verificada fundamentada exclusivamente en estatutos estatales públicos, directrices administrativas y normativas de desembolso vigentes. Puede consultar directamente los portales oficiales y la normativa aplicable a continuación:
+            </p>
+            <div style="background:#fff;border:1px solid var(--line);border-radius:8px;padding:1.5rem;">
+              <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.85rem;">
+                
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://revenue.alabama.gov/individual-corporate/choose-act/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Departamento de Ingresos de Alabama (ALDOR) — Ley CHOOSE</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Portal oficial con regulaciones, requisitos de elegibilidad y fases de implementación del crédito fiscal educativo.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://classwallet.com/alchoose/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Portal ClassWallet Alabama CHOOSE</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Plataforma oficial para validación de servicios educativos y desembolsos a familias en Alabama.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://www.legislature.state.al.us/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Ley 2024-87 de la Legislatura de Alabama (Ley CHOOSE de 2024)</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Estatuto legal estatal que crea las cuentas de ahorro educativo en Alabama.</p>
+            </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div style="text-align:center;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--line);">
+          <a href="#formulario-orientacion" class="btn btn-primary" style="padding:0.85rem 2rem;font-size:1.05rem;font-weight:700;">Ir al Formulario de Orientación Gratuita de Alabama ↓</a>
+        </div>
+      </article>
+    
+
+      <!-- ================= ESTADO: CAROLINA DEL SUR ================= -->
+      <article id="state-guide-south-carolina" class="state-detail-panel" data-state="south-carolina" style="display:none;background:#fff;border:1px solid var(--line);border-radius:12px;padding:2.5rem 2rem;margin-bottom:3rem;box-shadow:0 8px 30px rgba(0,0,0,0.05);">
+        <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--line);padding-bottom:1rem;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;">
+          <div>
+            <span style="background:var(--surface-alt);border:1px solid var(--line);padding:3px 10px;border-radius:20px;font-size:0.85rem;font-weight:700;color:var(--primary);text-transform:uppercase;">ClassWallet</span>
+            <h2 style="font-size:2.2rem;color:var(--primary);margin:0.5rem 0 0 0;">Guía Informativa de Carolina del Sur</h2>
+            <p style="font-size:1.1rem;color:var(--ink-soft);margin:0.25rem 0 0 0;font-weight:600;">Fondo Fiduciario de Becas Educativas (ESTF)</p>
+          </div>
+          <div>
+            <a href="#formulario-orientacion" class="btn btn-primary" style="padding:0.75rem 1.5rem;font-weight:700;">Solicitar Orientación para Carolina del Sur ↓</a>
+          </div>
+        </div>
+        <section class="hero" style="padding:4rem 0 3rem 0;background:linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);border-bottom:1px solid var(--line);">
+      <div class="container" style="max-width:960px;">
+        <p class="eyebrow" style="letter-spacing:1px;font-weight:700;">Guía informativa PARA FAMILIAS · CAROLINA DEL SUR</p>
+        <h1 style="font-size:2.5rem;line-height:1.2;color:var(--primary);margin-top:0.5rem;margin-bottom:1.25rem;">Cómo funcionan las cuentas de educación de Carolina del Sur (ESTF) para familias</h1>
+        <p class="hero-lead" style="font-size:1.15rem;color:var(--ink-soft);line-height:1.7;margin-bottom:2rem;">Referencia oficial para familias sobre el Fondo Fiduciario de Becas Educativas (ESTF) de Carolina del Sur, configuración en ClassWallet y proveedores formativos autorizados.</p>
+        
+        <div style="background:#fef3c7;border-left:4px solid #f59e0b;padding:1.25rem 1.5rem;border-radius:8px;margin-bottom:2.5rem;">
+          <h4 style="margin-top:0;color:#92400e;font-size:1.1rem;font-weight:700;">Transparencia y Naturaleza Jurídica</h4>
+          <p style="margin-bottom:0.5rem;color:#78350f;font-size:0.95rem;line-height:1.6;">
+            <strong>Chanak Foundation</strong> es una organización sin fines de lucro 501(c)(3) (EIN: 36-5154011) que ofrece orientación educativa gratuita a las familias. Los servicios educativos los presta <strong>Chanak International Academy</strong> (operada por Chanak TrainUp Education Inc., FLDOE #134620, candidata a la acreditación MSA-CESS), una entidad relacionada.
+          </p>
+          <p style="margin:0;color:#78350f;font-size:0.9rem;line-height:1.5;">
+            <em>Aviso importante:</em> Chanak no garantiza aprobación, cobertura ni montos de fondos; esas decisiones corresponden exclusivamente al programa oficial del estado de Carolina del Sur.
+          </p>
+        </div>
+        
+      </div>
+    </section>
+
+    
+        <section class="section" style="padding:3.5rem 0;border-bottom:1px solid var(--line);">
+          <div class="container">
+            <p class="eyebrow">ADMINISTRACIÓN Y FUNCIONAMIENTO OFICIAL</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">¿Cómo funciona el programa Fondo Fiduciario de Becas Educativas (ESTF)?</h2>
+            <p style="font-size:1.05rem;line-height:1.7;color:var(--ink-soft);max-width:900px;margin-bottom:2rem;">
+              El Fondo Fiduciario de Becas Educativas (ESTF) de Carolina del Sur concede becas a estudiantes elegibles para cubrir gastos educativos aprobados, planes curriculares y servicios formativos.
+            </p>
+
+            <div class="cards cards-three" style="margin-bottom:2.5rem;">
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">🏛️</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Organismo Administrador</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);">Departamento de Educación de Carolina del Sur (SCDE). Respaldado bajo la normativa: <em>Código de Leyes de Carolina del Sur Sección 59-8-110 (Ley ESTF)</em>.</p>
+                <div style="margin-top:1rem;">
+                  <a href="https://sc-estf-program.com/en/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:700;font-size:0.9rem;text-decoration:underline;">Ver portal oficial del estado ↗</a>
+                </div>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">💳</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Plataforma de Gestión</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);">El SCDE gestiona las cuentas ESTF a través de ClassWallet, facilitando a las familias herramientas seguras para autorizar pagos a proveedores y consultar saldos.</p>
+                <div style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-soft);"><strong>Plataforma:</strong> ClassWallet</div>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">📅</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Ciclos y Facturación</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);"><strong>Depósitos:</strong> Asignaciones trimestrales en cuenta para gastos educativos elegibles</p>
+                <p style="font-size:0.95rem;color:var(--ink-soft);margin-top:0.5rem;"><strong>Reglas de Factura:</strong> Pago Directo ClassWallet con validación del departamento estatal</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section alt" style="padding:3.5rem 0;background:var(--bg);border-bottom:1px solid var(--line);">
+          <div class="container grid-two" style="gap:3rem;">
+            <div>
+              <p class="eyebrow">REQUISITOS DOCUMENTALES</p>
+              <h2 style="font-size:1.85rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1.25rem;">Documentos Habituales Solicitados</h2>
+              <p style="color:var(--ink-soft);font-size:1rem;line-height:1.6;margin-bottom:1.5rem;">
+                Cada estado establece requisitos específicos para verificar la residencia legal y la edad escolar de los beneficiarios. Tenga preparados estos documentos antes de postular:
+              </p>
+              <ul style="color:var(--ink);font-size:0.95rem;line-height:1.6;padding-left:1.25rem;">
+                <li style='margin-bottom:0.6rem;'>Comprobante de residencia en Carolina del Sur (licencia, contrato de alquiler, impuesto predial)</li><li style='margin-bottom:0.6rem;'>Certificado de nacimiento oficial del alumno</li><li style='margin-bottom:0.6rem;'>Acreditación de elegibilidad de Medicaid o ingresos del hogar (bajo 400% del umbral de pobreza federal)</li><li style='margin-bottom:0.6rem;'>Constancia de matrícula en escuela pública en el curso previo o ingreso a kindergarten</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="eyebrow">PASOS PARA LA FAMILIA</p>
+              <h2 style="font-size:1.85rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1.25rem;">Ruta de Postulación y Pago</h2>
+              <ol style="color:var(--ink);font-size:0.95rem;line-height:1.6;padding-left:1.25rem;list-style-type:none;">
+                <li style='margin-bottom:1rem;'><strong>Paso 1:</strong> Enviar la solicitud digital a través del portal ESTF del SCDE.</li><li style='margin-bottom:1rem;'><strong>Paso 2:</strong> Verificar los ingresos familiares y los criterios de elegibilidad del alumno.</li><li style='margin-bottom:1rem;'><strong>Paso 3:</strong> Configurar la cuenta de tutor en ClassWallet tras recibir la aprobación oficial.</li><li style='margin-bottom:1rem;'><strong>Paso 4:</strong> Aprobar las facturas de proveedores calificados mediante ClassWallet Direct Pay.</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section" style="padding:3.5rem 0;border-bottom:1px solid var(--line);">
+          <div class="container">
+            <p class="eyebrow">PROPUESTA FORMATIVA Y PEDAGÓGICA</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:0.75rem;">¿Qué Ofrece Chanak a las Familias?</h2>
+            <p style="font-size:1.05rem;line-height:1.7;color:var(--ink-soft);max-width:850px;margin-bottom:2rem;">
+              Chanak promueve una formación integral con atención personalizada para estudiantes y familias que buscan excelencia académica y valores sólidos.
+            </p>
+
+            <div class="cards cards-three" style="margin-bottom:2rem;">
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:var(--primary);margin-bottom:0.5rem;">60<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Currículo Central de EE. UU.</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Enfoque en <em>Mastery Learning</em> (aprendizaje para el dominio). El estudiante avanza demostrando comprensión sólida de cada unidad de aprendizaje sin lagunas formativas.
+                </p>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:#0d9488;margin-bottom:0.5rem;">20<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Idioma y Cultura de Herencia</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Atención y mentoría bilingüe en inglés y español. Preservamos las raíces culturales e idiomáticas familiares mientras se fortalece la fluidez académica en inglés.
+                </p>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:#b45309;margin-bottom:0.5rem;">20<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Life Skills y Cosmovisión Bíblica</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Desarrollo de carácter, habilidades prácticas para la vida, mayordomía y liderazgo comunitario fundamentados en una perspectiva cristiana ecuménica y respetuosa.
+                </p>
+              </article>
+            </div>
+
+            <!-- Service Status Note -->
+            <div style="background:var(--surface-alt);border:1px solid var(--line);padding:1.25rem 1.5rem;border-radius:8px;margin-bottom:2rem;">
+              <h4 style="margin:0 0 0.5rem 0;color:var(--primary);font-size:1.05rem;">Estatus de Chanak en Carolina del Sur</h4>
+              <p style="margin:0;font-size:0.95rem;color:var(--ink-soft);line-height:1.6;">
+                <strong>Estado actual:</strong> <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-weight:600;">Servicio sujeto a la aprobación del programa</span>.
+                Chanak International Academy tramita y actualiza continuamente sus homologaciones con cada plataforma estatal (ClassWallet).
+              </p>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section alt" style="padding:3.5rem 0;background:var(--bg);border-bottom:1px solid var(--line);">
+          <div class="container" style="max-width:850px;">
+            <p class="eyebrow">PREGUNTAS FRECUENTES ORIENTATIVAS</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:2rem;">Preguntas Frecuentes sobre Fondo Fiduciario de Becas Educativas (ESTF)</h2>
+            
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Cuál es el monto anual de la beca ESTF de Carolina del Sur?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">El importe de la beca lo fija anualmente la Asamblea General de Carolina del Sur (actualmente hasta $6.000 por alumno elegible).</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Quién califica para el programa ESTF de Carolina del Sur?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Residentes de Carolina del Sur cuyos ingresos familiares no superen el 400% del umbral federal de pobreza y cumplan los criterios de escolarización previa.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿ClassWallet cobra comisiones a las familias?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">No, las familias no pagan comisiones para acceder a ClassWallet y gestionar los fondos de la beca ESTF de su hijo.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Los fondos cubren acompañamiento académico guiado?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Sí, entre los gastos autorizados se incluye el apoyo pedagógico, currículo aprobado y acompañamiento formativo.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Cómo apoya Chanak Foundation a las familias?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Chanak Foundation ofrece orientación bilingüe gratuita y sin compromiso sobre el proceso de solicitud y las alternativas de proveedores.</p>
+          </div>
+        
+          </div>
+        </section>
+        
+    
+        
+        
+
+    
+        <section class="section" style="padding:3.5rem 0;background:var(--surface);border-bottom:1px solid var(--line);">
+          <div class="container" style="max-width:850px;">
+            <p class="eyebrow">FUENTES NORMATIVAS VERIFICADAS</p>
+            <h2 style="font-size:1.75rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">Fuentes Oficiales y Marco Normativo</h2>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin-bottom:1.5rem;">
+              Chanak Foundation brinda orientación educativa imparcial y verificada fundamentada exclusivamente en estatutos estatales públicos, directrices administrativas y normativas de desembolso vigentes. Puede consultar directamente los portales oficiales y la normativa aplicable a continuación:
+            </p>
+            <div style="background:#fff;border:1px solid var(--line);border-radius:8px;padding:1.5rem;">
+              <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.85rem;">
+                
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://ed.sc.gov/districts-schools/state-accountability/education-scholarship-trust-fund/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Departamento de Educación de Carolina del Sur (SCDE) — Programa ESTF</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Portal oficial del departamento estatal con actualizaciones del programa y normativas de supervisión.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://sc-estf-program.com/en/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Portal Oficial del Programa ESTF de Carolina del Sur</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Portal de registro de familias, verificación de elegibilidad y gestión de fondos de becas.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://classwallet.com/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>ClassWallet para Carolina del Sur</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Sistema de pago oficial para facturación de proveedores educativos autorizados y saldos familiares.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://www.scstatehouse.gov/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Código de Leyes de Carolina del Sur § 59-8-110 y ss.</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Disposiciones estatutarias que regulan el Fondo Fiduciario de Becas Educativas de Carolina del Sur.</p>
+            </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div style="text-align:center;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--line);">
+          <a href="#formulario-orientacion" class="btn btn-primary" style="padding:0.85rem 2rem;font-size:1.05rem;font-weight:700;">Ir al Formulario de Orientación Gratuita de Carolina del Sur ↓</a>
+        </div>
+      </article>
+    
+
+      <!-- ================= ESTADO: NEW HAMPSHIRE ================= -->
+      <article id="state-guide-new-hampshire" class="state-detail-panel" data-state="new-hampshire" style="display:none;background:#fff;border:1px solid var(--line);border-radius:12px;padding:2.5rem 2rem;margin-bottom:3rem;box-shadow:0 8px 30px rgba(0,0,0,0.05);">
+        <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--line);padding-bottom:1rem;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;">
+          <div>
+            <span style="background:var(--surface-alt);border:1px solid var(--line);padding:3px 10px;border-radius:20px;font-size:0.85rem;font-weight:700;color:var(--primary);text-transform:uppercase;">ClassWallet</span>
+            <h2 style="font-size:2.2rem;color:var(--primary);margin:0.5rem 0 0 0;">Guía Informativa de New Hampshire</h2>
+            <p style="font-size:1.1rem;color:var(--ink-soft);margin:0.25rem 0 0 0;font-weight:600;">Cuenta de Libertad Educativa (EFA)</p>
+          </div>
+          <div>
+            <a href="#formulario-orientacion" class="btn btn-primary" style="padding:0.75rem 1.5rem;font-weight:700;">Solicitar Orientación para New Hampshire ↓</a>
+          </div>
+        </div>
+        <section class="hero" style="padding:4rem 0 3rem 0;background:linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);border-bottom:1px solid var(--line);">
+      <div class="container" style="max-width:960px;">
+        <p class="eyebrow" style="letter-spacing:1px;font-weight:700;">Guía informativa PARA FAMILIAS · NEW HAMPSHIRE</p>
+        <h1 style="font-size:2.5rem;line-height:1.2;color:var(--primary);margin-top:0.5rem;margin-bottom:1.25rem;">Cómo funcionan las cuentas de educación de New Hampshire (EFA) para familias</h1>
+        <p class="hero-lead" style="font-size:1.15rem;color:var(--ink-soft);line-height:1.7;margin-bottom:2rem;">Manual detallado para familias sobre las Cuentas de Libertad Educativa (EFA) de New Hampshire, la gestión de Children's Scholarship Fund y los trámites en ClassWallet.</p>
+        
+        <div style="background:#fef3c7;border-left:4px solid #f59e0b;padding:1.25rem 1.5rem;border-radius:8px;margin-bottom:2.5rem;">
+          <h4 style="margin-top:0;color:#92400e;font-size:1.1rem;font-weight:700;">Transparencia y Naturaleza Jurídica</h4>
+          <p style="margin-bottom:0.5rem;color:#78350f;font-size:0.95rem;line-height:1.6;">
+            <strong>Chanak Foundation</strong> es una organización sin fines de lucro 501(c)(3) (EIN: 36-5154011) que ofrece orientación educativa gratuita a las familias. Los servicios educativos los presta <strong>Chanak International Academy</strong> (operada por Chanak TrainUp Education Inc., FLDOE #134620, candidata a la acreditación MSA-CESS), una entidad relacionada.
+          </p>
+          <p style="margin:0;color:#78350f;font-size:0.9rem;line-height:1.5;">
+            <em>Aviso importante:</em> Chanak no garantiza aprobación, cobertura ni montos de fondos; esas decisiones corresponden exclusivamente al programa oficial del estado de New Hampshire.
+          </p>
+        </div>
+        
+      </div>
+    </section>
+
+    
+        <section class="section" style="padding:3.5rem 0;border-bottom:1px solid var(--line);">
+          <div class="container">
+            <p class="eyebrow">ADMINISTRACIÓN Y FUNCIONAMIENTO OFICIAL</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">¿Cómo funciona el programa Cuenta de Libertad Educativa (EFA)?</h2>
+            <p style="font-size:1.05rem;line-height:1.7;color:var(--ink-soft);max-width:900px;margin-bottom:2rem;">
+              El programa de Cuentas de Libertad Educativa (EFA) de New Hampshire otorga subvenciones de adecuación por alumno a familias elegibles para costear servicios pedagógicos personalizados, matrícula y recursos de educación en el hogar.
+            </p>
+
+            <div class="cards cards-three" style="margin-bottom:2.5rem;">
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">🏛️</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Organismo Administrador</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);">Children's Scholarship Fund New Hampshire y Departamento de Educación de NH. Respaldado bajo la normativa: <em>Leyes de New Hampshire RSA 194-F (Programa de Cuentas de Libertad Educativa)</em>.</p>
+                <div style="margin-top:1rem;">
+                  <a href="https://nh.scholarshipfund.org/apply/nh-education-freedom-accounts/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:700;font-size:0.9rem;text-decoration:underline;">Ver portal oficial del estado ↗</a>
+                </div>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">💳</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Plataforma de Gestión</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);">Children's Scholarship Fund NH colabora con ClassWallet para desembolsar y auditar los gastos de EFA. Los padres administran todas las transacciones desde su panel en ClassWallet.</p>
+                <div style="margin-top:0.5rem;font-size:0.85rem;color:var(--ink-soft);"><strong>Plataforma:</strong> ClassWallet</div>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2rem;margin-bottom:0.75rem;">📅</div>
+                <h3 style="font-size:1.2rem;margin-top:0;color:var(--primary);">Ciclos y Facturación</h3>
+                <p style="font-size:0.95rem;color:var(--ink-soft);"><strong>Depósitos:</strong> Subvenciones estatales de adecuación por alumno desembolsadas en cuotas mediante ClassWallet</p>
+                <p style="font-size:0.95rem;color:var(--ink-soft);margin-top:0.5rem;"><strong>Reglas de Factura:</strong> Facturación desglosada de servicios educativos gestionada en ClassWallet</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section alt" style="padding:3.5rem 0;background:var(--bg);border-bottom:1px solid var(--line);">
+          <div class="container grid-two" style="gap:3rem;">
+            <div>
+              <p class="eyebrow">REQUISITOS DOCUMENTALES</p>
+              <h2 style="font-size:1.85rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1.25rem;">Documentos Habituales Solicitados</h2>
+              <p style="color:var(--ink-soft);font-size:1rem;line-height:1.6;margin-bottom:1.5rem;">
+                Cada estado establece requisitos específicos para verificar la residencia legal y la edad escolar de los beneficiarios. Tenga preparados estos documentos antes de postular:
+              </p>
+              <ul style="color:var(--ink);font-size:0.95rem;line-height:1.6;padding-left:1.25rem;">
+                <li style='margin-bottom:0.6rem;'>Comprobante de residencia en New Hampshire (licencia, factura de servicios, documento fiscal)</li><li style='margin-bottom:0.6rem;'>Constancia de edad del alumno (certificado de nacimiento)</li><li style='margin-bottom:0.6rem;'>Verificación de ingresos del hogar (bajo el 350% del umbral federal de pobreza)</li><li style='margin-bottom:0.6rem;'>Acuerdo de EFA firmado con Children's Scholarship Fund NH</li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="eyebrow">PASOS PARA LA FAMILIA</p>
+              <h2 style="font-size:1.85rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1.25rem;">Ruta de Postulación y Pago</h2>
+              <ol style="color:var(--ink);font-size:0.95rem;line-height:1.6;padding-left:1.25rem;list-style-type:none;">
+                <li style='margin-bottom:1rem;'><strong>Paso 1:</strong> Completar la postulación en línea en NH.ScholarshipFund.org.</li><li style='margin-bottom:1rem;'><strong>Paso 2:</strong> Adjuntar comprobantes de ingresos y verificación de residencia en New Hampshire.</li><li style='margin-bottom:1rem;'><strong>Paso 3:</strong> Firmar el acuerdo electrónico de beca EFA tras la aprobación.</li><li style='margin-bottom:1rem;'><strong>Paso 4:</strong> Ingresar a ClassWallet para asignar fondos a los proveedores educativos registrados.</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section" style="padding:3.5rem 0;border-bottom:1px solid var(--line);">
+          <div class="container">
+            <p class="eyebrow">PROPUESTA FORMATIVA Y PEDAGÓGICA</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:0.75rem;">¿Qué Ofrece Chanak a las Familias?</h2>
+            <p style="font-size:1.05rem;line-height:1.7;color:var(--ink-soft);max-width:850px;margin-bottom:2rem;">
+              Chanak promueve una formación integral con atención personalizada para estudiantes y familias que buscan excelencia académica y valores sólidos.
+            </p>
+
+            <div class="cards cards-three" style="margin-bottom:2rem;">
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:var(--primary);margin-bottom:0.5rem;">60<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Currículo Central de EE. UU.</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Enfoque en <em>Mastery Learning</em> (aprendizaje para el dominio). El estudiante avanza demostrando comprensión sólida de cada unidad de aprendizaje sin lagunas formativas.
+                </p>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:#0d9488;margin-bottom:0.5rem;">20<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Idioma y Cultura de Herencia</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Atención y mentoría bilingüe en inglés y español. Preservamos las raíces culturales e idiomáticas familiares mientras se fortalece la fluidez académica en inglés.
+                </p>
+              </article>
+
+              <article class="card">
+                <div style="font-size:2.2rem;font-weight:800;color:#b45309;margin-bottom:0.5rem;">20<span style="font-size:1.2rem;">%</span></div>
+                <h3 style="font-size:1.15rem;margin-top:0;">Life Skills y Cosmovisión Bíblica</h3>
+                <p style="font-size:0.92rem;color:var(--ink-soft);">
+                  Desarrollo de carácter, habilidades prácticas para la vida, mayordomía y liderazgo comunitario fundamentados en una perspectiva cristiana ecuménica y respetuosa.
+                </p>
+              </article>
+            </div>
+
+            <!-- Service Status Note -->
+            <div style="background:var(--surface-alt);border:1px solid var(--line);padding:1.25rem 1.5rem;border-radius:8px;margin-bottom:2rem;">
+              <h4 style="margin:0 0 0.5rem 0;color:var(--primary);font-size:1.05rem;">Estatus de Chanak en New Hampshire</h4>
+              <p style="margin:0;font-size:0.95rem;color:var(--ink-soft);line-height:1.6;">
+                <strong>Estado actual:</strong> <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-weight:600;">Servicio sujeto a la aprobación del programa</span>.
+                Chanak International Academy tramita y actualiza continuamente sus homologaciones con cada plataforma estatal (ClassWallet).
+              </p>
+            </div>
+          </div>
+        </section>
+        
+    
+        <section class="section alt" style="padding:3.5rem 0;background:var(--bg);border-bottom:1px solid var(--line);">
+          <div class="container" style="max-width:850px;">
+            <p class="eyebrow">PREGUNTAS FRECUENTES ORIENTATIVAS</p>
+            <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:2rem;">Preguntas Frecuentes sobre Cuenta de Libertad Educativa (EFA)</h2>
+            
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Quién administra el programa EFA en New Hampshire?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Children's Scholarship Fund New Hampshire (CSF NH) administra el programa EFA en colaboración con el Departamento de Educación de New Hampshire.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Cuál es el límite de ingresos para calificar al EFA de NH?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">La ley de New Hampshire establece la elegibilidad para hogares con ingresos de hasta el 350% del umbral federal de pobreza en el momento de la postulación.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Los fondos de EFA pueden usarse para aprendizaje virtual en línea?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">Sí, los cursos educativos virtuales, planes curriculares y acompañamiento académico de proveedores aprobados son gastos válidos.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Cómo se envían los pagos a las organizaciones educativas?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">A través de ClassWallet Direct Pay, los fondos se transfieren directamente desde la cuenta del estudiante al proveedor, sin requerir desembolso previo familiar.</p>
+          </div>
+        
+          <div style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);">
+            <h3 style="font-size:1.15rem;color:var(--primary);margin-top:0;margin-bottom:0.5rem;">¿Chanak Foundation cobra por orientar sobre el programa EFA?</h3>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin:0;">No, Chanak Foundation ofrece orientación informativa gratuita para guiar a las familias en New Hampshire.</p>
+          </div>
+        
+          </div>
+        </section>
+        
+    
+        
+        
+
+    
+        <section class="section" style="padding:3.5rem 0;background:var(--surface);border-bottom:1px solid var(--line);">
+          <div class="container" style="max-width:850px;">
+            <p class="eyebrow">FUENTES NORMATIVAS VERIFICADAS</p>
+            <h2 style="font-size:1.75rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">Fuentes Oficiales y Marco Normativo</h2>
+            <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.6;margin-bottom:1.5rem;">
+              Chanak Foundation brinda orientación educativa imparcial y verificada fundamentada exclusivamente en estatutos estatales públicos, directrices administrativas y normativas de desembolso vigentes. Puede consultar directamente los portales oficiales y la normativa aplicable a continuación:
+            </p>
+            <div style="background:#fff;border:1px solid var(--line);border-radius:8px;padding:1.5rem;">
+              <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.85rem;">
+                
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://nh.scholarshipfund.org/apply/nh-education-freedom-accounts/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Children's Scholarship Fund New Hampshire (CSF NH)</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Entidad administradora contratada por el estado para la tramitación de solicitudes y cálculo de becas EFA.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://www.education.nh.gov/pathways-education/education-freedom-accounts" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Departamento de Educación de New Hampshire (NHED) — Cuentas EFA</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Orientación de la agencia estatal sobre subvenciones de adecuación por alumno y requisitos de cumplimiento.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://classwallet.com/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Portal ClassWallet New Hampshire</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Monedero digital utilizado para pagar directamente a proveedores educativos autorizados.</p>
+            </li>
+            <li style="padding-bottom:0.85rem;border-bottom:1px solid var(--line);">
+              <a href="https://www.gencourt.state.nh.us/rsa/html/XV/194-F/194-F-mrg.htm" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;font-size:1.02rem;text-decoration:underline;display:inline-flex;align-items:center;gap:0.35rem;">
+                <span>Estatutos Revisados de New Hampshire RSA 194-F</span>
+                <span aria-hidden="true" style="font-size:0.85rem;">↗</span>
+              </a>
+              <p style="margin:0.25rem 0 0 0;font-size:0.88rem;color:var(--ink-soft);line-height:1.5;">Legislación del estado de New Hampshire que crea y regula las Cuentas de Libertad Educativa.</p>
+            </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div style="text-align:center;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--line);">
+          <a href="#formulario-orientacion" class="btn btn-primary" style="padding:0.85rem 2rem;font-size:1.05rem;font-weight:700;">Ir al Formulario de Orientación Gratuita de New Hampshire ↓</a>
+        </div>
+      </article>
+    
+      </div>
+    </div>
+  </section>
+
+  <!-- TABLA COMPARATIVA DE PROGRAMAS -->
+  <section class="section" id="tabla-programas" style="padding:3.5rem 0;border-bottom:1px solid var(--line);background:#fff;">
+    <div class="container">
+      <p class="eyebrow">PANORAMA NACIONAL COMPARATIVO</p>
+      <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">Tabla Comparativa de Programas de Fondos Escolares</h2>
+      <p style="font-size:1.05rem;line-height:1.7;color:var(--ink-soft);max-width:880px;margin-bottom:1.5rem;">
+        Resumen general de los programas estatales activos, su plataforma de administración y el estatus orientativo:
+      </p>
+
+      <div class="table-container">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Estado</th>
+              <th>Programa Oficial</th>
+              <th>Plataforma</th>
+              <th>Mecanismo de Desembolso</th>
+              <th>Estatus Chanak</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Arizona</strong></td>
+              <td>Empowerment Scholarship Account (ESA)</td>
+              <td><span style="background:var(--surface-alt);padding:2px 8px;border-radius:4px;font-weight:600;">ClassWallet</span></td>
+              <td>Asignaciones trimestrales / Pago Directo</td>
+              <td><span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-size:0.82rem;font-weight:600;">Sujeto a aprobación del programa</span></td>
+              <td><button type="button" class="btn btn-secondary" onclick="activateStateTab('arizona')" style="padding:0.4rem 0.8rem;font-size:0.85rem;">Ver Guía</button></td>
+            </tr>
+            <tr>
+              <td><strong>Florida</strong></td>
+              <td>Step Up for Students (PEP y FES-UA)</td>
+              <td><span style="background:var(--surface-alt);padding:2px 8px;border-radius:4px;font-weight:600;">EMA Marketplace</span></td>
+              <td>Depósitos trimestrales / Marketplace oficial</td>
+              <td><span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-size:0.82rem;font-weight:600;">Sujeto a aprobación del programa</span></td>
+              <td><button type="button" class="btn btn-secondary" onclick="activateStateTab('florida')" style="padding:0.4rem 0.8rem;font-size:0.85rem;">Ver Guía</button></td>
+            </tr>
+            <tr>
+              <td><strong>Utah</strong></td>
+              <td>Utah Fits All Scholarship (UFA)</td>
+              <td><span style="background:var(--surface-alt);padding:2px 8px;border-radius:4px;font-weight:600;">Odyssey</span></td>
+              <td>Desembolsos programados en mercado digital</td>
+              <td><span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-size:0.82rem;font-weight:600;">Sujeto a aprobación del programa</span></td>
+              <td><button type="button" class="btn btn-secondary" onclick="activateStateTab('utah')" style="padding:0.4rem 0.8rem;font-size:0.85rem;">Ver Guía</button></td>
+            </tr>
+            <tr>
+              <td><strong>Wyoming</strong></td>
+              <td>Wyoming Education Savings Account (ESA)</td>
+              <td><span style="background:var(--surface-alt);padding:2px 8px;border-radius:4px;font-weight:600;">Odyssey</span></td>
+              <td>Desembolsos escalonados por cuenta parental</td>
+              <td><span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-size:0.82rem;font-weight:600;">Sujeto a aprobación del programa</span></td>
+              <td><button type="button" class="btn btn-secondary" onclick="activateStateTab('wyoming')" style="padding:0.4rem 0.8rem;font-size:0.85rem;">Ver Guía</button></td>
+            </tr>
+            <tr>
+              <td><strong>Alabama</strong></td>
+              <td>The CHOOSE Act of 2024</td>
+              <td><span style="background:var(--surface-alt);padding:2px 8px;border-radius:4px;font-weight:600;">ClassWallet</span></td>
+              <td>Crédito fiscal reembolsable / Pago Directo</td>
+              <td><span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-size:0.82rem;font-weight:600;">Sujeto a aprobación del programa</span></td>
+              <td><button type="button" class="btn btn-secondary" onclick="activateStateTab('alabama')" style="padding:0.4rem 0.8rem;font-size:0.85rem;">Ver Guía</button></td>
+            </tr>
+            <tr>
+              <td><strong>Carolina del Sur</strong></td>
+              <td>Education Scholarship Trust Fund (ESTF)</td>
+              <td><span style="background:var(--surface-alt);padding:2px 8px;border-radius:4px;font-weight:600;">ClassWallet</span></td>
+              <td>Asignaciones trimestrales en monedero digital</td>
+              <td><span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-size:0.82rem;font-weight:600;">Sujeto a aprobación del programa</span></td>
+              <td><button type="button" class="btn btn-secondary" onclick="activateStateTab('south-carolina')" style="padding:0.4rem 0.8rem;font-size:0.85rem;">Ver Guía</button></td>
+            </tr>
+            <tr>
+              <td><strong>New Hampshire</strong></td>
+              <td>Education Freedom Account (EFA)</td>
+              <td><span style="background:var(--surface-alt);padding:2px 8px;border-radius:4px;font-weight:600;">ClassWallet</span></td>
+              <td>Cuotas estatales desembolsadas por alumno</td>
+              <td><span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-size:0.82rem;font-weight:600;">Sujeto a aprobación del programa</span></td>
+              <td><button type="button" class="btn btn-secondary" onclick="activateStateTab('new-hampshire')" style="padding:0.4rem 0.8rem;font-size:0.85rem;">Ver Guía</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN POR PLATAFORMA DIGITAL -->
+  <section class="section alt" style="padding:3.5rem 0;background:var(--bg);border-bottom:1px solid var(--line);">
+    <div class="container">
+      <p class="eyebrow">TECNOLOGÍA Y ADMINISTRACIÓN FINANCIERA</p>
+      <h2 style="font-size:2rem;color:var(--primary);margin-top:0.25rem;margin-bottom:1rem;">¿Cómo operan las plataformas digitales oficiales?</h2>
+      <p style="font-size:1.05rem;line-height:1.7;color:var(--ink-soft);max-width:850px;margin-bottom:2rem;">
+        Los departamentos de educación estatal utilizan plataformas gubernamentales autorizadas para auditar los gastos, autorizar liquidaciones directas y garantizar el cumplimiento normativo:
+      </p>
+
+      <div class="cards cards-three">
+        <article class="card">
+          <h3 style="font-size:1.2rem;color:var(--primary);margin-top:0;">ClassWallet</h3>
+          <p style="font-size:0.92rem;color:var(--ink-soft);line-height:1.6;">
+            Utilizado en Arizona, Alabama, Carolina del Sur y New Hampshire. Permite a las familias pagar a proveedores calificados mediante la función <em>Direct Pay</em> (Pago Directo) sin necesidad de adelantar dinero propio ni gestionar reembolsos engorrosos.
+          </p>
+        </article>
+        <article class="card">
+          <h3 style="font-size:1.2rem;color:var(--primary);margin-top:0;">Odyssey</h3>
+          <p style="font-size:0.92rem;color:var(--ink-soft);line-height:1.6;">
+            Utilizado en Utah y Wyoming. Gestiona el marketplace digital donde los Proveedores Calificados emiten facturas electrónicas y los padres autorizan transferencias de saldo estatal tras validar los servicios formativos.
+          </p>
+        </article>
+        <article class="card">
+          <h3 style="font-size:1.2rem;color:var(--primary);margin-top:0;">EMA (Step Up for Students)</h3>
+          <p style="font-size:0.92rem;color:var(--ink-soft);line-height:1.6;">
+            Plataforma oficial en Florida para becas PEP y FES-UA. Administra las cuentas de los estudiantes, el catálogo de proveedores aprobados por el estado y la liquidación directa de cuotas escolares y recursos calificados.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO CENTRALIZADO DE ORIENTACIÓN -->
+  <section class="section" id="formulario-orientacion" style="padding:4rem 0;background:var(--surface);">
+    <div class="container">
+      <div class="card" style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:3rem 2.5rem;box-shadow:0 10px 35px rgba(0,0,0,0.06);max-width:780px;margin:0 auto;">
+        
+        <div style="text-align:center;margin-bottom:2rem;">
+          <span style="background:var(--surface-alt);border:1px solid var(--line);padding:3px 12px;border-radius:20px;font-size:0.85rem;font-weight:700;color:var(--primary);">ASESORÍA FAMILIAR 100% GRATUITA</span>
+          <h2 style="font-size:2.2rem;color:var(--primary);margin:0.75rem 0 0.5rem 0;font-weight:700;">Solicitar Orientación de Fondos de Educación</h2>
+          <p style="color:var(--ink-soft);font-size:1rem;line-height:1.6;margin:0;">
+            Complete el siguiente formulario para recibir acompañamiento personalizado sin costo sobre las normativas de su estado. <strong>Chanak Foundation nunca solicita contraseñas ni credenciales de ClassWallet, Odyssey o Step Up.</strong>
+          </p>
+        </div>
+        
+        <form id="orientationForm" novalidate>
+          <input type="text" name="website_hp" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="locale" value="es">
+          
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem;">
+            <div>
+              <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:0.4rem;color:var(--ink);">Nombre y Apellido del Padre / Tutor *</label>
+              <input type="text" name="guardian_name" required placeholder="Ej. Carlos Mendoza" style="width:100%;padding:0.75rem;border:1px solid var(--line);border-radius:6px;font-size:0.95rem;font-family:inherit;">
+            </div>
+            <div>
+              <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:0.4rem;color:var(--ink);">Correo Electrónico de Contacto *</label>
+              <input type="email" name="guardian_email" required placeholder="nombre@correo.com" style="width:100%;padding:0.75rem;border:1px solid var(--line);border-radius:6px;font-size:0.95rem;font-family:inherit;">
+            </div>
+          </div>
+          
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem;">
+            <div>
+              <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:0.4rem;color:var(--ink);">Estado de Residencia *</label>
+              <select name="state_code" id="formStateSelect" required style="width:100%;padding:0.75rem;border:1px solid var(--line);border-radius:6px;font-size:0.95rem;font-family:inherit;background:#fff;">
+                <option value="">Seleccione su estado...</option>
+                <option value="arizona">Arizona — Empowerment Scholarship Account (ESA)</option>
+                <option value="florida">Florida — Step Up for Students (PEP / FES-UA)</option>
+                <option value="utah">Utah — Utah Fits All Scholarship (UFA)</option>
+                <option value="wyoming">Wyoming — Wyoming ESA</option>
+                <option value="alabama">Alabama — The CHOOSE Act of 2024</option>
+                <option value="south-carolina">Carolina del Sur — Education Scholarship Trust Fund (ESTF)</option>
+                <option value="new-hampshire">New Hampshire — Education Freedom Account (EFA)</option>
+                <option value="other">Otro Estado / Consulta General</option>
+              </select>
+            </div>
+            <div>
+              <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:0.4rem;color:var(--ink);">Nivel o Grado Escolar Aproximado</label>
+              <select name="grade_range" style="width:100%;padding:0.75rem;border:1px solid var(--line);border-radius:6px;font-size:0.95rem;font-family:inherit;background:#fff;">
+                <option value="">Seleccione el nivel escolar...</option>
+                <option value="k-5">Primaria / Elementary (Grados K–5)</option>
+                <option value="6-8">Secundaria / Middle School (Grados 6–8)</option>
+                <option value="9-12">Bachillerato / High School (Grados 9–12)</option>
+                <option value="multiple">Varios hijos en diferentes niveles</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-bottom:1.25rem;">
+            <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:0.4rem;color:var(--ink);">Idioma de Preferencia para la Orientación</label>
+            <select name="preferred_language" style="width:100%;padding:0.75rem;border:1px solid var(--line);border-radius:6px;font-size:0.95rem;font-family:inherit;background:#fff;">
+              <option value="es" selected>Español</option>
+              <option value="en">Inglés (English)</option>
+              <option value="both">Bilingüe (Español e Inglés)</option>
+            </select>
+          </div>
+
+          <div style="margin-bottom:1.5rem;">
+            <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:0.4rem;color:var(--ink);">Preguntas o Comentarios Específicos (Opcional)</label>
+            <textarea name="message" rows="3" placeholder="Indique si ya cuenta con una cuenta activa en ClassWallet/Odyssey o si necesita apoyo con la postulación inicial..." style="width:100%;padding:0.75rem;border:1px solid var(--line);border-radius:6px;font-size:0.95rem;font-family:inherit;resize:vertical;"></textarea>
+          </div>
+
+          <!-- CASILLAS DE CONSENTIMIENTO -->
+          <div style="margin-bottom:1.75rem;background:var(--surface);padding:1.25rem;border-radius:8px;border:1px solid var(--line);">
+            <!-- Casilla 1: Obligatoria -->
+            <label style="display:flex;align-items:flex-start;gap:0.75rem;font-size:0.88rem;line-height:1.5;color:var(--ink-soft);cursor:pointer;margin-bottom:1rem;">
+              <input type="checkbox" name="consent_given" required style="margin-top:0.25rem;flex-shrink:0;">
+              <span>Acepto recibir orientación educativa gratuita de Chanak Foundation. Entiendo que Chanak no garantiza aprobación ni montos de fondos estatales y que nunca solicita credenciales de acceso a las plataformas de becas. *</span>
+            </label>
+            
+            <!-- Casilla 2: Opcional y desmarcada por defecto -->
+            <label style="display:flex;align-items:flex-start;gap:0.75rem;font-size:0.88rem;line-height:1.5;color:var(--ink-soft);cursor:pointer;">
+              <input type="checkbox" name="academy_contact_consent" style="margin-top:0.25rem;flex-shrink:0;">
+              <span>Autorizo que Chanak International Academy me contacte con información sobre sus servicios. (Opcional)</span>
+            </label>
+          </div>
+
+          <div style="margin-bottom:1rem;">
+            <button type="submit" id="submitBtn" class="btn btn-primary" style="width:100%;padding:1rem 1.5rem;font-size:1.1rem;font-weight:700;border-radius:6px;cursor:pointer;">
+              Enviar Solicitud de Orientación Gratuita
+            </button>
+          </div>
+
+          <div id="formFeedback" style="display:none;padding:1rem;border-radius:6px;font-size:0.95rem;line-height:1.5;margin-top:1rem;"></div>
+          
+          <p style="font-size:0.82rem;color:var(--ink-soft);margin-top:1rem;line-height:1.5;text-align:center;">
+            <strong>Protección de Menores:</strong> No solicitamos ni almacenamos datos de identificación directa de menores (sin nombres de niños ni fechas de nacimiento). Su información se maneja con estricta confidencialidad.
+          </p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+</main>
+
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
@@ -408,7 +1950,7 @@
         <li><a href="/es/education-funding/">Fondos Estatales de Educación</a></li>
         <li><a href="/funders.html">Para Financiadores</a></li>
         <li><a href="/impact.html">Impacto Comunitario</a></li>
-        <li><a href="/privacy.html">Privacidad</a></li>
+        <li><a href="/politica-de-privacidad/">Política de Privacidad</a></li>
         <li><a href="/terms.html">Términos de Servicio</a></li>
       </ul>
     </div>
@@ -421,23 +1963,82 @@
   </div>
 </footer>
 
-  
+<!-- SCRIPT INTERACTIVO: PARÁMETRO ?estado=, PANELES Y ENVÍO CON BEACON -->
 <script>
+function activateStateTab(stateSlug) {
+  if (!stateSlug) return;
+  stateSlug = stateSlug.toLowerCase().trim();
+
+  // Actualizar botones
+  var buttons = document.querySelectorAll('.state-tab-btn');
+  buttons.forEach(function(btn) {
+    if (btn.getAttribute('data-target') === stateSlug) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+
+  // Mostrar el panel del estado seleccionado y ocultar los demás
+  var panels = document.querySelectorAll('.state-detail-panel');
+  var targetPanel = document.getElementById('state-guide-' + stateSlug);
+  
+  panels.forEach(function(panel) {
+    panel.style.display = 'none';
+  });
+
+  if (targetPanel) {
+    targetPanel.style.display = 'block';
+  }
+
+  // Preseleccionar en el formulario
+  var formStateSelect = document.getElementById('formStateSelect');
+  if (formStateSelect) {
+    formStateSelect.value = stateSlug;
+  }
+
+  // Actualizar enlace de cambio de idioma
+  var langSwitch = document.getElementById('langSwitcherLink');
+  if (langSwitch) {
+    langSwitch.href = '/education-funding/?estado=' + encodeURIComponent(stateSlug);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
-  // Track secondary Academy links
-  document.querySelectorAll('[data-track="academy-referral"]').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      if (typeof gtag === 'function') {
-        gtag('event', 'click_academy_referral', {
-          'event_category': 'External Referral',
-          'event_label': el.getAttribute('data-state') || 'Unknown',
-          'destination_url': el.href
-        });
+  // 1. Leer parámetro de URL ?estado=
+  var urlParams = new URLSearchParams(window.location.search);
+  var estadoParam = urlParams.get('estado') || urlParams.get('state') || 'arizona';
+  
+  activateStateTab(estadoParam);
+
+  // Si vino con ?estado= explícito, hacer scroll suave a la guía
+  if (urlParams.has('estado') || urlParams.has('state')) {
+    var targetPanel = document.getElementById('state-guide-' + estadoParam.toLowerCase());
+    if (targetPanel) {
+      setTimeout(function() {
+        targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 200);
+    }
+  }
+
+  // Event listener para los botones de pestañas
+  document.querySelectorAll('.state-tab-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = btn.getAttribute('data-target');
+      activateStateTab(target);
+      var panel = document.getElementById('state-guide-' + target);
+      if (panel) {
+        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      // Actualizar URL sin recargar la página
+      if (history.pushState) {
+        var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?estado=' + encodeURIComponent(target);
+        window.history.pushState({path:newurl},'',newurl);
       }
     });
   });
 
-  // Handle Form Submission
+  // Manejo de envío del formulario
   var form = document.getElementById('orientationForm');
   if (form) {
     form.addEventListener('submit', async function(e) {
@@ -453,22 +2054,22 @@ document.addEventListener('DOMContentLoaded', function () {
       var preferred_language = form.querySelector('[name="preferred_language"]').value;
       var message = form.querySelector('[name="message"]').value.trim();
       var consent_given = form.querySelector('[name="consent_given"]').checked;
+      var academy_contact_consent = form.querySelector('[name="academy_contact_consent"]') ? form.querySelector('[name="academy_contact_consent"]').checked : false;
       var website_hp = form.querySelector('[name="website_hp"]').value;
-      var locale = form.querySelector('[name="locale"]').value || 'en';
+      var locale = form.querySelector('[name="locale"]').value || 'es';
 
       if (!guardian_name || !guardian_email || !consent_given) {
         feedback.style.display = 'block';
         feedback.style.background = '#fef2f2';
         feedback.style.color = '#991b1b';
         feedback.style.border = '1px solid #f87171';
-        feedback.innerText = locale === 'es' 
-          ? 'Por favor complete su nombre, correo y acepte el consentimiento para continuar.'
-          : 'Please complete your name, email, and check the consent box to proceed.';
+        feedback.innerText = 'Por favor complete su nombre, correo electrónico y acepte la casilla de consentimiento para continuar.';
         return;
       }
 
       submitBtn.disabled = true;
-      submitBtn.innerText = locale === 'es' ? 'Enviando...' : 'Submitting...';
+      submitBtn.innerText = 'Enviando...';
+      feedback.style.display = 'none';
 
       try {
         var payload = {
@@ -479,6 +2080,7 @@ document.addEventListener('DOMContentLoaded', function () {
           preferred_language: preferred_language,
           message: message,
           consent_given: consent_given,
+          academy_contact_consent: academy_contact_consent,
           website_hp: website_hp,
           locale: locale,
           source_url: window.location.href
@@ -492,23 +2094,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
         var resData = await response.json();
         if (response.ok && resData.success) {
-          form.reset();
-          feedback.style.display = 'block';
-          feedback.style.background = '#f0fdf4';
-          feedback.style.color = '#166534';
-          feedback.style.border = '1px solid #86efac';
-          feedback.innerText = locale === 'es'
-            ? '¡Gracias! Hemos recibido su solicitud. Un asesor educativo de Chanak Foundation se pondrá en contacto pronto.'
-            : 'Thank you! We have received your inquiry. A Chanak Foundation education advisor will contact you shortly.';
+          // 1. GUARDAR INDICADOR DE UN SOLO USO EN sessionStorage
+          try {
+            sessionStorage.setItem('orientation_confirmed_token', 'token_' + Date.now());
+            sessionStorage.setItem('orientation_state', state_code || 'general');
+          } catch(e) {}
 
-          // Trigger Ad Grants verified conversion event
+          var thankYouUrl = '/es/education-funding/thank-you/?estado=' + encodeURIComponent(state_code);
+          var navigated = false;
+
+          function proceedToThankYou() {
+            if (!navigated) {
+              navigated = true;
+              window.location.href = thankYouUrl;
+            }
+          }
+
+          // 2. DISPARAR EVENTO orientacion_enviada CON transport_type: 'beacon' Y CALLBACK
           if (typeof gtag === 'function') {
             gtag('event', 'orientacion_enviada', {
               'event_category': 'Lead',
-              'event_label': state_code,
-              'value': 1
+              'event_label': state_code || 'general',
+              'value': 1,
+              'transport_type': 'beacon',
+              'event_callback': function() {
+                console.log('[Ad Grants] Evento confirmado por Google Tag.');
+                proceedToThankYou();
+              }
             });
+            // Timeout de seguridad en caso de que el callback tarde o sea bloqueado
+            setTimeout(proceedToThankYou, 300);
+          } else {
+            proceedToThankYou();
           }
+          return;
         } else {
           throw new Error(resData.error || 'Server error');
         }
@@ -518,9 +2137,9 @@ document.addEventListener('DOMContentLoaded', function () {
         feedback.style.background = '#fef2f2';
         feedback.style.color = '#991b1b';
         feedback.style.border = '1px solid #f87171';
-        feedback.innerText = locale === 'es'
-          ? 'Ocurrió un error al enviar el formulario. Por favor intente nuevamente o escríbanos a info@chanakfoundation.org.'
-          : 'An error occurred submitting the form. Please try again or email us at info@chanakfoundation.org.';
+        feedback.innerText = (err && err.message && err.message !== 'Server error')
+          ? err.message
+          : 'No pudimos guardar tu solicitud, escríbenos a info@chanakfoundation.org';
       } finally {
         submitBtn.disabled = false;
         submitBtn.innerText = originalBtnText;

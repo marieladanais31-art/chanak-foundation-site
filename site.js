@@ -105,7 +105,7 @@
     if (!navList || navList.querySelector('.nav-language-item')) return;
     const item = document.createElement('li');
     item.className = 'nav-language-item';
-    item.innerHTML = '<label for="global-language-select" class="nav-language-label" data-i18n-global="languageLabel">Language</label><select id="global-language-select" class="nav-language-select" aria-label="Language selector"><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="pt">Português</option></select>';
+    item.innerHTML = '<label for="global-language-select" class="nav-language-label" data-i18n-global="languageLabel">Language</label><select id="global-language-select" class="nav-language-select" aria-label="Language selector"><option value="en">English</option><option value="es">Español</option></select>';
     navList.appendChild(item);
     const select = item.querySelector('select');
     select.value = locale;
