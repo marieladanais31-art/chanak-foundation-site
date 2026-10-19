@@ -71,24 +71,10 @@
           </ul>
         </div>
 
-        <div style="margin-bottom:2rem;">
+        <div>
           <a href="/education-funding/" class="btn btn-primary" style="padding:0.85rem 1.75rem;font-size:1rem;font-weight:700;display:inline-block;">
             Return to State Education Funding Hub
           </a>
-        </div>
-
-        <!-- Optional secondary link to Academy -->
-        <div style="border-top:1px solid var(--line);padding-top:1.75rem;margin-top:1rem;">
-          <p style="font-size:0.88rem;color:var(--ink-soft);margin-bottom:0.75rem;">
-            Would you like to explore private learning programs in your state?
-          </p>
-          <a id="academyReferralLink" href="https://www.chanakacademy.org/scholarships/" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:0.92rem;padding:0.65rem 1.25rem;display:inline-flex;align-items:center;gap:0.4rem;">
-            <span>View Chanak International Academy services in your state</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-          <p style="font-size:0.78rem;color:var(--ink-soft);margin-top:0.6rem;line-height:1.4;">
-            Optional external link to a related entity. Does not affect or condition free foundation orientation.
-          </p>
         </div>
 
       </div>
@@ -141,39 +127,6 @@
         // Direct URL access or page reload without indicator:
         // Only display the informational message; do NOT count any conversion.
         console.log("[Thank You] Direct access or reload without indicator. Informational view only; 0 conversions recorded.");
-      }
-
-      // 2. Dynamic state mapping for Academy services
-      var stateAcademyMap = {
-        "arizona": "https://www.chanakacademy.org/arizona/",
-        "florida": "https://www.chanakacademy.org/florida-home-education/",
-        "utah": "https://www.chanakacademy.org/utah/",
-        "wyoming": "https://www.chanakacademy.org/wyoming/",
-        "alabama": "https://www.chanakacademy.org/alabama/",
-        "south-carolina": "https://www.chanakacademy.org/south-carolina/",
-        "new-hampshire": "https://www.chanakacademy.org/new-hampshire/"
-      };
-
-      var params = new URLSearchParams(window.location.search);
-      var state = (params.get("estado") || params.get("state") || "").toLowerCase().trim();
-      var link = document.getElementById("academyReferralLink");
-
-      if (link && state && stateAcademyMap[state]) {
-        link.href = stateAcademyMap[state];
-      }
-
-      // Secondary click event: NOT a Google Ad Grants conversion
-      if (link) {
-        link.addEventListener("click", function() {
-          if (typeof gtag === "function") {
-            gtag("event", "click_academy_referral", {
-              "event_category": "External Referral",
-              "event_label": state || "general",
-              "destination_url": link.href
-            });
-            console.log("[Analytics] Referral click tracked (not an Ad Grants conversion):", state);
-          }
-        });
       }
     })();
   </script>
