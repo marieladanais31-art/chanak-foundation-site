@@ -31,7 +31,7 @@ window.communityHubsData = [
     solutions: {
       es: [
         {
-          title: "Continuidad Educativa Acreditada",
+          title: "Continuidad Educativa Formal",
           desc: "Acceso local a secundaria y bachillerato flexible mediante tecnología satelital y metodología de dominio (Mastery Learning)."
         },
         {
@@ -100,7 +100,7 @@ window.communityHubsData = [
         },
         {
           title: "Nivelación & Éxito Académico",
-          desc: "Tutorías personalizadas contra el rezago escolar conectadas con el plan curricular de Chanak."
+          desc: "Acompañamiento académico guiado contra el rezago escolar conectadas con el plan curricular de Chanak."
         }
       ],
       en: [
@@ -114,7 +114,7 @@ window.communityHubsData = [
         },
         {
           title: "Academic Remediation & Retention",
-          desc: "Personalized mastery tutoring preventing school abandonment in coordination with Chanak's curriculum."
+          desc: "Personalized guided academic support preventing school abandonment in coordination with Chanak's curriculum."
         }
       ]
     },
@@ -151,7 +151,7 @@ window.communityHubsData = [
     solutions: {
       es: [
         {
-          title: "Doble Titulación Acreditada (US High School)",
+          title: "Doble Titulación de EE. UU. (Candidata a Acreditación MSA-CESS)",
           desc: "Acceso a titulación estadounidense oficial simultánea con estudios locales, abriendo puertas universitarias globales."
         },
         {
