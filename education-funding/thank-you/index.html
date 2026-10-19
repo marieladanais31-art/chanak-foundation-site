@@ -155,7 +155,7 @@
       };
 
       var params = new URLSearchParams(window.location.search);
-      var state = (params.get("state") || "").toLowerCase().trim();
+      var state = (params.get("estado") || params.get("state") || "").toLowerCase().trim();
       var link = document.getElementById("academyReferralLink");
 
       if (link && state && stateAcademyMap[state]) {
