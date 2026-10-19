@@ -45,7 +45,7 @@ window.communityHubsData = [
       ],
       en: [
         {
-          title: "Accredited Local Secondary Pathways",
+          title: "Secondary Education Pathways",
           desc: "Completing recognized middle and high school education without family displacement, enabled by satellite connectivity and mastery learning."
         },
         {
@@ -132,8 +132,8 @@ window.communityHubsData = [
       en: "Regional & Global Learning Hubs (Spain & Global Distance Pathways)"
     },
     locationBadge: {
-      es: "Red Comunitaria Europa & Acreditación Internacional US",
-      en: "European Community Network & US International Accreditation"
+      es: "Red Comunitaria Europa & Titulación Internacional US",
+      en: "European Community Network & US International Pathways"
     },
     image: {
       url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
@@ -141,12 +141,12 @@ window.communityHubsData = [
       alt: "Estudiantes en entorno colaborativo de aprendizaje internacional",
       caption: {
         es: "Red de micro-escuelas seguras, bienestar juvenil y Doble Titulación Internacional",
-        en: "Safe micro-school network, youth well-being, and accredited Dual Diploma tracks"
+        en: "Safe micro-school network, youth well-being, and Dual Diploma tracks"
       }
     },
     context: {
       es: "Espacios de aprendizaje protegidos enfocados en el bienestar emocional, ambientes libres de acoso y programas de Doble Titulación Internacional (US High School Diploma) para familias en España y a nivel internacional.",
-      en: "Supportive educational micro-hubs fostering emotional well-being, anti-bullying environments, and accredited US High School Dual Diploma pathways for families across Spain and globally."
+      en: "Supportive educational micro-hubs fostering emotional well-being, anti-bullying environments, and US High School Dual Diploma pathways for families across Spain and globally."
     },
     solutions: {
       es: [
@@ -165,7 +165,7 @@ window.communityHubsData = [
       ],
       en: [
         {
-          title: "Accredited Dual Diploma Pathway",
+          title: "U.S. Dual Diploma Pathway",
           desc: "Concurrent US High School diploma alongside local curricula, unlocking international higher education."
         },
         {
@@ -179,10 +179,10 @@ window.communityHubsData = [
       ]
     },
     statusBadge: {
-      es: "Active Network · Inscripción Abierta Internacional",
-      en: "Active Network · Open International Enrollment"
+      es: "Red Activa · Convocatoria de Becas Abierta",
+      en: "Active Network · Open Scholarship Applications"
     },
-    tags: ["Dual Diploma", "Youth Well-Being", "US Accreditation", "Global Pathways"]
+    tags: ["Dual Diploma", "Youth Well-Being", "US Secondary Pathway", "Global Pathways"]
   }
 ];
 
