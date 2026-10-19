@@ -51,19 +51,9 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://chanakfoundation.org/contacto/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://chanakfoundation.org/transparencia/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://chanakfoundation.org/politica-de-privacidad/</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://chanakfoundation.org/terminos-de-servicio/</loc>
@@ -86,27 +76,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://chanakfoundation.org/panama/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://chanakfoundation.org/programas/dual-diploma/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://chanakfoundation.org/programas/homeschool-support/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://chanakfoundation.org/evaluacion-diagnostica/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://chanakfoundation.org/evaluacion-academica/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
