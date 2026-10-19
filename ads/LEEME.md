@@ -28,7 +28,7 @@
    * Verifica que los grupos de anuncios tengan nombres claros (`[Estado] ESA - English` y `[Estado] ESA - Spanish`).
    * Confirma que todas las **URLs finales** apunten exclusivamente a `https://chanakfoundation.org/education-funding/...` o `https://chanakfoundation.org/es/education-funding/...`.
 5. Haz clic en **Conservar cambios**.
-6. **IMPORTANTE:** No publiques en la cuenta hasta haber revisado las vistas previas con Mariela.
+6. **IMPORTANTE:** No publiques en la cuenta hasta haber revisado y validado las vistas previas oficiales.
 
 ---
 
