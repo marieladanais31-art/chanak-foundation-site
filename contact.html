@@ -125,7 +125,7 @@
             <option value="Adult Education & Family Workshops" data-i18n="optAdultEdu">Adult Education &amp; Parenting Workshops</option>
             <option value="Dual Diploma International Scholarship" data-i18n="optDualDiploma">Dual Diploma International Scholarship Fund</option>
             <option value="Community Homeschool Support & Church Hubs" data-i18n="optHomeschool">Community Homeschool Support / Church Hubs</option>
-            <option value="Free Diagnostic Assessment" data-i18n="optDiagnostic">Free Initial Educational Assessment &amp; Academic Guidance</option>
+            <option value="Free Initial Assessment" data-i18n="optDiagnostic">Free Initial Educational Assessment &amp; Academic Guidance</option>
             <option value="Church and Ministry Collaboration" data-i18n="optChurch">Church / Ministry Hub Collaboration</option>
             <option value="Donations and Sponsorship" data-i18n="optDonations">Donations and Sponsorship</option>
             <option value="Volunteer Interest" data-i18n="optVolunteer">Volunteer Interest</option>
@@ -379,7 +379,7 @@
     if (progParam === 'adult-education') catSelect.value = 'Adult Education & Family Workshops';
     if (progParam === 'dual-diploma') catSelect.value = 'Dual Diploma International Scholarship';
     if (progParam === 'homeschool') catSelect.value = 'Community Homeschool Support & Church Hubs';
-    if (progParam === 'diagnostic') catSelect.value = 'Free Diagnostic Assessment';
+    if (progParam === 'diagnostic' || progParam === 'assessment') catSelect.value = 'Free Initial Assessment';
   }
 
   document.getElementById('contactForm').addEventListener('submit', function (e) {
