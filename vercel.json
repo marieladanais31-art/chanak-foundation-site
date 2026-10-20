@@ -73,8 +73,8 @@
       "permanent": true
     },
     {
-      "source": "/panama(.*)",
-      "destination": "/dual-diploma-panama/",
+      "source": "/panama/?$",
+      "destination": "/panama-relief",
       "permanent": true
     },
     {
