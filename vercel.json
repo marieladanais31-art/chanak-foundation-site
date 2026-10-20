@@ -73,7 +73,7 @@
       "permanent": true
     },
     {
-      "source": "/panama/?$",
+      "source": "/panama",
       "destination": "/panama-relief",
       "permanent": true
     },
