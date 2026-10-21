@@ -43,12 +43,10 @@
 
 ## 4. Medición de Conversiones (Ad Grants Compliance)
 
-* **Conversión Principal de la Cuenta:** `orientacion_enviada`
+* **Conversión Principal de la Cuenta:** `Orientación ESA - solicitud confirmada` (`AW-18109980849/P_ijCL2Z3bAcELHBwbtD`)
   * Disparada exclusivamente tras el envío exitoso y validado del formulario en servidor.
   * No cuenta clics en botones ni visitas a la página de inicio.
-* **Clics hacia la Academia:** `click_academy_referral`
-  * Se registra como evento secundario en Google Analytics 4.
-  * **PROHIBIDO:** No debe incluirse en la columna "Incluir en conversiones" de Google Ads para evitar suspensiones por derivación comercial.
+* No crear enlaces, redirecciones, etiquetas ni eventos de derivación hacia la academia. La orientación se presta dentro de `chanakfoundation.org`.
 
 ---
 

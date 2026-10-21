@@ -42,4 +42,4 @@ En `donate.html` se eliminaron del HTML público los montos fijos con impacto at
 
 ## 4. Auditoría de Páginas de Servicios de la Academia vs. Fundación
 
-Se identificaron páginas históricas del repositorio que describen servicios arancelados o académicos (Dual Diploma, evaluaciones, homeschool). Consultar la tabla de auditoría en la documentación para que Mariela decida cuáles migrar definitivamente a `chanakacademy.org` para mantener el sitio de la fundación exclusivamente con fines educativos e informativos sin ánimo de lucro.
+Se identificaron páginas históricas del repositorio que describen servicios arancelados o académicos (Dual Diploma, evaluaciones, homeschool). Mantener este sitio exclusivamente dentro del dominio chanakfoundation.org, con fines educativos e informativos sin ánimo de lucro. No crear derivaciones a dominios de la academia; consultar AGENTS.md.

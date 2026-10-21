@@ -1,0 +1,8 @@
+name: Ad Grants domain policy
+on: [push, pull_request]
+jobs:
+  domain-policy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/check-adgrants-domains.py
