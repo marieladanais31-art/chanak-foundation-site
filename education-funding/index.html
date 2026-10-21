@@ -2031,7 +2031,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
           // 2. FIRE orientacion_enviada WITH transport_type: 'beacon' AND CALLBACK
           if (typeof gtag === 'function') {
-            gtag('event', 'orientacion_enviada', {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-18109980849/P_ijCL2Z3bAcELHBwbtD',
+              'transaction_id': resData.inquiry_id,
               'event_category': 'Lead',
               'event_label': state_code || 'general',
               'value': 1,
@@ -2041,7 +2043,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 proceedToThankYou();
               }
             });
-            setTimeout(proceedToThankYou, 300);
+            setTimeout(proceedToThankYou, 1500);
           } else {
             proceedToThankYou();
           }

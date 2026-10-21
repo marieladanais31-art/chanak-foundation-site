@@ -38,7 +38,7 @@ module.exports = async (req, res) => {
     // 1. Anti-Spam Honeypot Check: Bots fill hidden fields
     if (website_hp) {
       console.warn('[Anti-Spam] Honeypot triggered, discarding bot submission silently.');
-      return res.status(200).json({ success: true, message: 'Request received' });
+      return res.status(400).json({ success: false, error: 'Unable to submit this request' });
     }
 
     // 2. Server-side Validation
@@ -167,9 +167,17 @@ module.exports = async (req, res) => {
       email_dispatched: emailDispatched
     }));
 
-    // Return success 200 so form submission and Google Ad Grants conversion tracking proceed reliably
+    // Only confirm a lead when at least one durable delivery channel accepted it.
+    if (!savedInSupabase && !emailDispatched) {
+      return res.status(503).json({
+        success: false,
+        error: 'No pudimos guardar tu solicitud. Escríbenos a info@chanakfoundation.org'
+      });
+    }
+
     return res.status(200).json({
       success: true,
+      inquiry_id: require('node:crypto').randomUUID(),
       message: 'Orientation inquiry submitted successfully',
       saved_in_supabase: savedInSupabase,
       email_dispatched: emailDispatched

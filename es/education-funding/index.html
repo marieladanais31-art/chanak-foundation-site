@@ -2065,7 +2065,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
           // 2. DISPARAR EVENTO orientacion_enviada CON transport_type: 'beacon' Y CALLBACK
           if (typeof gtag === 'function') {
-            gtag('event', 'orientacion_enviada', {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-18109980849/P_ijCL2Z3bAcELHBwbtD',
+              'transaction_id': resData.inquiry_id,
               'event_category': 'Lead',
               'event_label': state_code || 'general',
               'value': 1,
@@ -2076,7 +2078,7 @@ document.addEventListener('DOMContentLoaded', function () {
               }
             });
             // Timeout de seguridad en caso de que el callback tarde o sea bloqueado
-            setTimeout(proceedToThankYou, 300);
+            setTimeout(proceedToThankYou, 1500);
           } else {
             proceedToThankYou();
           }
