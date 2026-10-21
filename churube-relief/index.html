@@ -100,7 +100,7 @@
         },
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://buy.stripe.com/aFa3cwc3v59383ucoq67S06",
+          "urlTemplate": "https://buy.stripe.com/aFa3cwc3v59383ucoq67S06?client_reference_id=churube-relief",
           "inLanguage": "en",
           "actionPlatform": [
             "http://schema.org/DesktopWebPlatform",
@@ -211,7 +211,7 @@
                   <source src="/media/churube/video-testimonio-churube.mp4" type="video/mp4">
                   <source src="/media/churube/video-testimonio-churube.webm" type="video/webm">
                   <p class="p-6 text-slate-300 text-sm">
-                    Your browser does not support HTML5 video. Documented field recordings are held for verified donor and IRS Schedule F inspection.
+                    Your browser does not support HTML5 video. Contact us to request accessible project documentation.
                   </p>
                 </video>
 
@@ -232,7 +232,7 @@
                       IRS Foreign Expenditure Transparency
                     </h4>
                     <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                      On-site assessment conducted by local community liaisons in Churubé, District of Natá. Documenting structural damage to ensure 100% transparency under IRS 501(c)(3) foreign expenditure standards.
+                      On-site assessment conducted by local community liaisons in Churubé, District of Natá. Documenting reported structural damage and educational needs for project planning.
                     </p>
                   </div>
                 </div>
@@ -302,25 +302,13 @@
                   <h3 class="text-xl font-bold text-brand-navy">Make a Direct Gift</h3>
                   <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800">501(c)(3) Tax-Deductible</span>
                 </div>
-                <p class="text-xs text-slate-500">Every dollar goes straight to construction materials and student stations in Churubé.</p>
+                <p class="text-xs text-slate-500">Gifts support the project budget, including materials, education supplies, delivery and coordination.</p>
               </div>
 
-              <!-- Frequency Toggle: One-time vs Monthly -->
-              <div class="mb-5">
-                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Gift Frequency</label>
-                <div class="grid grid-cols-2 p-1 bg-slate-100 rounded-lg">
-                  <button type="button" id="freq-onetime" class="py-2 text-xs sm:text-sm font-bold rounded-md transition-all bg-white text-brand-navy shadow-sm">
-                    One-time Gift
-                  </button>
-                  <button type="button" id="freq-monthly" class="py-2 text-xs sm:text-sm font-semibold rounded-md transition-all text-slate-600 hover:text-brand-navy">
-                    Monthly Support
-                  </button>
-                </div>
-              </div>
-
+              <p class="mb-5 text-xs text-slate-600">One-time donation. Choose your final amount and currency on Stripe. The suggestions below illustrate project needs and are not preselected at checkout.</p>
               <!-- Amount Buttons -->
               <div class="mb-4">
-                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Select Impact Tier</label>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Explore Suggested Gifts</label>
                 <div class="grid grid-cols-2 gap-2.5 mb-3">
                   
                   <button type="button" data-amount="50" class="amt-btn active p-3 border-2 border-brand-navy bg-slate-50 rounded-xl text-left transition-all hover:border-brand-navy">
@@ -363,7 +351,7 @@
               <div id="impact-banner" class="bg-amber-50 border border-amber-200 p-3.5 rounded-xl mb-5 flex items-start gap-3">
                 <span class="text-xl">🎒</span>
                 <div>
-                  <h4 id="impact-title" class="text-xs font-bold text-amber-900 uppercase tracking-wide">Direct Impact for $50:</h4>
+                  <h4 id="impact-title" class="text-xs font-bold text-amber-900 uppercase tracking-wide">Suggested use of $50:</h4>
                   <p id="impact-desc" class="text-xs text-amber-800 mt-0.5 leading-snug">
                     Full Student School Backpack &amp; Books: Equips one displaced child in Churubé with accredited textbooks, modular distance-learning workbooks, stationery, and learning materials.
                   </p>
@@ -373,15 +361,16 @@
               <!-- Stripe Checkout CTA -->
               <a 
                 id="stripe-donate-btn"
-                href="https://buy.stripe.com/aFa3cwc3v59383ucoq67S06" 
+                href="https://buy.stripe.com/aFa3cwc3v59383ucoq67S06?client_reference_id=churube-relief" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                onclick="gtag('event', 'conversion', {'send_to': 'AW-18109980849/donacion_iniciada'});"
+                onclick="gtag('event', 'conversion', {'send_to': 'AW-18109980849/OJC0CI7GvqQdELHBwbtD'});"
                 class="w-full block text-center bg-brand-gold hover:bg-brand-goldHover text-brand-dark font-extrabold text-base py-3.5 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 mb-3"
               >
-                Donate <span id="cta-amount-display">$50</span> Now (Tax-Deductible)
+                Choose Amount &amp; Donate on Stripe
               </a>
 
+              <p class="text-xs text-slate-500 mb-3">Stripe currently labels this as a general Chanak education donation. This link includes a Churubé project reference. Suggested uses are estimates; allocations depend on assessed needs. For a restricted gift, contact info@chanakfoundation.org before donating.</p>
               <!-- Secondary PayPal Link -->
               <div class="text-center">
                 <a 
@@ -400,7 +389,7 @@
                   <svg class="w-3.5 h-3.5 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
                   256-Bit SSL Encrypted
                 </span>
-                <span>Immediate IRS Receipt</span>
+                <span>Secure Stripe Checkout</span>
                 <span>Florida Reg. #CH84302</span>
               </div>
 
@@ -579,7 +568,7 @@
         
         <div class="text-center max-w-2xl mx-auto mb-12">
           <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Financial Transparency</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-1.5">100% Itemized $48,000 Budget</h2>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-1.5">Proposed $48,000 Project Budget</h2>
           <p class="text-slate-500 text-sm mt-2">Every dollar donated is allocated to specific, verifiable building materials and learning items.</p>
         </div>
 
@@ -686,7 +675,7 @@
             </div>
             <div>
               <h3 class="text-base sm:text-lg font-bold text-brand-navy">501(c)(3) Legal Compliance &amp; Foreign Grants Stewardship</h3>
-              <p class="text-xs text-slate-500">Complete IRS Schedule F compliance and Florida State Department of Agriculture (FDACS) registration.</p>
+              <p class="text-xs text-slate-500">Contact us for organizational records and project updates.</p>
             </div>
           </div>
 
@@ -695,7 +684,7 @@
               <strong>Chanak TrainUp Education Inc.</strong> is a recognized 501(c)(3) not-for-profit corporation registered in Florida. Contributions are tax-deductible under Section 170 of the Internal Revenue Code to the fullest extent permitted by U.S. law.
             </p>
             <p>
-              In strict compliance with <strong>IRS Schedule F (Form 990)</strong> requirements governing activities outside the United States, our board executes direct expenditure responsibility, ensuring that grant disbursements are audited against physical and electronic invoices from authorized hardware stores in Coclé province.
+              Project spending is intended for assessed relief and educational needs. Request current budgets, supporting records and progress reports from info@chanakfoundation.org.
             </p>
             <div class="bg-slate-50 p-3.5 rounded-lg border border-slate-200 text-[11px] text-slate-500">
               <strong>FLORIDA STATUTORY DISCLOSURE:</strong> A COPY OF THE OFFICIAL REGISTRATION AND FINANCIAL INFORMATION MAY BE OBTAINED FROM THE DIVISION OF CONSUMER SERVICES BY CALLING TOLL-FREE WITHIN THE STATE (1-800-435-7352) OR VISITING WWW.FLORIDACONSUMERHELP.COM. REGISTRATION DOES NOT IMPLY ENDORSEMENT, APPROVAL, OR RECOMMENDATION BY THE STATE. FLORIDA REGISTRATION #CH84302.
@@ -793,19 +782,19 @@
     (function() {
       const tiers = {
         '50': {
-          title: 'Direct Impact for $50:',
+          title: 'Suggested use of $50:',
           desc: 'Student School Backpack & Books: Equips one displaced child in Churubé with accredited textbooks, modular distance-learning workbooks, stationery, and learning materials.'
         },
         '150': {
-          title: 'Direct Impact for $150:',
+          title: 'Suggested use of $150:',
           desc: 'Solar-Powered Home Study Desk: Provides a weather-resistant foldable study desk, solar LED lamp, and basic educational tablet access for homes without electricity.'
         },
         '350': {
-          title: 'Direct Impact for $350:',
+          title: 'Suggested use of $350:',
           desc: 'Corrugated Zinc Roofing Pack (1 Bedroom): Delivers weather-resistant galvanized zinc sheets, anti-seismic anchoring hardware, and structural sealants for an earthquake-damaged family room.'
         },
         '1000': {
-          title: 'Direct Impact for $1,000:',
+          title: 'Suggested use of $1,000:',
           desc: 'Timber, Rebar & Cement Structural Base: Funds reinforced masonry, anti-seismic treated timber beams, and foundation repairs for a collapsed rural residence.'
         }
       };
@@ -814,21 +803,17 @@
       const customInput = document.getElementById('custom-amount-input');
       const impactTitle = document.getElementById('impact-title');
       const impactDesc = document.getElementById('impact-desc');
-      const ctaDisplay = document.getElementById('cta-amount-display');
-      const freqOnetime = document.getElementById('freq-onetime');
-      const freqMonthly = document.getElementById('freq-monthly');
 
       let currentAmount = 50;
-      let currentFreq = 'onetime';
 
       function updateImpact(amt) {
-        ctaDisplay.textContent = '$' + Number(amt).toLocaleString();
+
         
         if (tiers[amt]) {
           impactTitle.textContent = tiers[amt].title;
           impactDesc.textContent = tiers[amt].desc;
         } else {
-          impactTitle.textContent = 'Direct Impact for $' + Number(amt).toLocaleString() + ':';
+          impactTitle.textContent = 'Suggested use of $' + Number(amt).toLocaleString() + ':';
           if (amt < 50) {
             impactDesc.textContent = 'Provides immediate dry food supplies, drinking water, and basic hygiene packages for children in Churubé.';
           } else if (amt < 150) {
@@ -867,22 +852,6 @@
           currentAmount = Number(this.value);
           updateImpact(currentAmount);
         }
-      });
-
-      freqOnetime.addEventListener('click', function() {
-        this.classList.add('bg-white', 'text-brand-navy', 'shadow-sm', 'font-bold');
-        this.classList.remove('text-slate-600', 'font-semibold');
-        freqMonthly.classList.remove('bg-white', 'text-brand-navy', 'shadow-sm', 'font-bold');
-        freqMonthly.classList.add('text-slate-600', 'font-semibold');
-        currentFreq = 'onetime';
-      });
-
-      freqMonthly.addEventListener('click', function() {
-        this.classList.add('bg-white', 'text-brand-navy', 'shadow-sm', 'font-bold');
-        this.classList.remove('text-slate-600', 'font-semibold');
-        freqOnetime.classList.remove('bg-white', 'text-brand-navy', 'shadow-sm', 'font-bold');
-        freqOnetime.classList.add('text-slate-600', 'font-semibold');
-        currentFreq = 'monthly';
       });
 
     })();
