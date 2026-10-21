@@ -73,18 +73,18 @@
       "permanent": true
     },
     {
-      "source": "/panama",
-      "destination": "/panama-relief",
+      "source": "/panama(.*)",
+      "destination": "/churube-relief",
       "permanent": true
     },
     {
       "source": "/programas/dual-diploma(.*)",
-      "destination": "/dual-diploma-espana/",
+      "destination": "/programs.html#scholarships",
       "permanent": true
     },
     {
       "source": "/programas/homeschool-support(.*)",
-      "destination": "/homeschool-espana/",
+      "destination": "/programs.html#teachers",
       "permanent": true
     },
     {
