@@ -2063,11 +2063,16 @@ document.addEventListener('DOMContentLoaded', function () {
             }
           }
 
-          // 2. DISPARAR EVENTO orientacion_enviada CON transport_type: 'beacon' Y CALLBACK
+          // 2. DISPARAR EVENTO orientacion_enviada Y CONVERSION GOOGLE ADS
           if (typeof gtag === 'function') {
             gtag('event', 'conversion', {
               'send_to': 'AW-18109980849/P_ijCL2Z3bAcELHBwbtD',
               'transaction_id': resData.inquiry_id,
+              'value': 1.0,
+              'currency': 'USD',
+              'transport_type': 'beacon'
+            });
+            gtag('event', 'orientacion_enviada', {
               'event_category': 'Lead',
               'event_label': state_code || 'general',
               'value': 1,

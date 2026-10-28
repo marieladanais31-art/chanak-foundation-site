@@ -406,8 +406,13 @@
     };
 
     if (typeof window.gtag === 'function') {
-      window.gtag('event', 'contact_email_opened', {
-        event_callback: openEmail
+      window.gtag('event', 'contact_email_opened');
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-18109980849/P_ijCL2Z3bAcELHBwbtD',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': openEmail
+      });
       });
       window.setTimeout(openEmail, 1000);
     } else {

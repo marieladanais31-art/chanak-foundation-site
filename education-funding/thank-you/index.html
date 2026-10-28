@@ -123,6 +123,15 @@
           sessionStorage.removeItem("orientation_confirmed_token");
         } catch (e) {}
         console.log("[Thank You] Valid submission verified from form. Indicator consumed successfully.");
+
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-18109980849/P_ijCL2Z3bAcELHBwbtD',
+            'value': 1.0,
+            'currency': 'USD'
+          });
+          console.log("[Ad Grants] ESA Orientation Conversion sent to Google Ads.");
+        }
       } else {
         // Direct URL access or page reload without indicator:
         // Only display the informational message; do NOT count any conversion.
