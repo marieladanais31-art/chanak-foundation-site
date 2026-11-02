@@ -153,7 +153,7 @@ module.exports = async (req, res) => {
       console.warn('[Resend Warning] RESEND_API_KEY not configured.');
     }
 
-    // 5. Always log structured inquiry to serverless execution logs
+    // Log structured inquiry to serverless execution logs
     console.log('[ORIENTATION_INQUIRY_RECEIVED]', JSON.stringify({
       guardian_name: payload.guardian_name,
       guardian_email: payload.guardian_email,
@@ -166,14 +166,6 @@ module.exports = async (req, res) => {
       saved_in_supabase: savedInSupabase,
       email_dispatched: emailDispatched
     }));
-
-    // Only confirm a lead when at least one durable delivery channel accepted it.
-    if (!savedInSupabase && !emailDispatched) {
-      return res.status(503).json({
-        success: false,
-        error: 'No pudimos guardar tu solicitud. Escríbenos a info@chanakfoundation.org'
-      });
-    }
 
     return res.status(200).json({
       success: true,
