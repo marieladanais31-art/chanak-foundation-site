@@ -5,10 +5,19 @@
   --surface: #ffffff;
   --surface-alt: #eef3fa;
   --line: #d4deed;
-  --primary: #1e437f;
-  --primary-dark: #173564;
-  --accent: #5f85b8;
+  --primary: #0D274D;
+  --primary-dark: #07172E;
+  --accent: #1B8DBB;
+  --accent-green: #43A047;
+  --accent-cyan: #1B8DBB;
+  --gold: #C9A84C;
   --success-soft: #e9f2e8;
+}
+
+.emergency-bar {
+  background: var(--primary) !important;
+  color: #ffffff !important;
+  border-bottom: 2px solid var(--accent-green) !important;
 }
 
 * { box-sizing: border-box; }
