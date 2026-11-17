@@ -43,3 +43,18 @@ En `donate.html` se eliminaron del HTML público los montos fijos con impacto at
 ## 4. Auditoría de Páginas de Servicios de la Academia vs. Fundación
 
 Se identificaron páginas históricas del repositorio que describen servicios arancelados o académicos (Dual Diploma, evaluaciones, homeschool). Mantener este sitio exclusivamente dentro del dominio chanakfoundation.org, con fines educativos e informativos sin ánimo de lucro. No crear derivaciones a dominios de la academia; consultar AGENTS.md.
+
+---
+
+## 3. Páginas Microschool y Fundadores (17 nov 2026), a validar con Mariela
+Generadas con `build_ms.py` (14 páginas EN/ES). Nada de lo siguiente debe verse en el HTML público.
+
+- **San Buenaventura (Panamá):** solo se conoce el nombre y que es secundaria para zonas de difícil acceso. Faltan provincia/distrito, número de estudiantes, estado de las autorizaciones con MEDUCA y datos de la comunidad. La página no afirma nada de eso.
+- **Tarragona:** el texto del socio sale de la web de EducaFe (Mont-roig del Camp, Projecte Brúixola). El marco legal de la sede en España está indicado como "se confirma antes de abrir". Confirmar quién es el titular (EducaFe o entidad del socio).
+- **Florida:** sin anfitriones concretos. Frase de ESA sujeta a aprobación del programa; mantener solo estados y servicios aprobados.
+- **Fondo Semilla:** frase de uso alternativo de fondos ("el fin benéfico similar más cercano") es texto estándar; revisarla con contador o abogado. No hay importes públicos. El enlace de Stripe lleva `client_reference_id=microschool-seed-fund` para distinguir estas donaciones.
+- **Fundadores:** la ficha de Mariela usa su perfil público (finanzas en Panamá, Philadelphia International School, Columbus University, A.C.E., MBA). La de Elías se limita a su cargo (presidente de la Junta de EducaFe, tecnología/SIS y acreditación). Philadelphia aparece solo en la historia de la fundadora, sin petición de fondos. Fotos: copiar `assets/founders/mariela.jpg` y `assets/founders/elias.jpg`; hasta entonces se ven iniciales.
+- **Imágenes:** copiar a `assets/microschools/` (`hub.jpg`, `florida.jpg`, `tarragona.jpg`, `panama.jpg`, `stem-lab.jpg`, `seed-fund.jpg`) las imágenes de Canva en alta resolución. Sin archivo, la página se ve sin imagen de portada.
+- **Conversión de donación:** sigue disparándose al hacer clic en el botón de Stripe. Mejor: que el enlace de Stripe redirija a `/thank-you.html` y medir allí.
+- **Pilares:** la portada habla de tres iniciativas y donate/funders de tres pilares distintos. Falta unificar.
+- **Redirecciones pendientes:** renombrar `/dual-diploma-espana/`, `/dual-diploma-panama/` y `/homeschool-espana/` a rutas de becas, con 301.
