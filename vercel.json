@@ -3,6 +3,21 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/dual-diploma-espana(.*)",
+      "destination": "/scholarships/spain/",
+      "permanent": true
+    },
+    {
+      "source": "/dual-diploma-panama(.*)",
+      "destination": "/scholarships/panama/",
+      "permanent": true
+    },
+    {
+      "source": "/homeschool-espana(.*)",
+      "destination": "/community-support/spain/",
+      "permanent": true
+    },
+    {
       "source": "/es/education-funding/arizona(.*)",
       "destination": "/es/education-funding/?estado=arizona",
       "permanent": true
