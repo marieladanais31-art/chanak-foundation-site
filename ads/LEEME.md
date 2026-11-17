@@ -61,3 +61,15 @@
    * Ninguna palabra clave puede ser de una sola palabra (ej. "becas", "escuela", "educación").
 4. **Separación de Marca:**
    * Ningún anuncio ni palabra clave apunta a dominios comerciales ajenos.
+
+---
+
+## 3. Campañas de Microschools (`microschools_campaigns.csv`)
+
+Tres campañas de búsqueda que se importan igual que las demás (no se importan solas):
+
+* **A, Anfitriones y aliados** → `/microschools/`. Conversión: envío del formulario de contacto.
+* **B, Donar a educación** → `/microschools/fund/`. Conversión: donación completada (`thank-you.html`).
+* **C, Guía gratuita** → `/microschools/guide/`. Conversión: contacto o interacción con la guía.
+
+Reglas aplicadas: solo concordancia de frase de 2 a 5 palabras, palabras negativas por campaña, 3 enlaces de sitio por campaña, puja "Maximizar conversiones", URLs solo en `chanakfoundation.org`, titulares ≤30 y descripciones ≤90 caracteres (validado por código). Presupuesto diario de 30 como marcador: ajustar en Google Ads Editor. Los conteos de ubicación son por país; afinar por estado donde haya sedes. Antes de importar, crear en Google Ads la acción de conversión del formulario de contacto.
