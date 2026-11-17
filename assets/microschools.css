@@ -1,0 +1,35 @@
+/* Páginas Microschool · chanakfoundation.org */
+.ms-hero{padding-bottom:3rem}
+.ms-hero .hero-grid{grid-template-columns:minmax(0,820px)}
+.ms-hero .hero-grid:has(.ms-hero-media){grid-template-columns:1.25fr 1fr}
+.ms-hero-media img.ms-contain{object-fit:contain;background:#eef3fa;min-height:0;height:auto}
+.ms-eyebrow{color:#43A047!important;font-weight:800}
+.ms-hero h1{color:#0D274D}
+.ms-status{background:#eef3fa;border-left:4px solid #C9A84C;padding:.75rem 1rem;border-radius:8px;font-size:.92rem;color:#1d2838;margin:1rem 0}
+.ms-hero-media img{width:100%;height:100%;min-height:260px;object-fit:cover;border-radius:14px}
+.btn.ms-gold{background:#C9A84C;color:#fff!important;font-weight:700}
+.btn.ms-gold:hover{background:#b3943f}
+.ms-nav-donate{background:#C9A84C;color:#fff!important;padding:8px 16px;border-radius:4px;font-weight:700}
+.section h2{color:#0D274D}
+.ms-intro{color:var(--ink-soft);max-width:60ch;margin:.25rem 0 1.25rem}
+.ms-grid{display:grid;gap:1rem;margin-top:1rem}
+.ms-cols-1{grid-template-columns:1fr}.ms-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.ms-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.ms-card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:1.2rem;display:flex;flex-direction:column}
+.ms-card h3{color:#0D274D;margin:.1rem 0 .4rem}.ms-card p{color:var(--ink-soft);line-height:1.6;margin:0}
+.ms-more{margin-top:auto;padding-top:.8rem;color:#1B8DBB;font-weight:700;text-decoration:none}
+.ms-narrow{max-width:760px}.ms-narrow p{line-height:1.7}
+.ms-callout{background:#e9f2e8;border-left:4px solid #43A047;border-radius:10px;padding:1.1rem 1.3rem;line-height:1.65;color:#1d2838}
+.ms-steps{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.9rem}
+.ms-steps li{display:flex;gap:1rem;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:13px;padding:1rem 1.2rem}
+.ms-steps h3{margin:0 0 .2rem;color:#0D274D;font-size:1.05rem}.ms-steps p{margin:0;color:var(--ink-soft);line-height:1.55}
+.ms-num{flex:0 0 auto;width:2rem;height:2rem;border-radius:50%;background:#0D274D;color:#fff;display:grid;place-items:center;font-weight:800}
+.ms-cta-sec{background:linear-gradient(135deg,#0D274D 0%,#162E51 100%);color:#fff}
+.ms-cta-sec h2{color:#fff}.ms-cta-sec p{color:#d4deed;max-width:62ch;line-height:1.65}
+.ms-people{display:grid;gap:1.4rem;margin-top:1rem}
+.ms-person{display:grid;grid-template-columns:150px 1fr;gap:1.4rem;background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.4rem}
+.ms-avatar{position:relative;width:150px;height:150px;border-radius:50%;background:linear-gradient(135deg,#0D274D,#1B8DBB);color:#fff;display:grid;place-items:center;font-size:2.4rem;font-weight:800;overflow:hidden}
+.ms-avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ms-figure{margin:0;background:linear-gradient(180deg,#eef3fa,#fff);border:1px solid var(--line);border-radius:14px;padding:1rem;text-align:center}.ms-figure img{max-width:100%;height:auto;max-height:430px;object-fit:contain}
+.ms-person h3{margin:0;color:#0D274D}.ms-role{color:#43A047;font-weight:800;margin:.1rem 0 .6rem}
+.ms-person ul{padding-left:1.1rem;color:var(--ink-soft);line-height:1.6}
+@media (max-width:900px){.ms-cols-2,.ms-cols-3{grid-template-columns:1fr}.ms-person{grid-template-columns:1fr;justify-items:center;text-align:left}.ms-hero-media{order:-1}}
