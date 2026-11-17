@@ -61,3 +61,14 @@ Generadas con `build_ms.py` (14 páginas EN/ES). Nada de lo siguiente debe verse
 - **Redirecciones (hecho):** `/dual-diploma-espana/` → `/scholarships/spain/`, `/dual-diploma-panama/` → `/scholarships/panama/`, `/homeschool-espana/` → `/community-support/spain/` (301 en `vercel.json`). Revisar que el texto interno de esas páginas no hable de programa escolar.
 
 - **Tarragona:** necesita una foto real (no generada, sin menores identificables) que aporte Mariela. Al añadirla, restaurar el hero en `microschools/tarragona/` y `es/microschools/tarragona/` (`scripts/build_ms.py` no está en el repositorio: las páginas se editan a mano hasta recuperarlo).
+
+
+---
+
+## 4. Cierre: Search Console y Google Ads (18 nov 2026)
+
+**Search Console (pendiente):** la sesión de Chrome está en marieladanais31@gmail.com (sin propiedades); `administration@chanakacademy.org` aparece con la sesión cerrada. No se creó ni verificó nada. Pasos para Mariela: 1) iniciar sesión con la cuenta de administración; 2) añadir la propiedad de prefijo de URL `https://chanakfoundation.org/` y verificarla (meta-etiqueta en `<head>`, que se añade al repo y solo funciona en producción, o registro TXT en el DNS: solo con su visto bueno); 3) enviar `https://chanakfoundation.org/sitemap.xml` (35 URLs, todas 200); 4) pedir indexación de `/microschools`, `/microschools/fund` y `/microschools/guide`.
+
+**Google Ads (hecho):** creada la acción de conversión "Donación completada" (Compra, principal, se mide al cargar `chanakfoundation.org/thank-you`); "Donación - inicio de pago en Stripe" pasa a secundaria. **Pendiente:** acción "Formulario de contacto enviado" (el formulario ya dispara `AW-18109980849/P_ijCL2Z3bAcELHBwbtD`; comprobar a qué acción pertenece, porque "Orientación ESA - solicitud confirmada" muestra "Configuración errónea"). No se importó el CSV de Microschools: la subida web de Google Ads rechaza el archivo (no encuentra las campañas porque el CSV no incluye filas de definición de campaña); hay que importarlo con Google Ads Editor o crear las campañas a mano, siempre en pausa.
+
+**Diagnóstico (0 impresiones desde abril):** 4 campañas ESA con presupuesto total 260 US$/día; 413 palabras clave, muchas en concordancia amplia y varias con "volumen de búsquedas bajo". Sin cobros (normal en Ad Grants). Por revisar: ubicación/idioma, estrategia de puja, estado de la cuenta Ad Grants. Propuesta pendiente de Mariela: dejar una sola campaña ESA.
