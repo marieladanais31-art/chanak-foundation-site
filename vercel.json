@@ -88,8 +88,18 @@
       "permanent": true
     },
     {
+      "source": "/churube-relief(.*)",
+      "destination": "/microschools/panama-san-buenaventura/",
+      "permanent": true
+    },
+    {
+      "source": "/panama-relief(.*)",
+      "destination": "/microschools/panama-san-buenaventura/",
+      "permanent": true
+    },
+    {
       "source": "/panama(.*)",
-      "destination": "/churube-relief",
+      "destination": "/microschools/panama-san-buenaventura/",
       "permanent": true
     },
     {
